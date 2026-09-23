@@ -102,9 +102,9 @@ export const Navbar: React.FC<NavbarProps> = ({
           )}
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden md:flex items-center space-x-7 text-sm font-bold tracking-wide uppercase">
+          <nav aria-label="Main navigation" className="hidden md:flex items-center space-x-7 text-sm font-bold tracking-wide uppercase">
             <button
-              id="nav-link-home"
+              id="nav-link-home" aria-label="Home - FEMA Events audio visual hire in Kenya" aria-current={activeView === 'home' ? 'page' : undefined}
               onClick={() => handleNavClick('home')}
               className={`transition-colors cursor-pointer py-1 ${
                 activeView === 'home'
@@ -116,7 +116,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             </button>
             
             <button
-              id="nav-link-equipment"
+              id="nav-link-equipment" aria-label="Equipment - LED screens, sound, lighting and staging for hire" aria-current={activeView === 'equipment' ? 'page' : undefined}
               onClick={() => handleNavClick('equipment', 'equipment-section')}
               className={`transition-colors cursor-pointer py-1 ${
                 activeView === 'equipment'
@@ -128,7 +128,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             </button>
             
             <button
-              id="nav-link-occasions"
+              id="nav-link-occasions" aria-label="Occasions - AV solutions for crusades, summits and launches" aria-current={activeView === 'occasions' ? 'page' : undefined}
               onClick={() => handleNavClick('occasions', 'occasions-section')}
               className={`transition-colors cursor-pointer py-1 ${
                 activeView === 'occasions'
@@ -140,7 +140,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             </button>
             
             <button
-              id="nav-link-our-work"
+              id="nav-link-our-work" aria-label="Our Work - event production case studies in Kenya" aria-current={activeView === 'our-work' ? 'page' : undefined}
               onClick={() => handleNavClick('our-work', 'our-work-section')}
               className={`transition-colors cursor-pointer py-1 ${
                 activeView === 'our-work'
@@ -152,7 +152,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             </button>
             
             <button
-              id="nav-link-about"
+              id="nav-link-about" aria-label="About - the certified FEMA Events production crew" aria-current={activeView === 'about' ? 'page' : undefined}
               onClick={() => handleNavClick('about', 'about-section')}
               className={`transition-colors cursor-pointer py-1 ${
                 activeView === 'about'
@@ -167,7 +167,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           {/* Desktop Action Buttons */}
           <div className="hidden lg:flex items-center space-x-5">
             <a
-              id="nav-phone-link"
+              id="nav-phone-link" aria-label="0722 541 214 - chat with FEMA Events on WhatsApp"
               href="https://wa.me/254722541214?text=Hello%20FEMA%20Events,%20I%20would%20like%20to%20inquire%20about%20booking%20AV%20equipment"
               target="_blank"
               rel="noopener noreferrer"
@@ -177,7 +177,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               0722 541 214
             </a>
             <button
-              id="nav-quote-btn"
+              id="nav-quote-btn" aria-label="Book Equipment - request an AV hire quote from FEMA Events"
               onClick={() => onOpenQuote()}
               className="bg-[#b83a24] hover:bg-[#9b2e1b] text-white text-xs font-bold uppercase tracking-widest px-6 py-3 rounded-none border-2 border-white shadow-[3px_3px_0px_0px_#ffffff] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all cursor-pointer"
             >

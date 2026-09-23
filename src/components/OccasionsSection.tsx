@@ -95,7 +95,7 @@ export const OccasionsSection: React.FC<OccasionsSectionProps> = ({
                   )}
                 </div>
                 <div>
-                  <h4 className="font-serif font-bold text-sm leading-snug">{occ.tag}</h4>
+                  <h2 className="font-serif font-bold text-sm leading-snug">{occ.tag}</h2>
                 </div>
               </button>
             );
@@ -121,9 +121,9 @@ export const OccasionsSection: React.FC<OccasionsSectionProps> = ({
 
               {/* Highlights */}
               <div className="mb-6">
-                <h4 className="text-[11px] font-bold uppercase tracking-widest text-[#b83a24] mb-2.5">
+                <h3 className="text-[11px] font-bold uppercase tracking-widest text-[#b83a24] mb-2.5 font-sans">
                   Production Engineering Highlights
-                </h4>
+                </h3>
                 <div className="space-y-2">
                   {selectedOccasion.highlights.map((h, i) => (
                     <div key={i} className="flex items-start gap-2.5">
@@ -162,7 +162,9 @@ export const OccasionsSection: React.FC<OccasionsSectionProps> = ({
               <div className="relative rounded-none overflow-hidden h-56 sm:h-72 lg:h-[380px] border-2 border-white shadow-[4px_4px_0px_0px_#121212] group bg-stone-900">
                 <img
                   src={selectedOccasion.image}
-                  alt={selectedOccasion.title}
+                  alt={`${selectedOccasion.title} - live production setup by FEMA Events, Kenya`}
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-[#121212] opacity-40"></div>

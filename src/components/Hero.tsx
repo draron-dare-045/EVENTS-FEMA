@@ -92,7 +92,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigateView, onOpenQuote }) => {
         {/* Action Buttons - Stacked on Mobile with 48px touch targets */}
         <div className="w-full max-w-md sm:max-w-none flex flex-col sm:flex-row justify-center items-stretch sm:items-center gap-3 sm:gap-4 mb-12 sm:mb-16">
           <button
-            id="hero-request-quote-btn"
+            id="hero-request-quote-btn" aria-label="Book AV Equipment - request a quote from FEMA Events"
             onClick={onOpenQuote}
             className="w-full sm:w-auto bg-[#b83a24] hover:bg-[#9b2e1b] text-white text-xs sm:text-sm font-bold uppercase tracking-widest py-4 px-8 rounded-none border-2 border-white shadow-[4px_4px_0px_0px_#ffffff] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all cursor-pointer flex items-center justify-center gap-2"
           >
@@ -102,7 +102,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigateView, onOpenQuote }) => {
           
           <div className="grid grid-cols-2 sm:flex gap-2 sm:gap-3 w-full sm:w-auto">
             <button
-              id="hero-explore-equipment-btn"
+              id="hero-explore-equipment-btn" aria-label="Equipment - browse AV equipment for hire in Kenya"
               onClick={() => onNavigateView('equipment')}
               className="bg-stone-900 hover:bg-stone-800 border-2 border-stone-700 hover:border-white text-white text-xs sm:text-sm font-bold uppercase tracking-wider py-3.5 sm:py-4 px-4 sm:px-6 rounded-none shadow-[3px_3px_0px_0px_#b83a24] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all cursor-pointer flex items-center justify-center gap-1.5"
             >
@@ -111,7 +111,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigateView, onOpenQuote }) => {
             </button>
 
             <button
-              id="hero-explore-occasions-btn"
+              id="hero-explore-occasions-btn" aria-label="Occasions - event solutions FEMA Events powers"
               onClick={() => onNavigateView('occasions', 'occasions-section')}
               className="bg-stone-900 hover:bg-stone-800 border-2 border-stone-700 hover:border-white text-white text-xs sm:text-sm font-bold uppercase tracking-wider py-3.5 sm:py-4 px-4 sm:px-6 rounded-none shadow-[3px_3px_0px_0px_#b83a24] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all cursor-pointer flex items-center justify-center gap-1.5"
             >

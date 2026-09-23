@@ -170,7 +170,7 @@ export const EquipmentDetailPage: React.FC<EquipmentDetailPageProps> = ({
             <div key={sIdx} className="p-4 rounded-none bg-stone-50 border-2 border-[#121212] shadow-[3px_3px_0px_0px_#121212]">
               <div className="flex items-start justify-between mb-2">
                 <div>
-                  <h4 className="font-serif font-bold text-stone-900 text-sm">{spec.model}</h4>
+                  <h3 className="font-serif font-bold text-stone-900 text-sm">{spec.model}</h3>
                   <span className="text-[11px] text-stone-600 font-medium">{spec.type}</span>
                 </div>
                 <span className="text-[10px] uppercase font-bold text-white bg-[#b83a24] px-2 py-0.5 rounded-none border border-black">
@@ -295,7 +295,9 @@ export const EquipmentDetailPage: React.FC<EquipmentDetailPageProps> = ({
             >
               <img
                 src={img.url}
-                alt={img.caption}
+                alt={`${img.caption} - ${item.title} hire in Kenya by FEMA Events`}
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-[#121212] opacity-40"></div>

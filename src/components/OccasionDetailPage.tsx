@@ -233,9 +233,9 @@ export const OccasionDetailPage: React.FC<OccasionDetailPageProps> = ({
               <div key={cIdx} className="p-4 rounded-none bg-stone-50 border-2 border-stone-200">
                 <div className="flex items-start gap-2 mb-2">
                   <ShieldCheck className="w-4 h-4 text-[#b83a24] shrink-0 mt-0.5" />
-                  <h4 className="font-serif font-bold text-stone-900 text-sm">
+                  <h3 className="font-serif font-bold text-stone-900 text-sm">
                     Challenge {cIdx + 1}
-                  </h4>
+                  </h3>
                 </div>
                 <p className="text-xs text-stone-700 leading-relaxed font-normal">
                   {chal}
@@ -266,7 +266,9 @@ export const OccasionDetailPage: React.FC<OccasionDetailPageProps> = ({
               >
                 <img
                   src={img.url}
-                  alt={img.caption}
+                  alt={`${img.caption} - ${occasion.title} in Kenya, FEMA Events`}
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-[#121212] opacity-40"></div>

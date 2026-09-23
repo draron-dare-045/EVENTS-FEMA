@@ -213,7 +213,9 @@ export const OccasionsCarousel: React.FC<OccasionsCarouselProps> = ({
                 <div className="relative rounded-none overflow-hidden h-52 sm:h-72 lg:h-[380px] border-2 border-white shadow-[6px_6px_0px_0px_#b83a24] group bg-black">
                   <img
                     src={activeOccasion.image}
-                    alt={activeOccasion.title}
+                    alt={`${activeOccasion.title} - event sound, LED screens and staging in Kenya`}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-[#121212] opacity-30"></div>

@@ -27,6 +27,7 @@ import {
   PhoneCall
 } from 'lucide-react';
 import { EQUIPMENT_DATA } from './data/femaData';
+import { useSeo } from './seo';
 
 /**
  * Discipline Icon Map for Core Disciplines Teaser Cards
@@ -55,6 +56,9 @@ export default function App() {
   
   // Back to top floating button visibility
   const [showScrollTop, setShowScrollTop] = useState(false);
+
+  // SEO: keep <title> and meta description in sync with the visible page (no visual change)
+  useSeo(activeView, selectedEquipmentSubpage, selectedOccasionSubpage);
 
   // Monitor scroll distance for back-to-top trigger
   useEffect(() => {

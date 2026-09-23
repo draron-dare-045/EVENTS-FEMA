@@ -31,7 +31,7 @@ export const MobileBottomNav: React.FC<MobileBottomNavProps> = ({
       <div className="grid grid-cols-5 h-16 items-center px-1">
         {/* 1. Home Tab */}
         <button
-          id="mobile-dock-home"
+          id="mobile-dock-home" aria-label="Home - FEMA Events Kenya" aria-current={activeView === 'home' ? 'page' : undefined}
           onClick={() => onSelectView('home')}
           className={`flex flex-col items-center justify-center h-full w-full py-1 transition-colors cursor-pointer rounded-none ${
             activeView === 'home' ? 'text-[#b83a24]' : 'text-stone-400 hover:text-stone-200'
@@ -46,7 +46,7 @@ export const MobileBottomNav: React.FC<MobileBottomNavProps> = ({
 
         {/* 2. Equipment Tab */}
         <button
-          id="mobile-dock-equipment"
+          id="mobile-dock-equipment" aria-label="Gear - AV equipment for hire" aria-current={activeView === 'equipment' ? 'page' : undefined}
           onClick={() => onSelectView('equipment')}
           className={`flex flex-col items-center justify-center h-full w-full py-1 transition-colors cursor-pointer rounded-none ${
             activeView === 'equipment' ? 'text-[#b83a24]' : 'text-stone-400 hover:text-stone-200'
@@ -74,7 +74,7 @@ export const MobileBottomNav: React.FC<MobileBottomNavProps> = ({
 
         {/* 4. Occasions Tab */}
         <button
-          id="mobile-dock-occasions"
+          id="mobile-dock-occasions" aria-label="Events - occasions we power across Kenya" aria-current={activeView === 'occasions' ? 'page' : undefined}
           onClick={() => onSelectView('occasions')}
           className={`flex flex-col items-center justify-center h-full w-full py-1 transition-colors cursor-pointer rounded-none ${
             activeView === 'occasions' ? 'text-[#b83a24]' : 'text-stone-400 hover:text-stone-200'
@@ -89,7 +89,7 @@ export const MobileBottomNav: React.FC<MobileBottomNavProps> = ({
 
         {/* 5. Our Work Tab */}
         <button
-          id="mobile-dock-our-work"
+          id="mobile-dock-our-work" aria-label="Work - event production case studies" aria-current={activeView === 'our-work' ? 'page' : undefined}
           onClick={() => onSelectView('our-work')}
           className={`flex flex-col items-center justify-center h-full w-full py-1 transition-colors cursor-pointer rounded-none ${
             activeView === 'our-work' ? 'text-[#b83a24]' : 'text-stone-400 hover:text-stone-200'

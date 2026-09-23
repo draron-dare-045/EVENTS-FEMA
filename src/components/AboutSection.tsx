@@ -11,9 +11,9 @@ export const AboutSection: React.FC = () => {
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-none bg-black border-2 border-stone-700 text-[#b83a24] text-[11px] sm:text-xs font-bold uppercase tracking-widest mb-3 shadow-[2px_2px_0px_0px_#b83a24]">
               Why FEMA Events Kenya
             </div>
-            <h2 className="font-serif text-3xl sm:text-5xl font-bold leading-tight mb-6">
+            <h1 className="font-serif text-3xl sm:text-5xl font-bold leading-tight mb-6">
               Uncompromising Technical Rigor &amp; Acoustic Craft.
-            </h2>
+            </h1>
             <p className="text-stone-300 text-sm leading-relaxed mb-6 font-normal">
               FEMA Events is an elite event production house based in Nairobi, providing comprehensive Audio Visual, stage lighting, modular rigging, and backup power solutions for churches, corporates, and public institutions across Kenya. Every single rig is engineered and operated on-site by our own in-house crew — never outsourced or brokered out.
             </p>
@@ -27,7 +27,7 @@ export const AboutSection: React.FC = () => {
                 <div className="w-10 h-10 rounded-none bg-black border border-stone-700 flex items-center justify-center mb-3">
                   <BadgeCheck className="w-5 h-5 text-[#b83a24]" />
                 </div>
-                <h4 className="font-serif font-bold text-sm text-white mb-1">Full In-House Crew</h4>
+                <h2 className="font-serif font-bold text-sm text-white mb-1">Full In-House Crew</h2>
                 <p className="text-xs text-stone-300 leading-snug font-normal">
                   Certified sound engineers, lighting designers, and riggers on our direct payroll.
                 </p>
@@ -37,7 +37,7 @@ export const AboutSection: React.FC = () => {
                 <div className="w-10 h-10 rounded-none bg-black border border-stone-700 flex items-center justify-center mb-3">
                   <BatteryCharging className="w-5 h-5 text-[#b83a24]" />
                 </div>
-                <h4 className="font-serif font-bold text-sm text-white mb-1">100% Power Redundancy</h4>
+                <h2 className="font-serif font-bold text-sm text-white mb-1">100% Power Redundancy</h2>
                 <p className="text-xs text-stone-300 leading-snug font-normal">
                   Synchronized dual silent generators with sub-second automatic transfer switches.
                 </p>
@@ -47,7 +47,7 @@ export const AboutSection: React.FC = () => {
                 <div className="w-10 h-10 rounded-none bg-black border border-stone-700 flex items-center justify-center mb-3">
                   <Clock className="w-5 h-5 text-[#b83a24]" />
                 </div>
-                <h4 className="font-serif font-bold text-sm text-white mb-1">24/7 Live Monitoring</h4>
+                <h2 className="font-serif font-bold text-sm text-white mb-1">24/7 Live Monitoring</h2>
                 <p className="text-xs text-stone-300 leading-snug font-normal">
                   Dedicated stage and FOH technicians present from soundcheck through final curtain.
                 </p>
@@ -57,7 +57,7 @@ export const AboutSection: React.FC = () => {
                 <div className="w-10 h-10 rounded-none bg-black border border-stone-700 flex items-center justify-center mb-3">
                   <MapPin className="w-5 h-5 text-[#b83a24]" />
                 </div>
-                <h4 className="font-serif font-bold text-sm text-white mb-1">Nationwide Kenya Logistics</h4>
+                <h2 className="font-serif font-bold text-sm text-white mb-1">Nationwide Kenya Logistics</h2>
                 <p className="text-xs text-stone-300 leading-snug font-normal">
                   Fully equipped heavy logistics fleet serving Mombasa, Kisumu, Nakuru, and all regions.
                 </p>
@@ -70,7 +70,8 @@ export const AboutSection: React.FC = () => {
             <div className="relative rounded-none overflow-hidden border-2 border-white shadow-[6px_6px_0px_0px_#b83a24] bg-stone-900">
               <img
                 src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=1000&q=80"
-                alt="FEMA Events production crew rigging equipment"
+                alt="FEMA Events certified production crew rigging LED screens, sound and lighting for an event in Kenya"
+                decoding="async"
                 className="w-full h-full object-cover min-h-[420px]"
               />
               <div className="absolute inset-0 bg-[#121212] opacity-40"></div>

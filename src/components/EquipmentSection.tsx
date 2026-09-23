@@ -83,7 +83,7 @@ export const EquipmentSection: React.FC<EquipmentSectionProps> = ({
             01
           </div>
           <div>
-            <h3 className="font-serif font-bold text-sm text-[#121212] mb-1 uppercase tracking-wide">Select Your Gear</h3>
+            <h2 className="font-serif font-bold text-sm text-[#121212] mb-1 uppercase tracking-wide">Select Your Gear</h2>
             <p className="text-xs text-stone-700 leading-relaxed font-normal">
               Tap any equipment discipline to check model outputs, dimensions, and rig capabilities.
             </p>
@@ -95,7 +95,7 @@ export const EquipmentSection: React.FC<EquipmentSectionProps> = ({
             02
           </div>
           <div>
-            <h3 className="font-serif font-bold text-sm text-[#121212] mb-1 uppercase tracking-wide">Call or WhatsApp to Book</h3>
+            <h2 className="font-serif font-bold text-sm text-[#121212] mb-1 uppercase tracking-wide">Call or WhatsApp to Book</h2>
             <p className="text-xs text-stone-700 leading-relaxed font-normal">
               Tell our engineers your venue, dates, and audience size to reserve certified hardware.
             </p>
@@ -107,7 +107,7 @@ export const EquipmentSection: React.FC<EquipmentSectionProps> = ({
             03
           </div>
           <div>
-            <h3 className="font-serif font-bold text-sm text-[#121212] mb-1 uppercase tracking-wide">Certified On-Site Delivery</h3>
+            <h2 className="font-serif font-bold text-sm text-[#121212] mb-1 uppercase tracking-wide">Certified On-Site Delivery</h2>
             <p className="text-xs text-stone-700 leading-relaxed font-normal">
               Our in-house sound and video crew handles acoustic tuning, rigging, and live show operation.
             </p>
@@ -135,7 +135,9 @@ export const EquipmentSection: React.FC<EquipmentSectionProps> = ({
             <div className="relative h-52 sm:h-60 w-full overflow-hidden bg-stone-900 border-b-2 border-[#121212]">
               <img
                 src={item.image}
-                alt={item.title}
+                alt={`${item.title} for hire in Nairobi, Kenya - FEMA Events`}
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-[#121212] opacity-40"></div>

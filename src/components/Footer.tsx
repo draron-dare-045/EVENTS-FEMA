@@ -33,13 +33,13 @@ export const Footer: React.FC<FooterProps> = ({
 
         {/* Col 2: Sitemap */}
         <div>
-          <h4 className="text-white text-xs font-bold uppercase tracking-widest mb-4 border-b-2 border-stone-800 pb-1">
+          <h2 className="text-white text-xs font-bold uppercase tracking-widest mb-4 border-b-2 border-stone-800 pb-1 font-sans">
             Sitemap
-          </h4>
+          </h2>
           <ul className="space-y-2.5 text-xs font-bold uppercase tracking-wider">
             <li>
               <button
-                id="footer-nav-home"
+                id="footer-nav-home" aria-label="Home - FEMA Events audio visual hire"
                 onClick={() => onNavigateView('home')}
                 className="hover:text-[#b83a24] text-stone-300 transition-colors text-left flex items-center group cursor-pointer"
               >
@@ -48,7 +48,7 @@ export const Footer: React.FC<FooterProps> = ({
             </li>
             <li>
               <button
-                id="footer-nav-equipment"
+                id="footer-nav-equipment" aria-label="Equipment & Inventory - AV equipment hire catalogue"
                 onClick={() => onNavigateView('equipment', 'equipment-section')}
                 className="hover:text-[#b83a24] text-stone-300 transition-colors text-left flex items-center group cursor-pointer"
               >
@@ -57,7 +57,7 @@ export const Footer: React.FC<FooterProps> = ({
             </li>
             <li>
               <button
-                id="footer-nav-occasions"
+                id="footer-nav-occasions" aria-label="Occasions & Bundles - event AV packages for Kenya"
                 onClick={() => onNavigateView('occasions', 'occasions-section')}
                 className="hover:text-[#b83a24] text-stone-300 transition-colors text-left flex items-center group cursor-pointer"
               >
@@ -66,7 +66,7 @@ export const Footer: React.FC<FooterProps> = ({
             </li>
             <li>
               <button
-                id="footer-nav-our-work"
+                id="footer-nav-our-work" aria-label="Our Work & Case Studies - FEMA Events portfolio"
                 onClick={() => onNavigateView('our-work', 'our-work-section')}
                 className="hover:text-[#b83a24] text-stone-300 transition-colors text-left flex items-center group cursor-pointer"
               >
@@ -75,7 +75,7 @@ export const Footer: React.FC<FooterProps> = ({
             </li>
             <li>
               <button
-                id="footer-nav-about"
+                id="footer-nav-about" aria-label="About Us - the FEMA Events crew and warehouse"
                 onClick={() => onNavigateView('about', 'about-section')}
                 className="hover:text-[#b83a24] text-stone-300 transition-colors text-left flex items-center group cursor-pointer"
               >
@@ -84,7 +84,7 @@ export const Footer: React.FC<FooterProps> = ({
             </li>
             <li>
               <button
-                id="footer-nav-quote"
+                id="footer-nav-quote" aria-label="Request a Quote - get an AV hire quote"
                 onClick={() => onNavigateView('home', 'quote-section')}
                 className="hover:text-white text-[#b83a24] transition-colors text-left flex items-center group cursor-pointer font-bold"
               >
@@ -96,9 +96,9 @@ export const Footer: React.FC<FooterProps> = ({
 
         {/* Col 3: Services */}
         <div>
-          <h4 className="text-white text-xs font-bold uppercase tracking-widest mb-4 border-b-2 border-stone-800 pb-1">
+          <h2 className="text-white text-xs font-bold uppercase tracking-widest mb-4 border-b-2 border-stone-800 pb-1 font-sans">
             Services &amp; Rigs
-          </h4>
+          </h2>
           <ul className="space-y-2.5 text-xs font-medium">
             <li>
               <button
@@ -106,6 +106,7 @@ export const Footer: React.FC<FooterProps> = ({
                   onNavigateView('equipment', 'equipment-section');
                   onSelectEquipmentCategory?.('led-screens');
                 }}
+                aria-label="LED Screens & Displays - LED screen hire in Nairobi"
                 className="hover:text-[#b83a24] text-stone-300 transition-colors text-left cursor-pointer"
               >
                 LED Screens &amp; Displays
@@ -117,6 +118,7 @@ export const Footer: React.FC<FooterProps> = ({
                   onNavigateView('equipment', 'equipment-section');
                   onSelectEquipmentCategory?.('lighting');
                 }}
+                aria-label="Stage & Mood Lighting - stage lighting hire in Nairobi"
                 className="hover:text-[#b83a24] text-stone-300 transition-colors text-left cursor-pointer"
               >
                 Stage &amp; Mood Lighting
@@ -128,6 +130,7 @@ export const Footer: React.FC<FooterProps> = ({
                   onNavigateView('equipment', 'equipment-section');
                   onSelectEquipmentCategory?.('sound-audio');
                 }}
+                aria-label="Concert Sound & Audio - sound system hire in Nairobi"
                 className="hover:text-[#b83a24] text-stone-300 transition-colors text-left cursor-pointer"
               >
                 Concert Sound &amp; Audio
@@ -139,6 +142,7 @@ export const Footer: React.FC<FooterProps> = ({
                   onNavigateView('equipment', 'equipment-section');
                   onSelectEquipmentCategory?.('stages');
                 }}
+                aria-label="Stages & Platforms - modular stage hire in Nairobi"
                 className="hover:text-[#b83a24] text-stone-300 transition-colors text-left cursor-pointer"
               >
                 Stages &amp; Platforms
@@ -150,6 +154,7 @@ export const Footer: React.FC<FooterProps> = ({
                   onNavigateView('equipment', 'equipment-section');
                   onSelectEquipmentCategory?.('pyrotechnics');
                 }}
+                aria-label="Pyrotechnics & SFX - special effects hire in Kenya"
                 className="hover:text-[#b83a24] text-stone-300 transition-colors text-left cursor-pointer"
               >
                 Pyrotechnics &amp; SFX
@@ -161,6 +166,7 @@ export const Footer: React.FC<FooterProps> = ({
                   onNavigateView('equipment', 'equipment-section');
                   onSelectEquipmentCategory?.('generators');
                 }}
+                aria-label="Generators & Power - event generator hire in Nairobi"
                 className="hover:text-[#b83a24] text-stone-300 transition-colors text-left cursor-pointer"
               >
                 Generators &amp; Power
@@ -171,9 +177,9 @@ export const Footer: React.FC<FooterProps> = ({
 
         {/* Col 4: Contact info */}
         <div>
-          <h4 className="text-white text-xs font-bold uppercase tracking-widest mb-4 border-b-2 border-stone-800 pb-1">
+          <h2 className="text-white text-xs font-bold uppercase tracking-widest mb-4 border-b-2 border-stone-800 pb-1 font-sans">
             Nairobi Headquarters
-          </h4>
+          </h2>
           <ul className="space-y-3 text-xs">
             <li className="flex items-start gap-2.5">
               <MapPin className="w-4 h-4 text-[#b83a24] shrink-0 mt-0.5" />
@@ -181,14 +187,14 @@ export const Footer: React.FC<FooterProps> = ({
             </li>
             <li className="flex items-center gap-2.5">
               <PhoneCall className="w-4 h-4 text-[#b83a24] shrink-0" />
-              <a href="tel:+254722541214" className="hover:text-white transition-colors font-bold">
+              <a href="tel:+254722541214" aria-label="0722 541 214 - call FEMA Events" className="hover:text-white transition-colors font-bold">
                 0722 541 214
               </a>
             </li>
             <li className="flex items-center gap-2.5">
               <MessageSquare className="w-4 h-4 text-emerald-400 shrink-0" />
               <a 
-                href="https://wa.me/254722541214?text=Hello%20FEMA%20Events" 
+                href="https://wa.me/254722541214?text=Hello%20FEMA%20Events" aria-label="WhatsApp (0722 541 214) - message FEMA Events" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="hover:text-emerald-400 transition-colors font-bold"
@@ -198,7 +204,7 @@ export const Footer: React.FC<FooterProps> = ({
             </li>
             <li className="flex items-center gap-2.5">
               <Mail className="w-4 h-4 text-[#b83a24] shrink-0" />
-              <a href="mailto:Info@femaevents.com" className="hover:text-white transition-colors">
+              <a href="mailto:Info@femaevents.com" aria-label="Info@femaevents.com - email FEMA Events" className="hover:text-white transition-colors">
                 Info@femaevents.com
               </a>
             </li>

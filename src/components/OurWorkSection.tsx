@@ -33,9 +33,9 @@ export const OurWorkSection: React.FC<OurWorkSectionProps> = ({ onOpenQuote }) =
             <div className="inline-flex items-center gap-2 px-3 py-1 bg-black text-white text-[11px] font-bold uppercase tracking-widest mb-2 border border-black shadow-[2px_2px_0px_0px_#b83a24]">
               Proven Production Track Record
             </div>
-            <h2 className="font-serif text-3xl sm:text-5xl font-bold tracking-tight text-[#121212]">
+            <h1 className="font-serif text-3xl sm:text-5xl font-bold tracking-tight text-[#121212]">
               Our Work &amp; Case Studies.
-            </h2>
+            </h1>
             <p className="text-stone-700 text-sm mt-3 max-w-2xl leading-relaxed font-normal">
               Explore high-stakes corporate summits, multi-night outdoor crusades, and brand reveals powered seamlessly by FEMA Events across Kenya.
             </p>
@@ -69,9 +69,9 @@ export const OurWorkSection: React.FC<OurWorkSectionProps> = ({ onOpenQuote }) =
                   <span className="text-[10px] font-bold uppercase tracking-widest text-[#b83a24] block mb-1">
                     {cs.tag}
                   </span>
-                  <h4 className="font-serif font-bold text-lg text-[#121212] leading-snug">
+                  <h2 className="font-serif font-bold text-lg text-[#121212] leading-snug">
                     {cs.title}
-                  </h4>
+                  </h2>
                 </div>
                 <div className="mt-4 pt-3 border-t-2 border-stone-200 flex items-center justify-between text-xs text-stone-600 font-bold">
                   <span>{cs.venue.split(',')[0]}</span>
@@ -90,7 +90,9 @@ export const OurWorkSection: React.FC<OurWorkSectionProps> = ({ onOpenQuote }) =
               <div className="relative rounded-none overflow-hidden h-80 sm:h-96 lg:h-[480px] border-2 border-[#121212] shadow-[4px_4px_0px_0px_#121212] bg-stone-900">
                 <img
                   src={activeCaseStudy.image}
-                  alt={activeCaseStudy.title}
+                  alt={`${activeCaseStudy.title} at ${activeCaseStudy.venue} - event production case study by FEMA Events`}
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-[#121212] opacity-40"></div>
@@ -111,9 +113,9 @@ export const OurWorkSection: React.FC<OurWorkSectionProps> = ({ onOpenQuote }) =
                 <span>{activeCaseStudy.tag}</span>
               </div>
 
-              <h3 className="font-serif text-3xl sm:text-4xl font-bold text-[#121212] mb-6 leading-tight">
+              <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#121212] mb-6 leading-tight">
                 {activeCaseStudy.title}
-              </h3>
+              </h2>
 
               {/* Event Metadata Grid */}
               <div className="grid grid-cols-2 gap-4 mb-8 bg-stone-100 p-5 rounded-none border-2 border-[#121212]">
@@ -152,9 +154,9 @@ export const OurWorkSection: React.FC<OurWorkSectionProps> = ({ onOpenQuote }) =
 
               {/* Equipment Rigged */}
               <div className="mb-8">
-                <h4 className="text-xs font-bold uppercase tracking-widest text-stone-700 mb-3">
+                <h3 className="text-xs font-bold uppercase tracking-widest text-stone-700 mb-3 font-sans">
                   Production Rig &amp; Technology Deployed:
-                </h4>
+                </h3>
                 <ul className="space-y-2.5">
                   {activeCaseStudy.equipmentUsed.map((eq, eIdx) => (
                     <li key={eIdx} className="flex items-start gap-2.5 text-xs sm:text-sm text-stone-900 font-bold">
@@ -188,9 +190,9 @@ export const OurWorkSection: React.FC<OurWorkSectionProps> = ({ onOpenQuote }) =
               <span className="text-xs font-bold uppercase tracking-widest text-[#b83a24] mb-1 block">
                 Visual Field Capture
               </span>
-              <h3 className="font-serif text-2xl sm:text-3xl font-bold text-[#121212]">
+              <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#121212]">
                 Photo &amp; Rig Gallery
-              </h3>
+              </h2>
             </div>
             <div className="flex gap-2 mt-4 sm:mt-0 overflow-x-auto pb-1">
               {['all', 'Visual Displays', 'Sound & Audio', 'Lighting', 'Stages'].map((cat) => (
@@ -217,7 +219,9 @@ export const OurWorkSection: React.FC<OurWorkSectionProps> = ({ onOpenQuote }) =
               >
                 <img
                   src={photo.image}
-                  alt={photo.title}
+                  alt={`${photo.title} - ${photo.category} for events in Kenya by FEMA Events`}
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-[#121212] opacity-40"></div>
