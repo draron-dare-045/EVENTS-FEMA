@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Send, Check, MessageSquare, Phone, ChevronDown } from 'lucide-react';
+import { Send, Check, MessageSquare, Phone } from 'lucide-react';
+import { MobileSelect } from './MobileSelect';
 
 interface QuoteSectionProps {
   initialService?: string;
@@ -124,20 +125,13 @@ ${notes ? `- Additional Requirements: ${notes}` : ''}`;
               <label htmlFor="eventType" className="block text-xs font-bold uppercase tracking-wider text-stone-900 mb-2">
                 1. Select Gathering / Event Type
               </label>
-              <div className="relative">
-                <select
-                  id="eventType"
-                  value={eventType}
-                  onChange={(e) => setEventType(e.target.value)}
-                  required
-                  className="w-full appearance-none bg-[#FAF8F5] border-2 border-[#121212] rounded-none px-4 py-3 pr-10 text-sm focus:outline-none focus:border-[#b83a24] text-stone-900 font-medium cursor-pointer"
-                >
-                  {eventTypes.map((item) => (
-                    <option key={item.id} value={item.id}>{item.label}</option>
-                  ))}
-                </select>
-                <ChevronDown className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-stone-900" />
-              </div>
+              <MobileSelect
+                id="eventType"
+                title="Select Event Type"
+                value={eventType}
+                onChange={setEventType}
+                options={eventTypes.map((t) => ({ value: t.id, label: t.label }))}
+              />
             </div>
 
             {/* Step 2: Date & Location */}
