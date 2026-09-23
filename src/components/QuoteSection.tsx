@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Send, Check, MessageSquare, Phone } from 'lucide-react';
+import { Send, Check, MessageSquare, Phone, ChevronDown } from 'lucide-react';
 
 interface QuoteSectionProps {
   initialService?: string;
@@ -10,7 +10,26 @@ export const QuoteSection: React.FC<QuoteSectionProps> = ({
   initialService = '',
   initialOccasion = ''
 }) => {
-  const [eventType, setEventType] = useState<string>(initialOccasion || 'conference');
+  const eventTypes = [
+    { id: 'conference', label: 'Conference / Summit' },
+    { id: 'church', label: 'Church Crusade' },
+    { id: 'launch', label: 'Brand / Product Launch' },
+    { id: 'rally', label: 'Public Rally' },
+    { id: 'funeral', label: 'Memorial Service' }
+  ];
+
+  // Occasion pages send keys like "churches"; map them to the dropdown values
+  const occasionToEventType: Record<string, string> = {
+    churches: 'church',
+    conferences: 'conference',
+    launches: 'launch',
+    rallies: 'rally',
+    funerals: 'funeral'
+  };
+
+  const [eventType, setEventType] = useState<string>(
+    eventTypes.some((t) => t.id === initialOccasion) ? initialOccasion : (occasionToEventType[initialOccasion] || 'conference')
+  );
   const [eventDate, setEventDate] = useState<string>('');
   const [venueLocation, setVenueLocation] = useState<string>('Nairobi');
   const [contactName, setContactName] = useState<string>('');
@@ -44,7 +63,7 @@ export const QuoteSection: React.FC<QuoteSectionProps> = ({
   const handleWhatsAppInstantQuote = () => {
     const message = `Hello FEMA Events Kenya,
 I would like to request an Audio Visual Quote:
-- Event Type: ${eventType}
+- Event Type: ${eventTypes.find((t) => t.id === eventType)?.label || eventType}
 - Event Date: ${eventDate || 'TBD'}
 - Venue / Location: ${venueLocation}
 - Required Equipment: ${selectedServices.join(', ')}
@@ -102,30 +121,22 @@ ${notes ? `- Additional Requirements: ${notes}` : ''}`;
           <form onSubmit={handleSubmit} className="space-y-8">
             {/* Step 1: Event Context */}
             <div>
-              <label className="block text-xs font-bold uppercase tracking-wider text-stone-900 mb-3">
+              <label htmlFor="eventType" className="block text-xs font-bold uppercase tracking-wider text-stone-900 mb-2">
                 1. Select Gathering / Event Type
               </label>
-              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5">
-                {[
-                  { id: 'conference', label: 'Conference / Summit' },
-                  { id: 'church', label: 'Church Crusade' },
-                  { id: 'launch', label: 'Brand / Product Launch' },
-                  { id: 'rally', label: 'Public Rally' },
-                  { id: 'funeral', label: 'Memorial Service' }
-                ].map((item) => (
-                  <button
-                    type="button"
-                    key={item.id}
-                    onClick={() => setEventType(item.id)}
-                    className={`py-3.5 px-3 rounded-none text-xs font-bold uppercase tracking-wider border-2 transition-all text-center cursor-pointer ${
-                      eventType === item.id
-                        ? 'bg-[#121212] text-white border-[#121212] shadow-[3px_3px_0px_0px_#b83a24]'
-                        : 'bg-stone-50 border-stone-300 text-stone-800 hover:bg-stone-100 hover:border-stone-500'
-                    }`}
-                  >
-                    {item.label}
-                  </button>
-                ))}
+              <div className="relative">
+                <select
+                  id="eventType"
+                  value={eventType}
+                  onChange={(e) => setEventType(e.target.value)}
+                  required
+                  className="w-full appearance-none bg-[#FAF8F5] border-2 border-[#121212] rounded-none px-4 py-3 pr-10 text-sm focus:outline-none focus:border-[#b83a24] text-stone-900 font-medium cursor-pointer"
+                >
+                  {eventTypes.map((item) => (
+                    <option key={item.id} value={item.id}>{item.label}</option>
+                  ))}
+                </select>
+                <ChevronDown className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-stone-900" />
               </div>
             </div>
 
