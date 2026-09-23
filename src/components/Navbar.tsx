@@ -15,7 +15,7 @@ import {
   Calculator
 } from 'lucide-react';
 import { PageView } from '../types';
-import { FemaLogo } from './FemaLogo';
+import { FemaLogo, SHOW_LOGO } from './FemaLogo';
 
 interface NavbarProps {
   activeView: PageView;
@@ -90,6 +90,7 @@ export const Navbar: React.FC<NavbarProps> = ({
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
           {/* Brand Logo - Scalable Transparent SVG */}
+          {SHOW_LOGO && (
           <button
             id="nav-logo-btn"
             onClick={() => handleNavClick('home')}
@@ -98,6 +99,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           >
             <FemaLogo className="h-9 sm:h-11 w-auto transition-transform group-hover:scale-[1.02]" />
           </button>
+          )}
 
           {/* Desktop Navigation Links */}
           <nav className="hidden md:flex items-center space-x-7 text-sm font-bold tracking-wide uppercase">
@@ -212,10 +214,10 @@ export const Navbar: React.FC<NavbarProps> = ({
           <div>
             {/* Quick Header in Sheet */}
             <div className="flex items-center justify-between pb-4 border-b-2 border-stone-800 mb-5">
-              <FemaLogo id="mobile-menu-logo" className="h-8 w-auto" />
+              {SHOW_LOGO && <FemaLogo id="mobile-menu-logo" className="h-8 w-auto" />}
               <button
                 onClick={() => setMobileMenuOpen(false)}
-                className="text-stone-300 hover:text-white p-1 border-2 border-stone-700 rounded-none bg-stone-900"
+                className="ml-auto text-stone-300 hover:text-white p-1 border-2 border-stone-700 rounded-none bg-stone-900"
                 aria-label="Close menu"
               >
                 <X className="w-5 h-5" />

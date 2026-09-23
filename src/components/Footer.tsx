@@ -1,7 +1,7 @@
 import React from 'react';
 import { PhoneCall, Mail, MapPin, MessageSquare } from 'lucide-react';
 import { PageView } from '../types';
-import { FemaLogo } from './FemaLogo';
+import { FemaLogo, SHOW_LOGO } from './FemaLogo';
 
 interface FooterProps {
   onNavigateView: (view: PageView, sectionId?: string) => void;
@@ -17,9 +17,11 @@ export const Footer: React.FC<FooterProps> = ({
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 mb-10">
         {/* Col 1: About */}
         <div>
+          {SHOW_LOGO && (
           <div className="mb-4">
             <FemaLogo id="footer-fema-logo" className="h-10 sm:h-11 w-auto" />
           </div>
+          )}
           <p className="text-xs leading-relaxed text-stone-300 mb-4 font-normal">
             Full-spectrum Audio Visual production, concert audio, high-definition LED screens, stage lighting, and backup power rentals across Kenya.
           </p>
