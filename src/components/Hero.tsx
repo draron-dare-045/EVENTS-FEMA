@@ -85,8 +85,8 @@ export const Hero: React.FC<HeroProps> = ({ onNavigateView, onOpenQuote }) => {
             style={{ backgroundImage: `url('${img}')` }}
           />
         ))}
-        {/* Mobile High-Contrast Solid Overlay for crystal clear readability */}
-        <div className="absolute inset-0 bg-[#121212] opacity-80" />
+        {/* Gradient overlay for readability while letting the carousel imagery show through */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#121212]/70 via-[#121212]/55 to-[#121212]/80" />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center">
