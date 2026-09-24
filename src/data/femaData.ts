@@ -1,4 +1,5 @@
 import { EquipmentItem, OccasionItem, CaseStudy, GalleryPhoto } from '../types';
+import { PHOTOS } from './photos';
 
 export const EQUIPMENT_DATA: EquipmentItem[] = [
   {
@@ -9,18 +10,18 @@ export const EQUIPMENT_DATA: EquipmentItem[] = [
     shortDesc: 'High-definition indoor modular LED walls, daylight-visible outdoor panels, stage backdrops, and video switchers.',
     longDesc: 'Clear, ultra-bright visual screens sized for any room or outdoor venue — from an intimate corporate backdrop to a daylight-visible wall facing a crowd of thousands.',
     iconName: 'Monitor',
-    image: 'https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=1000&q=80',
+    image: PHOTOS.launch,
     showcaseImages: [
       {
-        url: 'https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=1000&q=80',
+        url: PHOTOS.launch,
         caption: 'Indoor Ultra-HD P2.6 Modular Main Stage Backdrop'
       },
       {
-        url: 'https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=1000&q=80',
+        url: PHOTOS.garden,
         caption: 'High-Nit Daylight Visible Outdoor Festival Delay Screen'
       },
       {
-        url: 'https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&w=1000&q=80',
+        url: PHOTOS.ballroom,
         caption: 'Dual Confidence Monitors & FOH Video Switching Desk'
       }
     ],
@@ -106,18 +107,18 @@ export const EQUIPMENT_DATA: EquipmentItem[] = [
     shortDesc: 'Intelligent moving heads, warm stage washes, profile spots, and mood uplighting tailored for any venue.',
     longDesc: 'Atmospheric lighting programmed to match the exact emotional arc of your event, from subtle warm keynote illumination to high-energy moving-light shows.',
     iconName: 'Sparkles',
-    image: 'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?auto=format&fit=crop&w=1000&q=80',
+    image: PHOTOS.expo,
     showcaseImages: [
       {
-        url: 'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?auto=format&fit=crop&w=1000&q=80',
+        url: PHOTOS.expo,
         caption: 'Concert Moving Head Beams with Hazer Atmospheric Beams'
       },
       {
-        url: 'https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=1000&q=80',
+        url: PHOTOS.launch,
         caption: 'Architectural Perimeter Uplighting for Gala Reception'
       },
       {
-        url: 'https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=1000&q=80',
+        url: PHOTOS.ballroom,
         caption: 'Warm Stage Wash & Profile Follow Spot for Keynotes'
       }
     ],
@@ -203,18 +204,18 @@ export const EQUIPMENT_DATA: EquipmentItem[] = [
     shortDesc: 'Concert line arrays, digital mixers, and speech-optimized wireless microphone systems for crisp acoustic coverage.',
     longDesc: 'High-clarity acoustic engineering so every spoken syllable and musical nuance is delivered with pristine intelligibility from the VIP front row to the furthest tent perimeter.',
     iconName: 'Speaker',
-    image: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=1000&q=80',
+    image: PHOTOS.launch,
     showcaseImages: [
       {
-        url: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=1000&q=80',
+        url: PHOTOS.launch,
         caption: 'Digital Audio Console Front-of-House 32-Channel Desk'
       },
       {
-        url: 'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=1000&q=80',
+        url: PHOTOS.ballroom,
         caption: 'Flown Touring Line Array System & High-Excursion Subwoofers'
       },
       {
-        url: 'https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=1000&q=80',
+        url: PHOTOS.garden,
         caption: 'UHF Wireless Mic Antenna Distribution System'
       }
     ],
@@ -300,18 +301,18 @@ export const EQUIPMENT_DATA: EquipmentItem[] = [
     shortDesc: 'Customizable modular risers, heavy-duty outdoor concert stages, podiums, and safety guardrails.',
     longDesc: 'Engineered stage platforms built to fit any venue footprint — from clean indoor executive risers with custom skirting to heavy-duty outdoor concert decks rated for multi-performer bands.',
     iconName: 'Layers',
-    image: 'https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?auto=format&fit=crop&w=1000&q=80',
+    image: PHOTOS.ballroom,
     showcaseImages: [
       {
-        url: 'https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?auto=format&fit=crop&w=1000&q=80',
+        url: PHOTOS.ballroom,
         caption: 'Heavy-Duty Modular Stage Deck with Carpet Finish'
       },
       {
-        url: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1000&q=80',
+        url: PHOTOS.garden,
         caption: 'Outdoor Ground-Level Scaffold Concert Platform'
       },
       {
-        url: 'https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&w=1000&q=80',
+        url: PHOTOS.launch,
         caption: 'Executive Acrylic Speaker Podium with Microphone Mount'
       }
     ],
@@ -397,18 +398,18 @@ export const EQUIPMENT_DATA: EquipmentItem[] = [
     shortDesc: 'Cold-spark fountains, CO2 cryo jets, low-lying fog machines, and synchronized atmospheric special effects.',
     longDesc: 'Safe, dramatic stage effects choreographed with light and sound to create show-stopping reveal moments, grand ceremonial entrances, and triumphant finales.',
     iconName: 'Flame',
-    image: 'https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?auto=format&fit=crop&w=1000&q=80',
+    image: PHOTOS.launch,
     showcaseImages: [
       {
-        url: 'https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?auto=format&fit=crop&w=1000&q=80',
+        url: PHOTOS.launch,
         caption: 'Cold-Spark Fountains Indoor Stage Reveal Moment'
       },
       {
-        url: 'https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=1000&q=80',
+        url: PHOTOS.garden,
         caption: 'Low-Lying Dense Dry-Ice Fog for First Dance'
       },
       {
-        url: 'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?auto=format&fit=crop&w=1000&q=80',
+        url: PHOTOS.ballroom,
         caption: 'High-Pressure CO2 Cryo Jet Blast on Stage Apron'
       }
     ],
@@ -494,18 +495,18 @@ export const EQUIPMENT_DATA: EquipmentItem[] = [
     shortDesc: 'Super-silent backup generators, redundant automatic transfer switches, and heavy-duty event power distribution.',
     longDesc: 'Uncompromising power stability with 100% redundancy guarantees so that mains power fluctuations or blackouts never disrupt your high-stakes event.',
     iconName: 'Zap',
-    image: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1000&q=80',
+    image: PHOTOS.ballroom,
     showcaseImages: [
       {
-        url: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1000&q=80',
+        url: PHOTOS.ballroom,
         caption: 'Super-Silent Sound-Baffled 60kVA & 150kVA Diesel Generators'
       },
       {
-        url: 'https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=1000&q=80',
+        url: PHOTOS.launch,
         caption: '3-Phase Weatherproof Rubber Distribution Distro Board'
       },
       {
-        url: 'https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=1000&q=80',
+        url: PHOTOS.garden,
         caption: 'Zero-Downtime Automatic Transfer Switch (ATS) Station'
       }
     ],
@@ -592,7 +593,7 @@ export const OCCASIONS_DATA: OccasionItem[] = [
     title: 'Churches & Multi-Day Crusades',
     shortDesc: 'Dynamic worship sound, powerful voice clarity, and daylight LED screens built for spiritual gatherings.',
     longDesc: 'Whether in an indoor sanctuary, an open sports ground, or a multi-day evangelistic crusade across Kenya, we engineer powerful long-throw sound systems, daylight-visible lyrics screens, and reliable generators that ensure uninterrupted ministry.',
-    image: 'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=1000&q=80',
+    image: PHOTOS.garden,
     highlights: [
       'Concert-grade line array with speech intelligibility across all rows',
       'Dual high-brightness daylight LED screens for live IMAG & lyrics',
@@ -634,15 +635,15 @@ export const OCCASIONS_DATA: OccasionItem[] = [
     ],
     gallery: [
       {
-        url: 'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=1000&q=80',
+        url: PHOTOS.garden,
         caption: 'Outdoor multi-day crusade with daylight dual LED walls'
       },
       {
-        url: 'https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=1000&q=80',
+        url: PHOTOS.launch,
         caption: 'Sanctuary worship stage lighting with warm wash and moving beams'
       },
       {
-        url: 'https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=1000&q=80',
+        url: PHOTOS.expo,
         caption: 'Line array rig flown on certified aluminum truss towers'
       }
     ]
@@ -653,7 +654,7 @@ export const OCCASIONS_DATA: OccasionItem[] = [
     title: 'Conferences, Summits & AGMs',
     shortDesc: 'Distraction-free AV setups engineered for keynotes, panel discussions, hybrid streams, and Q&As.',
     longDesc: 'We provide executive-tier presentation environments with ultra-sharp presentation screens, confidence monitors for keynotes, seamless multi-feed video switching, and pristine podium microphone acoustic balance.',
-    image: 'https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&w=1000&q=80',
+    image: PHOTOS.launch,
     highlights: [
       'Multi-channel presentation switchers for live slides & hybrid zoom',
       'Ultra-sharp P2.6 indoor LED backdrops and timer confidence monitors',
@@ -695,15 +696,15 @@ export const OCCASIONS_DATA: OccasionItem[] = [
     ],
     gallery: [
       {
-        url: 'https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&w=1000&q=80',
+        url: PHOTOS.launch,
         caption: 'Plenary hall stage with ultra-fine pixel pitch LED presentation backdrop'
       },
       {
-        url: 'https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=1000&q=80',
+        url: PHOTOS.launch,
         caption: 'Executive panel seating with discreet wireless gooseneck and lapel microphones'
       },
       {
-        url: 'https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1000&q=80',
+        url: PHOTOS.ballroom,
         caption: 'Multi-camera hybrid live stream control desk with seamless video switching'
       }
     ]
@@ -714,7 +715,7 @@ export const OCCASIONS_DATA: OccasionItem[] = [
     title: 'Product & Brand Launches',
     shortDesc: 'High-impact choreography where reveal lighting, special effects, and staging sync together.',
     longDesc: 'Transform brand launches into unforgettable sensory experiences. We combine cold-spark fountains, low-lying heavy fog, intelligent synchronized lighting sequences, and curved LED centerpieces that ignite excitement.',
-    image: 'https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?auto=format&fit=crop&w=1000&q=80',
+    image: PHOTOS.launch,
     highlights: [
       'Choreographed reveal sequences with cold sparks & low-fog entrance',
       'Curved high-definition LED centerpiece with 3D graphics playback',
@@ -756,15 +757,15 @@ export const OCCASIONS_DATA: OccasionItem[] = [
     ],
     gallery: [
       {
-        url: 'https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?auto=format&fit=crop&w=1000&q=80',
+        url: PHOTOS.launch,
         caption: 'Split-second cold spark reveal at regional automotive unboxing'
       },
       {
-        url: 'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=1000&q=80',
+        url: PHOTOS.launch,
         caption: 'Low fog dry-ice blanket during keynote product presentation'
       },
       {
-        url: 'https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=1000&q=80',
+        url: PHOTOS.expo,
         caption: 'Dynamic moving beam lighting synced to dramatic music soundtrack'
       }
     ]
@@ -775,7 +776,7 @@ export const OCCASIONS_DATA: OccasionItem[] = [
     title: 'Public Rallies & Open-Air Gatherings',
     shortDesc: 'Long-throw line arrays and daylight-visible outdoor LED walls engineered for massive open-air crowds.',
     longDesc: 'Built for extreme crowd densities and outdoor field conditions. Our heavy-duty stage trucks, long-throw line array towers, and sunlight-fighting outdoor LED walls deliver crystal-clear messaging across vast open stadium fields.',
-    image: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1000&q=80',
+    image: PHOTOS.garden,
     highlights: [
       'High-power touring line arrays with perimeter delay towers',
       'Daylight-fighting 6,500-nit outdoor LED jumbo screens',
@@ -817,15 +818,15 @@ export const OCCASIONS_DATA: OccasionItem[] = [
     ],
     gallery: [
       {
-        url: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1000&q=80',
+        url: PHOTOS.garden,
         caption: 'Open stadium gathering with perimeter delay audio coverage'
       },
       {
-        url: 'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?auto=format&fit=crop&w=1000&q=80',
+        url: PHOTOS.garden,
         caption: 'High-visibility daytime LED screen positioned above heavy modular stage'
       },
       {
-        url: 'https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=1000&q=80',
+        url: PHOTOS.expo,
         caption: 'Heavy ground support truss structure rated for high wind loads'
       }
     ]
@@ -836,7 +837,7 @@ export const OCCASIONS_DATA: OccasionItem[] = [
     title: 'Funerals & Memorial Services',
     shortDesc: 'Reverent, evenly distributed sound and discreet tribute screens so families can focus on the memorial.',
     longDesc: 'We handle memorial services with deep reverence, quiet dignity, and flawless reliability. Discreet audio distribution reaches every tent and overflow section clearly, accompanied by silent generators that make zero acoustic disturbance.',
-    image: 'https://images.unsplash.com/photo-1519452575417-564c1401ecc0?auto=format&fit=crop&w=1000&q=80',
+    image: PHOTOS.ballroom,
     highlights: [
       'Acoustically balanced sound distributed across family and guest tents',
       'Overflow LED and TV monitors for tribute slideshows and recordings',
@@ -878,15 +879,15 @@ export const OCCASIONS_DATA: OccasionItem[] = [
     ],
     gallery: [
       {
-        url: 'https://images.unsplash.com/photo-1519452575417-564c1401ecc0?auto=format&fit=crop&w=1000&q=80',
+        url: PHOTOS.ballroom,
         caption: 'Distributed audio column setup with discreet non-intrusive rigging'
       },
       {
-        url: 'https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&w=1000&q=80',
+        url: PHOTOS.garden,
         caption: 'High-contrast tribute presentation screens under shaded tent canopy'
       },
       {
-        url: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1000&q=80',
+        url: PHOTOS.ballroom,
         caption: 'Super-silent sound-baffled diesel generator operating at low decibels'
       }
     ]
@@ -902,7 +903,7 @@ export const CASE_STUDIES_DATA: CaseStudy[] = [
     eventType: 'Corporate Conference & Expo',
     duration: '3 Full Days',
     crowdSize: '2,500 Delegates',
-    image: 'https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=1000&q=80',
+    image: PHOTOS.expo,
     equipmentUsed: [
       'Custom curved 18×4m P2.6 LED video wall as main stage centerpiece',
       'Hybrid live-stream video switching across 3 breakout halls',
@@ -921,7 +922,7 @@ export const CASE_STUDIES_DATA: CaseStudy[] = [
     eventType: 'Outdoor Church Crusade',
     duration: '4 Consecutive Nights',
     crowdSize: '6,000+ Attendees Per Night',
-    image: 'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=1000&q=80',
+    image: PHOTOS.garden,
     equipmentUsed: [
       'Two 6×4m daylight-visible outdoor P4.8 LED screens for scripture and lyrics',
       'Long-throw touring line array system covering all perimeter seating zones',
@@ -940,7 +941,7 @@ export const CASE_STUDIES_DATA: CaseStudy[] = [
     eventType: 'Product & Brand Reveal',
     duration: '1 Evening Gala',
     crowdSize: '400 VIP Guests & Executives',
-    image: 'https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?auto=format&fit=crop&w=1000&q=80',
+    image: PHOTOS.ballroom,
     equipmentUsed: [
       'High-impact seamless LED video wall with synced 4K motion graphics',
       'Cold spark fountain machines timed precisely to the product unboxing',
@@ -958,37 +959,37 @@ export const GALLERY_PHOTOS: GalleryPhoto[] = [
     id: 'gal-1',
     title: 'Outdoor Public Rally Stage',
     category: 'Stages & Audio',
-    image: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=800&q=80'
+    image: PHOTOS.garden
   },
   {
     id: 'gal-2',
     title: 'Modular Concert Deck Build',
     category: 'Stages',
-    image: 'https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?auto=format&fit=crop&w=800&q=80'
+    image: PHOTOS.ballroom
   },
   {
     id: 'gal-3',
     title: 'Silent Diesel Generator & Distro',
     category: 'Power & Backup',
-    image: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80'
+    image: PHOTOS.ballroom
   },
   {
     id: 'gal-4',
     title: 'High-Definition LED Screen Wall',
     category: 'Visual Displays',
-    image: 'https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=800&q=80'
+    image: PHOTOS.ballroom
   },
   {
     id: 'gal-5',
     title: 'Front-of-House Digital Audio Mixing',
     category: 'Sound & Audio',
-    image: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80'
+    image: PHOTOS.launch
   },
   {
     id: 'gal-6',
     title: 'Moving Beam Stage Lighting Rig',
     category: 'Lighting',
-    image: 'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?auto=format&fit=crop&w=800&q=80'
+    image: PHOTOS.expo
   }
 ];
 

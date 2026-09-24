@@ -1,4 +1,5 @@
 import React from 'react';
+import { PHOTOS } from '../data/photos';
 import { BadgeCheck, BatteryCharging, Clock, MapPin } from 'lucide-react';
 
 export const AboutSection: React.FC = () => {
@@ -69,8 +70,8 @@ export const AboutSection: React.FC = () => {
           <div className="lg:col-span-6">
             <div className="relative rounded-none overflow-hidden border-2 border-white shadow-[6px_6px_0px_0px_#b83a24] bg-stone-900">
               <img
-                src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=1000&q=80"
-                alt="FEMA Events certified production crew rigging LED screens, sound and lighting for an event in Kenya"
+                src={PHOTOS.ballroom}
+                alt="FEMA Events crew installing an LED screen wall and stage decks in a hotel ballroom"
                 decoding="async"
                 className="w-full h-full object-cover min-h-[420px]"
               />

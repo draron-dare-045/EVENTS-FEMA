@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { ArrowRight, Sparkles, ShieldCheck, MessageSquare, PhoneCall, Layers, Calendar } from 'lucide-react';
 import { PageView } from '../types';
+import { PHOTOS } from '../data/photos';
 
 interface HeroProps {
   onNavigateView: (view: PageView, sectionId?: string, equipmentSubpage?: string) => void;
@@ -8,10 +9,10 @@ interface HeroProps {
 }
 
 const HERO_IMAGES = [
-  'https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=1600&q=80',
-  'https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?auto=format&fit=crop&w=1600&q=80',
-  'https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&w=1600&q=80',
-  'https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?auto=format&fit=crop&w=1600&q=80'
+  PHOTOS.launch,
+  PHOTOS.expo,
+  PHOTOS.garden,
+  PHOTOS.ballroom
 ];
 
 interface StatCounterProps {
