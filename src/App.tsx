@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'motion/react';
+import { motion, MotionConfig } from 'motion/react';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import { Hero } from './components/Hero';
@@ -155,6 +155,7 @@ export default function App() {
   };
 
   return (
+    <MotionConfig reducedMotion="user">
     <div className="min-h-screen flex flex-col bg-[#FAF8F5] text-[#121212]">
       {/* Fixed Navigation Header */}
       <Navbar
@@ -205,7 +206,7 @@ export default function App() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
-              transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
               className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"
             >
               <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 border-b-2 border-stone-300 pb-8">
@@ -240,17 +241,17 @@ export default function App() {
                 {EQUIPMENT_DATA.map((eq, index) => (
                   <motion.div
                     key={eq.id}
-                    initial={{ opacity: 0, y: 28 }}
+                    initial={{ opacity: 0, y: 36 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-40px" }}
                     transition={{ 
-                      duration: 0.55, 
-                      delay: index * 0.08, 
+                      duration: 1.1,
+                      delay: (index % 3) * 0.14, 
                       ease: [0.22, 1, 0.36, 1] 
                     }}
-                    whileHover={{ y: -4, transition: { duration: 0.2 } }}
+                    whileHover={{ y: -4, transition: { duration: 0.35, ease: [0.22, 1, 0.36, 1] } }}
                     onClick={() => handleSelectEquipmentCategory(eq.id)}
-                    className="bg-white rounded-none p-7 border-2 border-[#121212] shadow-[6px_6px_0px_0px_#121212] hover:shadow-[8px_8px_0px_0px_#b83a24] transition-all duration-200 cursor-pointer group flex flex-col justify-between"
+                    className="bg-white rounded-none p-7 border-2 border-[#121212] shadow-[6px_6px_0px_0px_#121212] hover:shadow-[8px_8px_0px_0px_#b83a24] transition-[box-shadow] duration-500 ease-out cursor-pointer group flex flex-col justify-between"
                   >
                     <div>
                       <div className="w-12 h-12 rounded-none bg-stone-100 border-2 border-[#121212] flex items-center justify-center mb-5 group-hover:bg-[#121212] transition-colors shadow-[2px_2px_0px_0px_#b83a24]">
@@ -346,7 +347,7 @@ export default function App() {
             Overview catalog OR detailed equipment drilldown (specs, packages, photo showcase)
            ========================================================================= */}
         {activeView === 'equipment' && (
-          <div className="pt-20">
+          <div className="pt-20 view-enter">
             {selectedEquipmentSubpage ? (
               <EquipmentDetailPage
                 equipmentId={selectedEquipmentSubpage}
@@ -378,7 +379,7 @@ export default function App() {
             Overview catalog OR detailed occasion drilldown (blueprints, 3-tier packages, challenges solved)
            ========================================================================= */}
         {activeView === 'occasions' && (
-          <div className="pt-20">
+          <div className="pt-20 view-enter">
             {selectedOccasionSubpage ? (
               <OccasionDetailPage
                 occasionId={selectedOccasionSubpage}
@@ -406,7 +407,7 @@ export default function App() {
             High-stakes Case Studies + Client Trust Partners + Testimonials + Full Photo Gallery
            ========================================================================= */}
         {activeView === 'our-work' && (
-          <div className="pt-20">
+          <div className="pt-20 view-enter">
             <OurWorkSection
               onOpenQuote={handleOpenQuote}
             />
@@ -422,7 +423,7 @@ export default function App() {
             Company history, 4 engineering pillars, warehouse & lab facility, certified crew
            ========================================================================= */}
         {activeView === 'about' && (
-          <div className="pt-20">
+          <div className="pt-20 view-enter">
             <AboutSection />
             <QuoteSection
               initialService={selectedServiceForQuote}
@@ -476,5 +477,6 @@ export default function App() {
         </button>
       )}
     </div>
+    </MotionConfig>
   );
 }

@@ -19,9 +19,10 @@ interface StatCounterProps {
   suffix?: string;
   prefix?: string;
   duration?: number;
+  decimals?: number;
 }
 
-const StatCounter: React.FC<StatCounterProps> = ({ target, suffix = '', prefix = '', duration = 2000 }) => {
+const StatCounter: React.FC<StatCounterProps> = ({ target, suffix = '', prefix = '', duration = 2500, decimals = 0 }) => {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
@@ -31,8 +32,10 @@ const StatCounter: React.FC<StatCounterProps> = ({ target, suffix = '', prefix =
     const step = (timestamp: number) => {
       if (!startTimestamp) startTimestamp = timestamp;
       const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-      const easeOutProgress = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
-      setCount(Math.floor(easeOutProgress * target));
+      // Linear pacing: every number stays on screen for the same amount of time,
+      // so there is no long wait on the last step.
+      const factor = Math.pow(10, decimals);
+      setCount(Math.round(progress * target * factor) / factor);
 
       if (progress < 1) {
         animationFrameId = window.requestAnimationFrame(step);
@@ -41,12 +44,12 @@ const StatCounter: React.FC<StatCounterProps> = ({ target, suffix = '', prefix =
 
     animationFrameId = window.requestAnimationFrame(step);
     return () => window.cancelAnimationFrame(animationFrameId);
-  }, [target, duration]);
+  }, [target, duration, decimals]);
 
   return (
     <span>
       {prefix}
-      {count}
+      {decimals > 0 && count < target ? count.toFixed(decimals) : count}
       {suffix}
     </span>
   );
@@ -54,6 +57,14 @@ const StatCounter: React.FC<StatCounterProps> = ({ target, suffix = '', prefix =
 
 export const Hero: React.FC<HeroProps> = ({ onNavigateView, onOpenQuote }) => {
   const [slideIndex, setSlideIndex] = useState(0);
+
+  // Preload every hero slide so the cross-fade never shows a half-loaded image
+  useEffect(() => {
+    HERO_IMAGES.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+    });
+  }, []);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -133,7 +144,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigateView, onOpenQuote }) => {
 
           <div className="text-center">
             <div className="font-serif text-lg sm:text-2xl font-black text-white flex items-baseline justify-center">
-              <StatCounter target={4} suffix="k" />
+              <StatCounter target={4} suffix="k" decimals={1} />
             </div>
             <div className="text-stone-200 text-[10px] sm:text-[11px] uppercase tracking-wider font-bold mt-1">4k Custom LEDs</div>
             <div className="text-stone-400 text-[10px] mt-0.5">P2.6 &amp; P3 panels</div>

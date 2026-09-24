@@ -1,4 +1,5 @@
 import React from 'react';
+import { FadeImage } from './FadeImage';
 import { motion } from 'motion/react';
 import { 
   Monitor, 
@@ -121,19 +122,16 @@ export const EquipmentSection: React.FC<EquipmentSectionProps> = ({
           <motion.div
             key={item.id}
             id={`card-${item.id}`}
-            initial={{ opacity: 0, y: 16 }}
+            initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-40px" }}
-            transition={{ 
-              duration: 0.3, 
-              delay: index * 0.05 
-            }}
+            transition={{ duration: 1.1, delay: (index % 2) * 0.18, ease: [0.22, 1, 0.36, 1] }}
             onClick={() => onSelectSubpage?.(item.id)}
-            className="bg-white rounded-none border-2 border-[#121212] shadow-[6px_6px_0px_0px_#121212] hover:shadow-[6px_6px_0px_0px_#b83a24] hover:border-[#b83a24] transition-all overflow-hidden cursor-pointer group flex flex-col justify-between"
+            className="bg-white rounded-none border-2 border-[#121212] shadow-[6px_6px_0px_0px_#121212] hover:shadow-[6px_6px_0px_0px_#b83a24] hover:border-[#b83a24] transition-[box-shadow,border-color] duration-500 ease-out overflow-hidden cursor-pointer group flex flex-col justify-between"
           >
             {/* Top Gear Image Banner */}
             <div className="relative h-52 sm:h-60 w-full overflow-hidden bg-stone-900 border-b-2 border-[#121212]">
-              <img
+              <FadeImage
                 src={item.image}
                 alt={`${item.title} for hire in Nairobi, Kenya - FEMA Events`}
                 loading="lazy"

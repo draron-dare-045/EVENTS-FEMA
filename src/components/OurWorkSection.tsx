@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { FadeImage } from './FadeImage';
 import { 
   Building, 
   Clock, 
@@ -88,7 +89,7 @@ export const OurWorkSection: React.FC<OurWorkSectionProps> = ({ onOpenQuote }) =
             {/* Left Image */}
             <div className="lg:col-span-6">
               <div className="relative rounded-none overflow-hidden h-80 sm:h-96 lg:h-[480px] border-2 border-[#121212] shadow-[4px_4px_0px_0px_#121212] bg-stone-900">
-                <img
+                <FadeImage
                   src={activeCaseStudy.image}
                   alt={`${activeCaseStudy.title} at ${activeCaseStudy.venue} - event production case study by FEMA Events`}
                   loading="lazy"
@@ -217,7 +218,7 @@ export const OurWorkSection: React.FC<OurWorkSectionProps> = ({ onOpenQuote }) =
                 key={photo.id}
                 className="group relative rounded-none overflow-hidden h-64 border-2 border-[#121212] shadow-[4px_4px_0px_0px_#121212] bg-stone-900"
               >
-                <img
+                <FadeImage
                   src={photo.image}
                   alt={`${photo.title} - ${photo.category} for events in Kenya by FEMA Events`}
                   loading="lazy"

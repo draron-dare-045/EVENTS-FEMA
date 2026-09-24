@@ -1,4 +1,5 @@
 import React from 'react';
+import { FadeImage } from './FadeImage';
 import { 
   ArrowLeft, 
   ChevronRight, 
@@ -264,7 +265,7 @@ export const OccasionDetailPage: React.FC<OccasionDetailPageProps> = ({
                 key={gIdx}
                 className="group relative rounded-none overflow-hidden h-60 sm:h-72 border-2 border-[#121212] shadow-[4px_4px_0px_0px_#121212] bg-stone-900"
               >
-                <img
+                <FadeImage
                   src={img.url}
                   alt={`${img.caption} - ${occasion.title} in Kenya, FEMA Events`}
                   loading="lazy"

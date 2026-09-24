@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { FadeImage } from './FadeImage';
 import { 
   Building2, 
   Mic2, 
@@ -160,7 +161,7 @@ export const OccasionsSection: React.FC<OccasionsSectionProps> = ({
             {/* Right Photo */}
             <div className="lg:col-span-5 order-1 lg:order-2">
               <div className="relative rounded-none overflow-hidden h-56 sm:h-72 lg:h-[380px] border-2 border-white shadow-[4px_4px_0px_0px_#121212] group bg-stone-900">
-                <img
+                <FadeImage
                   src={selectedOccasion.image}
                   alt={`${selectedOccasion.title} - live production setup by FEMA Events, Kenya`}
                   loading="lazy"

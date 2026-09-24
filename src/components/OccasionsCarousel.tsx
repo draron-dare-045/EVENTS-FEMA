@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { FadeImage } from './FadeImage';
 import { motion, AnimatePresence } from 'motion/react';
 import { 
   ChevronLeft, 
@@ -147,10 +148,10 @@ export const OccasionsCarousel: React.FC<OccasionsCarouselProps> = ({
           <AnimatePresence mode="wait">
             <motion.div
               key={activeOccasion.id}
-              initial={{ opacity: 0, x: 15 }}
+              initial={{ opacity: 0, x: 24 }}
               animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -15 }}
-              transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+              exit={{ opacity: 0, x: -24 }}
+              transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
               className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-10 p-5 sm:p-8 lg:p-10 items-center"
             >
               {/* Left Column: text, highlights & recommended kit */}
@@ -211,7 +212,7 @@ export const OccasionsCarousel: React.FC<OccasionsCarouselProps> = ({
               {/* Right Column: Live picture for the event */}
               <div className="lg:col-span-5 order-1 lg:order-2">
                 <div className="relative rounded-none overflow-hidden h-52 sm:h-72 lg:h-[380px] border-2 border-white shadow-[6px_6px_0px_0px_#b83a24] group bg-black">
-                  <img
+                  <FadeImage
                     src={activeOccasion.image}
                     alt={`${activeOccasion.title} - event sound, LED screens and staging in Kenya`}
                     loading="lazy"
