@@ -94,7 +94,7 @@ export const EQUIPMENT_DATA: EquipmentItem[] = [
         name: 'Stadium / Outdoor Crusade Jumbotron',
         tier: 'Stadium / Enterprise',
         idealFor: 'Open-air crusades, political rallies, music festivals (5,000–50,000 attendees)',
-        includedItems: ['Dual 6×4m Outdoor P4.8 High-Nit Screens', 'Heavy-duty Flown Truss Rigging', 'Multi-camera wireless link', 'Master video engineer on-site']
+        includedItems: ['Dual 6×4m Outdoor P3 High-Nit Screens', 'Heavy-duty Flown Truss Rigging', 'Multi-camera wireless link', 'Master video engineer on-site']
       }
     ]
   },
