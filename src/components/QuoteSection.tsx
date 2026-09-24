@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Send, Check, MessageSquare, Phone } from 'lucide-react';
+import { ThemedDatePicker } from './ThemedDatePicker';
 import { MobileSelect } from './MobileSelect';
 
 interface QuoteSectionProps {
@@ -140,14 +141,7 @@ ${notes ? `- Additional Requirements: ${notes}` : ''}`;
                 <label htmlFor="eventDate" className="block text-xs font-bold uppercase tracking-wider text-stone-900 mb-2">
                   Event Date
                 </label>
-                <input
-                  id="eventDate"
-                  type="date"
-                  required
-                  value={eventDate}
-                  onChange={(e) => setEventDate(e.target.value)}
-                  className="w-full bg-[#FAF8F5] border-2 border-[#121212] rounded-none px-4 py-3 text-sm focus:outline-none focus:border-[#b83a24] text-stone-900 font-medium"
-                />
+                <ThemedDatePicker id="eventDate" value={eventDate} onChange={setEventDate} />
               </div>
 
               <div>
