@@ -43,7 +43,7 @@ const useIsDesktop = () => {
 const fieldClass =
   'w-full appearance-none bg-[#FAF8F5] border-2 border-[#121212] rounded-none px-4 py-3 pr-10 text-sm focus:outline-none focus:border-[#b83a24] text-stone-900 font-medium cursor-pointer relative flex items-center text-left';
 
-/** The calendar itself: black panel with a red lining. */
+/** The calendar itself: black panel with a red lining. Past dates are disabled. */
 const CalendarPanel: React.FC<{
   value: string;
   onSelect: (value: string) => void;
@@ -52,12 +52,21 @@ const CalendarPanel: React.FC<{
   const selected = parseISO(value);
   const now = new Date();
   const today = { y: now.getFullYear(), m: now.getMonth(), d: now.getDate() };
-  const [view, setView] = useState({ y: (selected ?? today).y, m: (selected ?? today).m });
+  const todayISO = toISO(today.y, today.m, today.d);
+
+  // Open on the selected month, but never on a month that is already in the past.
+  const initial = selected && toISO(selected.y, selected.m, selected.d) >= todayISO ? selected : today;
+  const [view, setView] = useState({ y: initial.y, m: initial.m });
+
+  const isCurrentMonth = view.y === today.y && view.m === today.m;
 
   const shift = (delta: number) =>
     setView((v) => {
       const t = v.m + delta;
-      return { y: v.y + Math.floor(t / 12), m: ((t % 12) + 12) % 12 };
+      const next = { y: v.y + Math.floor(t / 12), m: ((t % 12) + 12) % 12 };
+      // Block navigating before the current month.
+      if (next.y < today.y || (next.y === today.y && next.m < today.m)) return v;
+      return next;
     });
 
   const leading = new Date(view.y, view.m, 1).getDay();
@@ -68,7 +77,7 @@ const CalendarPanel: React.FC<{
   ];
 
   const navBtn =
-    'p-1.5 border border-stone-700 text-white hover:border-[#b83a24] hover:text-[#b83a24] transition-colors cursor-pointer';
+    'p-1.5 border border-stone-700 text-white hover:border-[#b83a24] hover:text-[#b83a24] transition-colors cursor-pointer disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:border-stone-700 disabled:hover:text-white';
 
   return (
     <div
@@ -77,7 +86,13 @@ const CalendarPanel: React.FC<{
       className={`bg-[#121212] border-2 border-[#b83a24] text-white ${className}`}
     >
       <div className="flex items-center justify-between px-3 py-3 border-b-2 border-[#b83a24]">
-        <button type="button" onClick={() => shift(-1)} aria-label="Previous month" className={navBtn}>
+        <button
+          type="button"
+          onClick={() => shift(-1)}
+          disabled={isCurrentMonth}
+          aria-label="Previous month"
+          className={navBtn}
+        >
           <ChevronLeft className="w-4 h-4" />
         </button>
         <div className="text-xs font-bold uppercase tracking-widest" aria-live="polite">
@@ -99,21 +114,26 @@ const CalendarPanel: React.FC<{
         <div className="grid grid-cols-7 gap-1">
           {cells.map((day, i) => {
             if (day === null) return <div key={`blank-${i}`} />;
+            const iso = toISO(view.y, view.m, day);
+            const isPast = iso < todayISO;
             const isSelected = !!selected && selected.y === view.y && selected.m === view.m && selected.d === day;
             const isToday = today.y === view.y && today.m === view.m && today.d === day;
             return (
               <button
                 type="button"
                 key={day}
-                onClick={() => onSelect(toISO(view.y, view.m, day))}
-                aria-label={`${day} ${MONTHS[view.m]} ${view.y}`}
+                disabled={isPast}
+                onClick={() => onSelect(iso)}
+                aria-label={`${day} ${MONTHS[view.m]} ${view.y}${isPast ? ' (unavailable)' : ''}`}
                 aria-pressed={isSelected}
-                className={`h-9 text-xs font-bold border transition-colors cursor-pointer ${
-                  isSelected
-                    ? 'bg-[#b83a24] border-white text-white'
+                className={`h-9 text-xs font-bold border transition-colors ${
+                  isPast
+                    ? 'border-transparent text-stone-600 line-through opacity-40 cursor-not-allowed'
+                    : isSelected
+                    ? 'bg-[#b83a24] border-white text-white cursor-pointer'
                     : isToday
-                    ? 'border-[#b83a24] text-[#b83a24] hover:bg-[#b83a24] hover:text-white'
-                    : 'border-transparent text-stone-200 hover:border-[#b83a24] hover:bg-stone-900'
+                    ? 'border-[#b83a24] text-[#b83a24] hover:bg-[#b83a24] hover:text-white cursor-pointer'
+                    : 'border-transparent text-stone-200 hover:border-[#b83a24] hover:bg-stone-900 cursor-pointer'
                 }`}
               >
                 {day}
@@ -129,7 +149,7 @@ const CalendarPanel: React.FC<{
         </button>
         <button
           type="button"
-          onClick={() => onSelect(toISO(today.y, today.m, today.d))}
+          onClick={() => onSelect(todayISO)}
           className="text-[#b83a24] hover:text-white transition-colors cursor-pointer"
         >
           Today
@@ -143,6 +163,7 @@ const CalendarPanel: React.FC<{
  * Date field with a themed calendar.
  * Desktop: popover under the field. Mobile: bottom sheet.
  * Keeps the same "YYYY-MM-DD" value the native date input used.
+ * Only today and future dates can be picked.
  */
 export const ThemedDatePicker: React.FC<ThemedDatePickerProps> = ({
   id,

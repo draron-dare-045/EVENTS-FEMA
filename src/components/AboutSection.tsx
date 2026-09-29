@@ -1,100 +1,116 @@
 import React from 'react';
 import { PHOTOS } from '../data/photos';
-import { BadgeCheck, BatteryCharging, Clock, MapPin } from 'lucide-react';
+
+const STATS = [
+  { value: '10+', label: 'Years in live production' },
+  { value: '100%', label: 'In-house crew' },
+  { value: '24/7', label: 'Technicians on every show' }
+];
+
+const PILLARS = [
+  {
+    title: 'Full In-House Crew',
+    body: 'Certified sound engineers, lighting designers and riggers on our own payroll. Never outsourced.'
+  },
+  {
+    title: '100% Power Redundancy',
+    body: 'Dual silent generators with automatic transfer, so your show never loses power.'
+  },
+  {
+    title: 'Live Monitoring',
+    body: 'A dedicated technician at stage and FOH from soundcheck to final curtain.'
+  },
+  {
+    title: 'Nationwide Logistics',
+    body: 'Our own fleet delivers to Mombasa, Kisumu, Nakuru and everywhere in between.'
+  }
+];
 
 export const AboutSection: React.FC = () => {
   return (
-    <section id="about-section" className="py-24 bg-[#121212] text-white border-t-2 border-stone-800 scroll-mt-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-          {/* Left Narrative */}
-          <div className="lg:col-span-6">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-none bg-black border-2 border-stone-700 text-[#b83a24] text-[11px] sm:text-xs font-bold uppercase tracking-widest mb-3 shadow-[2px_2px_0px_0px_#b83a24]">
-              Why FEMA Events Kenya
-            </div>
-            <h1 className="font-serif text-3xl sm:text-5xl font-bold leading-tight mb-6">
-              Uncompromising Technical Rigor &amp; Acoustic Craft.
+    <section id="about-section" className="py-20 sm:py-28 bg-[#FAF8F5] text-[#121212] scroll-mt-20">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        {/* Intro: headline left, story right */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-end mb-16 sm:mb-24">
+          <div className="lg:col-span-7">
+            <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#b83a24] mb-4 border-b-2 border-[#b83a24] pb-1">
+              About FEMA Events
+            </span>
+            <h1 className="font-serif text-4xl sm:text-6xl font-bold leading-[1.08]">
+              Precision you can hear, see and rely on.
             </h1>
-            <p className="text-stone-300 text-sm leading-relaxed mb-6 font-normal">
-              FEMA Events is an elite event production house based in Nairobi, providing comprehensive Audio Visual, stage lighting, modular rigging, and backup power solutions for churches, corporates, and public institutions across Kenya. Every single rig is engineered and operated on-site by our own in-house crew — never outsourced or brokered out.
-            </p>
-            <p className="text-stone-300 text-sm leading-relaxed mb-8 font-normal">
-              From the initial site survey and acoustic measurement to cable routing, live FOH mixing, and swift strike, our team maintains flawless execution standards.
-            </p>
+          </div>
+          <p className="lg:col-span-5 text-base sm:text-lg text-stone-700 leading-relaxed">
+            We are an event production house in Nairobi, providing sound, LED screens, lighting,
+            staging and backup power to churches, corporates and institutions across Kenya. Every rig
+            is built and run on-site by our own crew.
+          </p>
+        </div>
 
-            {/* Core 4 Pillars */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-              <div className="bg-stone-900 p-5 rounded-none border-2 border-stone-700 shadow-[4px_4px_0px_0px_#000000]">
-                <div className="w-10 h-10 rounded-none bg-black border border-stone-700 flex items-center justify-center mb-3">
-                  <BadgeCheck className="w-5 h-5 text-[#b83a24]" />
-                </div>
-                <h2 className="font-serif font-bold text-sm text-white mb-1">Full In-House Crew</h2>
-                <p className="text-xs text-stone-300 leading-snug font-normal">
-                  Certified sound engineers, lighting designers, and riggers on our direct payroll.
-                </p>
-              </div>
+        {/* Image banner */}
+        <div className="relative overflow-hidden border-2 border-[#121212] shadow-[8px_8px_0px_0px_#b83a24] bg-stone-900 mb-16 sm:mb-24">
+          <img
+            src={PHOTOS.ballroom}
+            alt="FEMA Events crew installing an LED screen wall and stage decks in a hotel ballroom"
+            decoding="async"
+            className="w-full h-full object-cover min-h-[280px] sm:min-h-[420px]"
+          />
+          <div className="absolute inset-0 bg-[#121212] opacity-40"></div>
+          <div className="absolute inset-x-0 bottom-0 p-6 sm:p-10 text-white">
+            <span className="text-xs font-bold uppercase tracking-widest text-[#b83a24] bg-black px-2.5 py-1 border border-white/20">
+              Engineered in Nairobi
+            </span>
+            <h2 className="font-serif text-2xl sm:text-4xl font-bold max-w-2xl leading-tight mt-3">
+              Trusted by Kenya's foremost producers, ministries and organizations.
+            </h2>
+          </div>
+        </div>
 
-              <div className="bg-stone-900 p-5 rounded-none border-2 border-stone-700 shadow-[4px_4px_0px_0px_#000000]">
-                <div className="w-10 h-10 rounded-none bg-black border border-stone-700 flex items-center justify-center mb-3">
-                  <BatteryCharging className="w-5 h-5 text-[#b83a24]" />
-                </div>
-                <h2 className="font-serif font-bold text-sm text-white mb-1">100% Power Redundancy</h2>
-                <p className="text-xs text-stone-300 leading-snug font-normal">
-                  Synchronized dual silent generators with sub-second automatic transfer switches.
-                </p>
-              </div>
-
-              <div className="bg-stone-900 p-5 rounded-none border-2 border-stone-700 shadow-[4px_4px_0px_0px_#000000]">
-                <div className="w-10 h-10 rounded-none bg-black border border-stone-700 flex items-center justify-center mb-3">
-                  <Clock className="w-5 h-5 text-[#b83a24]" />
-                </div>
-                <h2 className="font-serif font-bold text-sm text-white mb-1">24/7 Live Monitoring</h2>
-                <p className="text-xs text-stone-300 leading-snug font-normal">
-                  Dedicated stage and FOH technicians present from soundcheck through final curtain.
-                </p>
-              </div>
-
-              <div className="bg-stone-900 p-5 rounded-none border-2 border-stone-700 shadow-[4px_4px_0px_0px_#000000]">
-                <div className="w-10 h-10 rounded-none bg-black border border-stone-700 flex items-center justify-center mb-3">
-                  <MapPin className="w-5 h-5 text-[#b83a24]" />
-                </div>
-                <h2 className="font-serif font-bold text-sm text-white mb-1">Nationwide Kenya Logistics</h2>
-                <p className="text-xs text-stone-300 leading-snug font-normal">
-                  Fully equipped heavy logistics fleet serving Mombasa, Kisumu, Nakuru, and all regions.
-                </p>
-              </div>
+        {/* Stats strip */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 border-y-2 border-[#121212] mb-16 sm:mb-24">
+          {STATS.map((stat, i) => (
+            <div
+              key={stat.label}
+              className={`py-8 sm:py-10 text-center ${
+                i > 0 ? 'border-t-2 sm:border-t-0 sm:border-l-2 border-[#121212]' : ''
+              }`}
+            >
+              <div className="font-serif text-4xl sm:text-5xl font-bold text-[#b83a24]">{stat.value}</div>
+              <div className="mt-2 text-xs font-bold uppercase tracking-widest text-stone-600">{stat.label}</div>
             </div>
+          ))}
+        </div>
+
+        {/* How we work: numbered rows instead of four boxed cards */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
+          <div className="lg:col-span-4">
+            <h2 className="font-serif text-3xl sm:text-4xl font-bold leading-tight mb-4">
+              How we keep every show flawless.
+            </h2>
+            <p className="text-stone-700 leading-relaxed">
+              From site survey to strike, the same team owns the work.
+            </p>
           </div>
 
-          {/* Right Visual Image Showcase */}
-          <div className="lg:col-span-6">
-            <div className="relative rounded-none overflow-hidden border-2 border-white shadow-[6px_6px_0px_0px_#b83a24] bg-stone-900">
-              <img
-                src={PHOTOS.ballroom}
-                alt="FEMA Events crew installing an LED screen wall and stage decks in a hotel ballroom"
-                decoding="async"
-                className="w-full h-full object-cover min-h-[420px]"
-              />
-              <div className="absolute inset-0 bg-[#121212] opacity-40"></div>
-              <div className="absolute bottom-8 left-8 right-8 text-white">
-                <div className="flex items-center gap-2 mb-2">
-                  <span className="w-2.5 h-2.5 bg-[#b83a24]"></span>
-                  <span className="text-xs font-bold uppercase tracking-widest text-[#b83a24] bg-black px-2 py-0.5 border border-white/20">
-                    Engineered in Nairobi
-                  </span>
+          <ol className="lg:col-span-8 border-t-2 border-[#121212]">
+            {PILLARS.map((pillar, i) => (
+              <li
+                key={pillar.title}
+                className="grid grid-cols-[3rem_1fr] sm:grid-cols-[4rem_1fr] gap-4 py-7 border-b-2 border-[#121212]"
+              >
+                <span className="font-serif text-2xl sm:text-3xl font-bold text-[#b83a24]">
+                  {String(i + 1).padStart(2, '0')}
+                </span>
+                <div>
+                  <h3 className="font-serif text-lg sm:text-xl font-bold mb-1.5">{pillar.title}</h3>
+                  <p className="text-sm sm:text-base text-stone-700 leading-relaxed">{pillar.body}</p>
                 </div>
-                <h3 className="font-serif text-2xl font-bold">
-                  Over 10 Years of Live Production Excellence
-                </h3>
-                <p className="text-xs text-stone-200 mt-1 font-medium">
-                  Trusted by Kenya's foremost event producers, church ministries, and global organizations.
-                </p>
-              </div>
-            </div>
-          </div>
+              </li>
+            ))}
+          </ol>
         </div>
       </div>
     </section>
   );
 };
-

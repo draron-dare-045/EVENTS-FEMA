@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Send, Check, MessageSquare, Phone } from 'lucide-react';
+import React, { useRef, useState } from 'react';
+import { Send, Check, MessageSquare, Phone, Loader2, AlertCircle } from 'lucide-react';
 import { ThemedDatePicker } from './ThemedDatePicker';
 import { MobileSelect } from './MobileSelect';
 
@@ -8,48 +8,71 @@ interface QuoteSectionProps {
   initialOccasion?: string;
 }
 
+type SubmitStatus = 'idle' | 'sending' | 'success' | 'error';
+
+const WEB3FORMS_ENDPOINT = 'https://api.web3forms.com/submit';
+// Web3Forms access keys are designed to be public (they only allow sending TO the
+// email the key was created with), so reading it from a Vite env var is safe.
+const WEB3FORMS_KEY: string = (import.meta as any).env?.VITE_WEB3FORMS_KEY ?? '';
+const WHATSAPP_NUMBER = '254722541214';
+const REQUEST_TIMEOUT_MS = 15000;
+
+const eventTypes = [
+  { id: 'conference', label: 'Conference / Summit' },
+  { id: 'church', label: 'Church Crusade' },
+  { id: 'launch', label: 'Brand / Product Launch' },
+  { id: 'rally', label: 'Public Rally' },
+  { id: 'funeral', label: 'Memorial Service' }
+];
+
+// Occasion pages send keys like "churches"; map them to the dropdown values
+const occasionToEventType: Record<string, string> = {
+  churches: 'church',
+  conferences: 'conference',
+  launches: 'launch',
+  rallies: 'rally',
+  funerals: 'funeral'
+};
+
+const availableServices = [
+  'LED Screens & Video Displays',
+  'Stage & Mood Lighting',
+  'Professional Sound & Audio',
+  'Stages & Modular Platforms',
+  'Pyrotechnics & Special Effects',
+  'Generator & Power Rentals'
+];
+
+const todayISO = () => {
+  const n = new Date();
+  return `${n.getFullYear()}-${String(n.getMonth() + 1).padStart(2, '0')}-${String(n.getDate()).padStart(2, '0')}`;
+};
+
 export const QuoteSection: React.FC<QuoteSectionProps> = ({
   initialService = '',
   initialOccasion = ''
 }) => {
-  const eventTypes = [
-    { id: 'conference', label: 'Conference / Summit' },
-    { id: 'church', label: 'Church Crusade' },
-    { id: 'launch', label: 'Brand / Product Launch' },
-    { id: 'rally', label: 'Public Rally' },
-    { id: 'funeral', label: 'Memorial Service' }
-  ];
+  const defaultEventType = eventTypes.some((t) => t.id === initialOccasion)
+    ? initialOccasion
+    : occasionToEventType[initialOccasion] || 'conference';
+  const defaultServices = initialService
+    ? [initialService]
+    : ['LED Screens & Video Displays', 'Professional Sound & Audio'];
 
-  // Occasion pages send keys like "churches"; map them to the dropdown values
-  const occasionToEventType: Record<string, string> = {
-    churches: 'church',
-    conferences: 'conference',
-    launches: 'launch',
-    rallies: 'rally',
-    funerals: 'funeral'
-  };
-
-  const [eventType, setEventType] = useState<string>(
-    eventTypes.some((t) => t.id === initialOccasion) ? initialOccasion : (occasionToEventType[initialOccasion] || 'conference')
-  );
+  const [eventType, setEventType] = useState<string>(defaultEventType);
   const [eventDate, setEventDate] = useState<string>('');
   const [venueLocation, setVenueLocation] = useState<string>('Nairobi');
   const [contactName, setContactName] = useState<string>('');
   const [contactPhone, setContactPhone] = useState<string>('');
-  const [selectedServices, setSelectedServices] = useState<string[]>(
-    initialService ? [initialService] : ['LED Screens & Video Displays', 'Professional Sound & Audio']
-  );
+  const [selectedServices, setSelectedServices] = useState<string[]>(defaultServices);
   const [notes, setNotes] = useState<string>('');
-  const [submitted, setSubmitted] = useState<boolean>(false);
+  const [status, setStatus] = useState<SubmitStatus>('idle');
+  const [errorMessage, setErrorMessage] = useState<string>('');
 
-  const availableServices = [
-    'LED Screens & Video Displays',
-    'Stage & Mood Lighting',
-    'Professional Sound & Audio',
-    'Stages & Modular Platforms',
-    'Pyrotechnics & Special Effects',
-    'Generator & Power Rentals'
-  ];
+  // Honeypot: real users never see or tick this. Bots usually do.
+  const honeypotRef = useRef<HTMLInputElement | null>(null);
+
+  const eventTypeLabel = eventTypes.find((t) => t.id === eventType)?.label || eventType;
 
   const handleToggleService = (svc: string) => {
     setSelectedServices((prev) =>
@@ -57,24 +80,115 @@ export const QuoteSection: React.FC<QuoteSectionProps> = ({
     );
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const resetForm = () => {
+    setEventType(defaultEventType);
+    setEventDate('');
+    setVenueLocation('Nairobi');
+    setContactName('');
+    setContactPhone('');
+    setSelectedServices(defaultServices);
+    setNotes('');
+    setErrorMessage('');
+    setStatus('idle');
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    if (status === 'sending') return; // block double submits
+
+    // Bot caught by honeypot: pretend success, send nothing.
+    if (honeypotRef.current?.checked) {
+      setStatus('success');
+      return;
+    }
+
+    // Client-side validation
+    if (selectedServices.length === 0) {
+      setErrorMessage('Please select at least one production discipline.');
+      setStatus('error');
+      return;
+    }
+    if (eventDate && eventDate < todayISO()) {
+      setErrorMessage('The event date cannot be in the past. Please pick today or a later date.');
+      setStatus('error');
+      return;
+    }
+    if (contactPhone.replace(/\D/g, '').length < 9) {
+      setErrorMessage('Please enter a valid phone number so our team can reach you.');
+      setStatus('error');
+      return;
+    }
+    if (!WEB3FORMS_KEY) {
+      setErrorMessage('Online requests are not configured yet. Please use WhatsApp or call 0722 541 214.');
+      setStatus('error');
+      return;
+    }
+
+    setStatus('sending');
+    setErrorMessage('');
+
+    const controller = new AbortController();
+    const timeout = window.setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS);
+
+    try {
+      const response = await fetch(WEB3FORMS_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_KEY,
+          subject: `New AV Quote Request: ${eventTypeLabel} (${contactName})`,
+          from_name: 'FEMA Events Website',
+          'Client Name': contactName,
+          'Client Phone': contactPhone,
+          'Event Type': eventTypeLabel,
+          'Event Date': eventDate || 'Not specified',
+          'Venue / County': venueLocation,
+          'Equipment Required': selectedServices.join(', '),
+          'Technical Notes': notes || 'None',
+          botcheck: ''
+        }),
+        signal: controller.signal
+      });
+
+      const data = await response.json().catch(() => null);
+
+      if (response.ok && data?.success) {
+        setStatus('success');
+      } else {
+        setErrorMessage(
+          data?.message
+            ? `We could not send your request (${data.message}). Please try again or use WhatsApp.`
+            : 'We could not send your request. Please try again or use WhatsApp.'
+        );
+        setStatus('error');
+      }
+    } catch (err) {
+      const timedOut = err instanceof DOMException && err.name === 'AbortError';
+      setErrorMessage(
+        timedOut
+          ? 'The request took too long. Check your connection and try again, or use WhatsApp.'
+          : 'Network problem. Check your connection and try again, or use WhatsApp.'
+      );
+      setStatus('error');
+    } finally {
+      window.clearTimeout(timeout);
+    }
   };
 
   const handleWhatsAppInstantQuote = () => {
     const message = `Hello FEMA Events Kenya,
 I would like to request an Audio Visual Quote:
-- Event Type: ${eventTypes.find((t) => t.id === eventType)?.label || eventType}
+- Event Type: ${eventTypeLabel}
 - Event Date: ${eventDate || 'TBD'}
 - Venue / Location: ${venueLocation}
 - Required Equipment: ${selectedServices.join(', ')}
 - Name / Contact: ${contactName || 'Client'} (${contactPhone || 'N/A'})
 ${notes ? `- Additional Requirements: ${notes}` : ''}`;
 
-    const encoded = encodeURIComponent(message);
-    window.open(`https://wa.me/254722541214?text=${encoded}`, '_blank');
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`, '_blank');
   };
+
+  const isSending = status === 'sending';
 
   return (
     <section id="quote-section" className="py-24 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-20">
@@ -92,16 +206,16 @@ ${notes ? `- Additional Requirements: ${notes}` : ''}`;
           </p>
         </div>
 
-        {submitted ? (
-          <div className="bg-stone-100 border-2 border-[#121212] rounded-none p-8 text-center shadow-[4px_4px_0px_0px_#121212]">
+        {status === 'success' ? (
+          <div className="bg-stone-100 border-2 border-[#121212] rounded-none p-8 text-center shadow-[4px_4px_0px_0px_#121212]" role="status">
             <div className="w-14 h-14 rounded-none bg-black text-white border-2 border-black flex items-center justify-center mx-auto mb-4 shadow-[2px_2px_0px_0px_#b83a24]">
               <Check className="w-8 h-8 text-[#b83a24]" />
             </div>
             <h3 className="font-serif text-2xl font-bold text-stone-900 mb-2">
-              Quote Request Submitted Successfully!
+              Quote Request Sent!
             </h3>
             <p className="text-stone-700 text-sm max-w-md mx-auto mb-6 font-normal">
-              Thank you, <strong className="text-stone-900">{contactName || 'Valued Client'}</strong>. Our production manager has received your specs and will call you on <strong className="text-stone-900">{contactPhone || 'your number'}</strong> with a detailed proposal.
+              Thank you, <strong className="text-stone-900">{contactName || 'Valued Client'}</strong>. Your request has been sent to our production team, who will contact you on <strong className="text-stone-900">{contactPhone || 'your number'}</strong> with a proposal. Need it faster? Message us on WhatsApp.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4">
               <button
@@ -112,7 +226,7 @@ ${notes ? `- Additional Requirements: ${notes}` : ''}`;
                 <span>Chat Instantly on WhatsApp</span>
               </button>
               <button
-                onClick={() => setSubmitted(false)}
+                onClick={resetForm}
                 className="text-stone-800 hover:text-black text-xs font-bold uppercase tracking-wider px-6 py-3 border-2 border-stone-400 hover:border-black rounded-none cursor-pointer"
               >
                 Submit Another Request
@@ -121,6 +235,17 @@ ${notes ? `- Additional Requirements: ${notes}` : ''}`;
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="space-y-8">
+            {/* Honeypot (hidden from humans) */}
+            <input
+              ref={honeypotRef}
+              type="checkbox"
+              name="botcheck"
+              tabIndex={-1}
+              autoComplete="off"
+              aria-hidden="true"
+              className="hidden"
+            />
+
             {/* Step 1: Event Context */}
             <div>
               <label htmlFor="eventType" className="block text-xs font-bold uppercase tracking-wider text-stone-900 mb-2">
@@ -173,6 +298,7 @@ ${notes ? `- Additional Requirements: ${notes}` : ''}`;
                       type="button"
                       key={svc}
                       onClick={() => handleToggleService(svc)}
+                      aria-pressed={isChecked}
                       className={`p-3.5 rounded-none border-2 text-left text-xs font-bold uppercase tracking-wider flex items-center justify-between transition-all cursor-pointer ${
                         isChecked
                           ? 'bg-black text-white border-black shadow-[3px_3px_0px_0px_#b83a24]'
@@ -238,15 +364,37 @@ ${notes ? `- Additional Requirements: ${notes}` : ''}`;
               ></textarea>
             </div>
 
+            {/* Error banner */}
+            {status === 'error' && errorMessage && (
+              <div
+                role="alert"
+                className="flex items-start gap-3 bg-red-50 border-2 border-[#b83a24] rounded-none p-4 shadow-[3px_3px_0px_0px_#121212]"
+              >
+                <AlertCircle className="w-5 h-5 text-[#b83a24] shrink-0 mt-0.5" />
+                <p className="text-sm text-stone-900 font-medium">{errorMessage}</p>
+              </div>
+            )}
+
             {/* Actions */}
             <div className="flex flex-col sm:flex-row items-center gap-4 pt-2">
               <button
                 type="submit"
                 id="submit-quote-form-btn"
-                className="w-full sm:w-2/3 bg-[#b83a24] hover:bg-[#9b2e1b] text-white font-bold py-4 rounded-none text-xs uppercase tracking-widest border-2 border-black shadow-[4px_4px_0px_0px_#121212] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all flex items-center justify-center gap-2 cursor-pointer"
+                disabled={isSending}
+                aria-busy={isSending}
+                className="w-full sm:w-2/3 bg-[#b83a24] hover:bg-[#9b2e1b] text-white font-bold py-4 rounded-none text-xs uppercase tracking-widest border-2 border-black shadow-[4px_4px_0px_0px_#121212] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all flex items-center justify-center gap-2 cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed"
               >
-                <Send className="w-4 h-4" />
-                <span>Submit Equipment Booking Request</span>
+                {isSending ? (
+                  <>
+                    <Loader2 className="w-4 h-4 animate-spin" />
+                    <span>Sending Request...</span>
+                  </>
+                ) : (
+                  <>
+                    <Send className="w-4 h-4" />
+                    <span>Submit Equipment Booking Request</span>
+                  </>
+                )}
               </button>
 
               <button
@@ -276,4 +424,3 @@ ${notes ? `- Additional Requirements: ${notes}` : ''}`;
     </section>
   );
 };
-
