@@ -204,8 +204,8 @@ export const Footer: React.FC<FooterProps> = ({
             </li>
             <li className="flex items-center gap-2.5">
               <Mail className="w-4 h-4 text-[#b83a24] shrink-0" />
-              <a href="mailto:Info@femaevents.com" aria-label="Info@femaevents.com - email FEMA Events" className="hover:text-white transition-colors">
-                Info@femaevents.com
+              <a href="mailto:info@femaevents.com" aria-label="info@femaevents.com - email FEMA Events" className="hover:text-white transition-colors">
+                info@femaevents.com
               </a>
             </li>
           </ul>

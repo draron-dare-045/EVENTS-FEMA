@@ -1,5 +1,5 @@
 import { EquipmentItem, OccasionItem, CaseStudy, GalleryPhoto } from '../types';
-import { PHOTOS } from './photos';
+import { WORK } from './photos';
 
 export const EQUIPMENT_DATA: EquipmentItem[] = [
   {
@@ -10,19 +10,19 @@ export const EQUIPMENT_DATA: EquipmentItem[] = [
     shortDesc: 'High-definition indoor modular LED walls, daylight-visible outdoor panels, stage backdrops, and video switchers.',
     longDesc: 'Clear, ultra-bright visual screens sized for any room or outdoor venue — from an intimate corporate backdrop to a daylight-visible wall facing a crowd of thousands.',
     iconName: 'Monitor',
-    image: PHOTOS.launch,
+    image: WORK.healthSummit,
     showcaseImages: [
       {
-        url: PHOTOS.launch,
-        caption: 'Indoor Ultra-HD P2.6 Modular Main Stage Backdrop'
+        url: WORK.healthSummit,
+        caption: 'Indoor LED wall framing a national summit arena stage'
       },
       {
-        url: PHOTOS.garden,
-        caption: 'High-Nit Daylight Visible Outdoor Festival Delay Screen'
+        url: WORK.ledRigging,
+        caption: 'Modular LED cabinets rigged on scaffold, built and run by our own crew'
       },
       {
-        url: PHOTOS.ballroom,
-        caption: 'Dual Confidence Monitors & FOH Video Switching Desk'
+        url: WORK.femaBranded,
+        caption: 'Branded LED backdrop with crisp, high-contrast graphics'
       }
     ],
     features: [
@@ -107,19 +107,19 @@ export const EQUIPMENT_DATA: EquipmentItem[] = [
     shortDesc: 'Intelligent moving heads, warm stage washes, profile spots, and mood uplighting tailored for any venue.',
     longDesc: 'Atmospheric lighting programmed to match the exact emotional arc of your event, from subtle warm keynote illumination to high-energy moving-light shows.',
     iconName: 'Sparkles',
-    image: PHOTOS.expo,
+    image: WORK.galaTent,
     showcaseImages: [
       {
-        url: PHOTOS.expo,
-        caption: 'Concert Moving Head Beams with Hazer Atmospheric Beams'
+        url: WORK.galaTent,
+        caption: 'Purple uplighting, draped ceiling and fairy-light canopy for a gala dinner'
       },
       {
-        url: PHOTOS.launch,
-        caption: 'Architectural Perimeter Uplighting for Gala Reception'
+        url: WORK.churchLed,
+        caption: 'Saturated stage wash and LED backdrop for a worship night'
       },
       {
-        url: PHOTOS.ballroom,
-        caption: 'Warm Stage Wash & Profile Follow Spot for Keynotes'
+        url: WORK.churchStage,
+        caption: 'Architectural wall lighting and a starfield backdrop in a sanctuary'
       }
     ],
     features: [
@@ -204,19 +204,19 @@ export const EQUIPMENT_DATA: EquipmentItem[] = [
     shortDesc: 'Concert line arrays, digital mixers, and speech-optimized wireless microphone systems for crisp acoustic coverage.',
     longDesc: 'High-clarity acoustic engineering so every spoken syllable and musical nuance is delivered with pristine intelligibility from the VIP front row to the furthest tent perimeter.',
     iconName: 'Speaker',
-    image: PHOTOS.launch,
+    image: WORK.churchLed,
     showcaseImages: [
       {
-        url: PHOTOS.launch,
-        caption: 'Digital Audio Console Front-of-House 32-Channel Desk'
+        url: WORK.churchLed,
+        caption: 'Floor monitors and mic stands set for a live worship service'
       },
       {
-        url: PHOTOS.ballroom,
-        caption: 'Flown Touring Line Array System & High-Excursion Subwoofers'
+        url: WORK.churchStage,
+        caption: 'Stage-side wedges, keyboards and pulpit mics in a large auditorium'
       },
       {
-        url: PHOTOS.garden,
-        caption: 'UHF Wireless Mic Antenna Distribution System'
+        url: WORK.healthSummit,
+        caption: 'Broadcast-ready PA and press position at a national summit'
       }
     ],
     features: [
@@ -301,19 +301,19 @@ export const EQUIPMENT_DATA: EquipmentItem[] = [
     shortDesc: 'Customizable modular risers, heavy-duty outdoor concert stages, podiums, and safety guardrails.',
     longDesc: 'Engineered stage platforms built to fit any venue footprint — from clean indoor executive risers with custom skirting to heavy-duty outdoor concert decks rated for multi-performer bands.',
     iconName: 'Layers',
-    image: PHOTOS.ballroom,
+    image: WORK.churchStage,
     showcaseImages: [
       {
-        url: PHOTOS.ballroom,
-        caption: 'Heavy-Duty Modular Stage Deck with Carpet Finish'
+        url: WORK.churchStage,
+        caption: 'Carpeted stage deck with pulpit, choir and band positions'
       },
       {
-        url: PHOTOS.garden,
-        caption: 'Outdoor Ground-Level Scaffold Concert Platform'
+        url: WORK.healthSummit,
+        caption: 'Round podium stage with steps built for a national summit'
       },
       {
-        url: PHOTOS.launch,
-        caption: 'Executive Acrylic Speaker Podium with Microphone Mount'
+        url: WORK.femaBranded,
+        caption: 'Low riser stage with LED backdrop for a hotel workshop'
       }
     ],
     features: [
@@ -398,19 +398,19 @@ export const EQUIPMENT_DATA: EquipmentItem[] = [
     shortDesc: 'Cold-spark fountains, CO2 cryo jets, low-lying fog machines, and synchronized atmospheric special effects.',
     longDesc: 'Safe, dramatic stage effects choreographed with light and sound to create show-stopping reveal moments, grand ceremonial entrances, and triumphant finales.',
     iconName: 'Flame',
-    image: PHOTOS.launch,
+    image: WORK.femaBranded,
     showcaseImages: [
       {
-        url: PHOTOS.launch,
-        caption: 'Cold-Spark Fountains Indoor Stage Reveal Moment'
+        url: WORK.femaBranded,
+        caption: 'Hall prepped for a reveal moment: LED wall, stage and cue-ready effects'
       },
       {
-        url: PHOTOS.garden,
-        caption: 'Low-Lying Dense Dry-Ice Fog for First Dance'
+        url: WORK.galaTent,
+        caption: 'Draped marquee ready for a dramatic guest entrance'
       },
       {
-        url: PHOTOS.ballroom,
-        caption: 'High-Pressure CO2 Cryo Jet Blast on Stage Apron'
+        url: WORK.churchLed,
+        caption: 'High-impact LED backdrop cued for a worship-night finale'
       }
     ],
     features: [
@@ -495,19 +495,19 @@ export const EQUIPMENT_DATA: EquipmentItem[] = [
     shortDesc: 'Super-silent backup generators, redundant automatic transfer switches, and heavy-duty event power distribution.',
     longDesc: 'Uncompromising power stability with 100% redundancy guarantees so that mains power fluctuations or blackouts never disrupt your high-stakes event.',
     iconName: 'Zap',
-    image: PHOTOS.ballroom,
+    image: WORK.outdoorTent,
     showcaseImages: [
       {
-        url: PHOTOS.ballroom,
-        caption: 'Super-Silent Sound-Baffled 60kVA & 150kVA Diesel Generators'
+        url: WORK.outdoorTent,
+        caption: 'Outdoor LED screen and speaker stacks powered off-grid under a marquee'
       },
       {
-        url: PHOTOS.launch,
-        caption: '3-Phase Weatherproof Rubber Distribution Distro Board'
+        url: WORK.ledRigging,
+        caption: 'Clean cable runs and scaffold rigging feeding a full screen wall'
       },
       {
-        url: PHOTOS.garden,
-        caption: 'Zero-Downtime Automatic Transfer Switch (ATS) Station'
+        url: WORK.healthSummit,
+        caption: 'Stable, silent power behind a summit arena screen and sound'
       }
     ],
     features: [
@@ -593,7 +593,7 @@ export const OCCASIONS_DATA: OccasionItem[] = [
     title: 'Churches & Multi-Day Crusades',
     shortDesc: 'Dynamic worship sound, powerful voice clarity, and daylight LED screens built for spiritual gatherings.',
     longDesc: 'Whether in an indoor sanctuary, an open sports ground, or a multi-day evangelistic crusade across Kenya, we engineer powerful long-throw sound systems, daylight-visible lyrics screens, and reliable generators that ensure uninterrupted ministry.',
-    image: PHOTOS.garden,
+    image: WORK.churchLed,
     highlights: [
       'Concert-grade line array with speech intelligibility across all rows',
       'Dual high-brightness daylight LED screens for live IMAG & lyrics',
@@ -635,16 +635,16 @@ export const OCCASIONS_DATA: OccasionItem[] = [
     ],
     gallery: [
       {
-        url: PHOTOS.garden,
-        caption: 'Outdoor multi-day crusade with daylight dual LED walls'
+        url: WORK.churchLed,
+        caption: 'Worship night with a full-width LED backdrop and stage wash'
       },
       {
-        url: PHOTOS.launch,
-        caption: 'Sanctuary worship stage lighting with warm wash and moving beams'
+        url: WORK.churchStage,
+        caption: 'Sanctuary stage ready with pulpit, monitors and choir positions'
       },
       {
-        url: PHOTOS.expo,
-        caption: 'Line array rig flown on certified aluminum truss towers'
+        url: WORK.outdoorTent,
+        caption: 'Open-air service screen and PA set up under cover'
       }
     ]
   },
@@ -654,7 +654,7 @@ export const OCCASIONS_DATA: OccasionItem[] = [
     title: 'Conferences, Summits & AGMs',
     shortDesc: 'Distraction-free AV setups engineered for keynotes, panel discussions, hybrid streams, and Q&As.',
     longDesc: 'We provide executive-tier presentation environments with ultra-sharp presentation screens, confidence monitors for keynotes, seamless multi-feed video switching, and pristine podium microphone acoustic balance.',
-    image: PHOTOS.launch,
+    image: WORK.healthSummit,
     highlights: [
       'Multi-channel presentation switchers for live slides & hybrid zoom',
       'Ultra-sharp P2.6 indoor LED backdrops and timer confidence monitors',
@@ -696,16 +696,16 @@ export const OCCASIONS_DATA: OccasionItem[] = [
     ],
     gallery: [
       {
-        url: PHOTOS.launch,
-        caption: 'Plenary hall stage with ultra-fine pixel pitch LED presentation backdrop'
+        url: WORK.healthSummit,
+        caption: 'Summit arena with LED presentation wall and press position'
       },
       {
-        url: PHOTOS.launch,
-        caption: 'Executive panel seating with discreet wireless gooseneck and lapel microphones'
+        url: WORK.femaBranded,
+        caption: 'Hotel workshop room with branded LED backdrop and classroom seating'
       },
       {
-        url: PHOTOS.ballroom,
-        caption: 'Multi-camera hybrid live stream control desk with seamless video switching'
+        url: WORK.churchStage,
+        caption: 'Auditorium stage with podium and confidence wedges'
       }
     ]
   },
@@ -715,7 +715,7 @@ export const OCCASIONS_DATA: OccasionItem[] = [
     title: 'Product & Brand Launches',
     shortDesc: 'High-impact choreography where reveal lighting, special effects, and staging sync together.',
     longDesc: 'Transform brand launches into unforgettable sensory experiences. We combine cold-spark fountains, low-lying heavy fog, intelligent synchronized lighting sequences, and curved LED centerpieces that ignite excitement.',
-    image: PHOTOS.launch,
+    image: WORK.femaBranded,
     highlights: [
       'Choreographed reveal sequences with cold sparks & low-fog entrance',
       'Curved high-definition LED centerpiece with 3D graphics playback',
@@ -757,16 +757,16 @@ export const OCCASIONS_DATA: OccasionItem[] = [
     ],
     gallery: [
       {
-        url: PHOTOS.launch,
-        caption: 'Split-second cold spark reveal at regional automotive unboxing'
+        url: WORK.femaBranded,
+        caption: 'Branded reveal wall on a clean stage in a hotel ballroom'
       },
       {
-        url: PHOTOS.launch,
-        caption: 'Low fog dry-ice blanket during keynote product presentation'
+        url: WORK.galaTent,
+        caption: 'Evening gala marquee with an LED feature screen'
       },
       {
-        url: PHOTOS.expo,
-        caption: 'Dynamic moving beam lighting synced to dramatic music soundtrack'
+        url: WORK.healthSummit,
+        caption: 'Arena stage and LED screen for a national-level unveiling'
       }
     ]
   },
@@ -776,7 +776,7 @@ export const OCCASIONS_DATA: OccasionItem[] = [
     title: 'Public Rallies & Open-Air Gatherings',
     shortDesc: 'Long-throw line arrays and daylight-visible outdoor LED walls engineered for massive open-air crowds.',
     longDesc: 'Built for extreme crowd densities and outdoor field conditions. Our heavy-duty stage trucks, long-throw line array towers, and sunlight-fighting outdoor LED walls deliver crystal-clear messaging across vast open stadium fields.',
-    image: PHOTOS.garden,
+    image: WORK.outdoorTent,
     highlights: [
       'High-power touring line arrays with perimeter delay towers',
       'Daylight-fighting 6,500-nit outdoor LED jumbo screens',
@@ -818,16 +818,16 @@ export const OCCASIONS_DATA: OccasionItem[] = [
     ],
     gallery: [
       {
-        url: PHOTOS.garden,
-        caption: 'Open stadium gathering with perimeter delay audio coverage'
+        url: WORK.outdoorTent,
+        caption: 'Open-air LED screen and PA stacks set on the grounds'
       },
       {
-        url: PHOTOS.garden,
-        caption: 'High-visibility daytime LED screen positioned above heavy modular stage'
+        url: WORK.ledRigging,
+        caption: 'Modular LED cabinets rigged on scaffold for a large outdoor screen wall'
       },
       {
-        url: PHOTOS.expo,
-        caption: 'Heavy ground support truss structure rated for high wind loads'
+        url: WORK.churchLed,
+        caption: 'Crowd-facing LED backdrop with powerful stage wash'
       }
     ]
   },
@@ -837,7 +837,7 @@ export const OCCASIONS_DATA: OccasionItem[] = [
     title: 'Funerals & Memorial Services',
     shortDesc: 'Reverent, evenly distributed sound and discreet tribute screens so families can focus on the memorial.',
     longDesc: 'We handle memorial services with deep reverence, quiet dignity, and flawless reliability. Discreet audio distribution reaches every tent and overflow section clearly, accompanied by silent generators that make zero acoustic disturbance.',
-    image: PHOTOS.ballroom,
+    image: WORK.galaTent,
     highlights: [
       'Acoustically balanced sound distributed across family and guest tents',
       'Overflow LED and TV monitors for tribute slideshows and recordings',
@@ -879,16 +879,16 @@ export const OCCASIONS_DATA: OccasionItem[] = [
     ],
     gallery: [
       {
-        url: PHOTOS.ballroom,
-        caption: 'Distributed audio column setup with discreet non-intrusive rigging'
+        url: WORK.galaTent,
+        caption: 'Draped marquee with a calm, dignified screen tribute'
       },
       {
-        url: PHOTOS.garden,
-        caption: 'High-contrast tribute presentation screens under shaded tent canopy'
+        url: WORK.churchStage,
+        caption: 'Quiet, well-balanced sound in a hall or chapel'
       },
       {
-        url: PHOTOS.ballroom,
-        caption: 'Super-silent sound-baffled diesel generator operating at low decibels'
+        url: WORK.outdoorTent,
+        caption: 'Tented memorial with a screen for overflow mourners'
       }
     ]
   }
@@ -903,7 +903,7 @@ export const CASE_STUDIES_DATA: CaseStudy[] = [
     eventType: 'Corporate Conference & Expo',
     duration: '3 Full Days',
     crowdSize: '2,500 Delegates',
-    image: PHOTOS.expo,
+    image: WORK.healthSummit,
     equipmentUsed: [
       'Custom curved 18×4m P2.6 LED video wall as main stage centerpiece',
       'Hybrid live-stream video switching across 3 breakout halls',
@@ -922,7 +922,7 @@ export const CASE_STUDIES_DATA: CaseStudy[] = [
     eventType: 'Outdoor Church Crusade',
     duration: '4 Consecutive Nights',
     crowdSize: '6,000+ Attendees Per Night',
-    image: PHOTOS.garden,
+    image: WORK.outdoorTent,
     equipmentUsed: [
       'Two 6×4m daylight-visible outdoor P4.8 LED screens for scripture and lyrics',
       'Long-throw touring line array system covering all perimeter seating zones',
@@ -941,7 +941,7 @@ export const CASE_STUDIES_DATA: CaseStudy[] = [
     eventType: 'Product & Brand Reveal',
     duration: '1 Evening Gala',
     crowdSize: '400 VIP Guests & Executives',
-    image: PHOTOS.ballroom,
+    image: WORK.galaTent,
     equipmentUsed: [
       'High-impact seamless LED video wall with synced 4K motion graphics',
       'Cold spark fountain machines timed precisely to the product unboxing',
@@ -957,39 +957,39 @@ export const CASE_STUDIES_DATA: CaseStudy[] = [
 export const GALLERY_PHOTOS: GalleryPhoto[] = [
   {
     id: 'gal-1',
-    title: 'Outdoor Public Rally Stage',
-    category: 'Stages & Audio',
-    image: PHOTOS.garden
+    title: 'Outdoor Daylight LED Screen',
+    category: 'Visual Displays',
+    image: WORK.outdoorTent
   },
   {
     id: 'gal-2',
-    title: 'Modular Concert Deck Build',
+    title: 'Sanctuary Stage Deck & Monitors',
     category: 'Stages',
-    image: PHOTOS.ballroom
+    image: WORK.churchStage
   },
   {
     id: 'gal-3',
-    title: 'Silent Diesel Generator & Distro',
-    category: 'Power & Backup',
-    image: PHOTOS.ballroom
+    title: 'Branded Indoor LED Backdrop',
+    category: 'Visual Displays',
+    image: WORK.femaBranded
   },
   {
     id: 'gal-4',
-    title: 'High-Definition LED Screen Wall',
-    category: 'Visual Displays',
-    image: PHOTOS.ballroom
+    title: 'Gala Marquee Mood Uplighting',
+    category: 'Lighting',
+    image: WORK.galaTent
   },
   {
     id: 'gal-5',
-    title: 'Front-of-House Digital Audio Mixing',
+    title: 'Floor Monitors & Worship Stage Wash',
     category: 'Sound & Audio',
-    image: PHOTOS.launch
+    image: WORK.churchLed
   },
   {
     id: 'gal-6',
-    title: 'Moving Beam Stage Lighting Rig',
-    category: 'Lighting',
-    image: PHOTOS.expo
+    title: 'Summit Arena Stage Build',
+    category: 'Stages',
+    image: WORK.healthSummit
   }
 ];
 

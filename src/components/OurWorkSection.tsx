@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FadeImage } from './FadeImage';
+import { Lightbox } from './Lightbox';
 import { 
   Building, 
   Clock, 
@@ -18,6 +19,7 @@ interface OurWorkSectionProps {
 export const OurWorkSection: React.FC<OurWorkSectionProps> = ({ onOpenQuote }) => {
   const [selectedCaseStudyId, setSelectedCaseStudyId] = useState<string>('tech-expo');
   const [selectedGalleryCategory, setSelectedGalleryCategory] = useState<string>('all');
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
   const activeCaseStudy = CASE_STUDIES_DATA.find((c) => c.id === selectedCaseStudyId) || CASE_STUDIES_DATA[0];
 
@@ -213,10 +215,15 @@ export const OurWorkSection: React.FC<OurWorkSectionProps> = ({ onOpenQuote }) =
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            {filteredGallery.map((photo) => (
+            {filteredGallery.map((photo, pIdx) => (
               <div
                 key={photo.id}
-                className="group relative rounded-none overflow-hidden h-64 border-2 border-[#121212] shadow-[4px_4px_0px_0px_#121212] bg-stone-900"
+                role="button"
+                tabIndex={0}
+                aria-label={`Enlarge photo: ${photo.title}`}
+                onClick={() => setLightboxIndex(pIdx)}
+                onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setLightboxIndex(pIdx); } }}
+                className="group relative rounded-none overflow-hidden h-64 border-2 border-[#121212] shadow-[4px_4px_0px_0px_#121212] hover:shadow-[4px_4px_0px_0px_#b83a24] transition-shadow bg-stone-900 cursor-zoom-in"
               >
                 <FadeImage
                   src={photo.image}
@@ -235,6 +242,12 @@ export const OurWorkSection: React.FC<OurWorkSectionProps> = ({ onOpenQuote }) =
               </div>
             ))}
           </div>
+          <Lightbox
+            items={filteredGallery}
+            index={lightboxIndex}
+            onClose={() => setLightboxIndex(null)}
+            onChange={setLightboxIndex}
+          />
         </div>
 
         {/* Corporate Trust & Testimonial Row */}

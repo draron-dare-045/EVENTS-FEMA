@@ -1,5 +1,5 @@
 import React from 'react';
-import { PHOTOS } from '../data/photos';
+import { WORK } from '../data/photos';
 
 const STATS = [
   { value: '10+', label: 'Years in live production' },
@@ -51,10 +51,10 @@ export const AboutSection: React.FC = () => {
         {/* Image banner */}
         <div className="relative overflow-hidden border-2 border-[#121212] shadow-[8px_8px_0px_0px_#b83a24] bg-stone-900 mb-16 sm:mb-24">
           <img
-            src={PHOTOS.ballroom}
-            alt="FEMA Events crew installing an LED screen wall and stage decks in a hotel ballroom"
+            src={WORK.ledRigging}
+            alt="FEMA Events technician rigging a modular LED screen wall on scaffold"
             decoding="async"
-            className="w-full h-full object-cover min-h-[280px] sm:min-h-[420px]"
+            className="w-full h-full object-cover object-[50%_35%] min-h-[280px] sm:min-h-[420px]"
           />
           <div className="absolute inset-0 bg-[#121212] opacity-40"></div>
           <div className="absolute inset-x-0 bottom-0 p-6 sm:p-10 text-white">

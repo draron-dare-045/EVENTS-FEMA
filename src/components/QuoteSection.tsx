@@ -15,6 +15,9 @@ const WEB3FORMS_ENDPOINT = 'https://api.web3forms.com/submit';
 // email the key was created with), so reading it from a Vite env var is safe.
 const WEB3FORMS_KEY: string = (import.meta as any).env?.VITE_WEB3FORMS_KEY ?? '';
 const WHATSAPP_NUMBER = '254722541214';
+// All quote requests are delivered to this inbox. The Web3Forms access key in .env
+// MUST be the one created for this address (Web3Forms sends only to the key's email).
+const CONTACT_EMAIL = 'info@femaevents.com';
 const REQUEST_TIMEOUT_MS = 15000;
 
 const eventTypes = [
@@ -119,7 +122,7 @@ export const QuoteSection: React.FC<QuoteSectionProps> = ({
       return;
     }
     if (!WEB3FORMS_KEY) {
-      setErrorMessage('Online requests are not configured yet. Please use WhatsApp or call 0722 541 214.');
+      setErrorMessage('Online requests are not configured yet. Please use WhatsApp, call 0722 541 214 or email info@femaevents.com.');
       setStatus('error');
       return;
     }
@@ -175,6 +178,19 @@ export const QuoteSection: React.FC<QuoteSectionProps> = ({
     }
   };
 
+  const buildMailtoHref = () => {
+    const body = `Hello FEMA Events,
+
+I would like to request an Audio Visual quote:
+- Event Type: ${eventTypeLabel}
+- Event Date: ${eventDate || 'TBD'}
+- Venue / Location: ${venueLocation}
+- Required Equipment: ${selectedServices.join(', ')}
+- Name / Contact: ${contactName || 'Client'} (${contactPhone || 'N/A'})
+${notes ? `- Additional Requirements: ${notes}` : ''}`;
+    return `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(`AV Quote Request: ${eventTypeLabel}`)}&body=${encodeURIComponent(body)}`;
+  };
+
   const handleWhatsAppInstantQuote = () => {
     const message = `Hello FEMA Events Kenya,
 I would like to request an Audio Visual Quote:
@@ -202,7 +218,7 @@ ${notes ? `- Additional Requirements: ${notes}` : ''}`;
             Book Your Production Gear &amp; Rigs
           </h2>
           <p className="text-stone-700 text-sm mt-2 font-normal">
-            Specify the equipment and date for your event. You can submit the form below or call our production team directly at <strong className="text-stone-900">0722 541 214</strong> to reserve immediately.
+            Specify the equipment and date for your event. You can submit the form below or call our production team directly at <strong className="text-stone-900">0722 541 214</strong> to reserve immediately. Requests are delivered to <strong className="text-stone-900">{CONTACT_EMAIL}</strong>.
           </p>
         </div>
 
@@ -371,7 +387,18 @@ ${notes ? `- Additional Requirements: ${notes}` : ''}`;
                 className="flex items-start gap-3 bg-red-50 border-2 border-[#b83a24] rounded-none p-4 shadow-[3px_3px_0px_0px_#121212]"
               >
                 <AlertCircle className="w-5 h-5 text-[#b83a24] shrink-0 mt-0.5" />
-                <p className="text-sm text-stone-900 font-medium">{errorMessage}</p>
+                <div className="text-sm text-stone-900 font-medium">
+                  <p>{errorMessage}</p>
+                  <p className="mt-1.5">
+                    Or email us directly:{' '}
+                    <a
+                      href={buildMailtoHref()}
+                      className="font-bold text-[#b83a24] underline underline-offset-2 hover:text-[#9b2e1b]"
+                    >
+                      {CONTACT_EMAIL}
+                    </a>
+                  </p>
+                </div>
               </div>
             )}
 
@@ -413,6 +440,10 @@ ${notes ? `- Additional Requirements: ${notes}` : ''}`;
                 <Phone className="w-3.5 h-3.5 text-[#b83a24]" />
                 Call Desk: 0722 541 214
               </span>
+              <span>&bull;</span>
+              <a href={`mailto:${CONTACT_EMAIL}`} className="hover:text-[#b83a24] transition-colors">
+                Email: {CONTACT_EMAIL}
+              </a>
               <span>&bull;</span>
               <span>24/7 Rigging &amp; Tech Support</span>
               <span>&bull;</span>
