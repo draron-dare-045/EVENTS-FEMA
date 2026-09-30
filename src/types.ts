@@ -19,6 +19,13 @@ export interface EquipmentPackage {
   includedItems: string[];
 }
 
+export interface GearLineupItem {
+  name: string;
+  type: string;
+  detail: string;
+  image: string;
+}
+
 export interface EquipmentItem {
   id: string;
   number: string;
@@ -34,6 +41,7 @@ export interface EquipmentItem {
   }[];
   features: string[];
   specs: EquipmentSpec[];
+  gearLineup?: GearLineupItem[];
   idealFor: string[];
   packages?: EquipmentPackage[];
 }

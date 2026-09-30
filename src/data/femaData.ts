@@ -1,5 +1,5 @@
 import { EquipmentItem, OccasionItem, CaseStudy, GalleryPhoto } from '../types';
-import { WORK } from './photos';
+import { WORK, GEAR } from './photos';
 
 export const EQUIPMENT_DATA: EquipmentItem[] = [
   {
@@ -204,11 +204,11 @@ export const EQUIPMENT_DATA: EquipmentItem[] = [
     shortDesc: 'Concert line arrays, digital mixers, and speech-optimized wireless microphone systems for crisp acoustic coverage.',
     longDesc: 'High-clarity acoustic engineering so every spoken syllable and musical nuance is delivered with pristine intelligibility from the VIP front row to the furthest tent perimeter.',
     iconName: 'Speaker',
-    image: WORK.churchLed,
+    image: WORK.subwooferStack,
     showcaseImages: [
       {
-        url: WORK.churchLed,
-        caption: 'Floor monitors and mic stands set for a live worship service'
+        url: WORK.subwooferStack,
+        caption: 'Subwoofer stacks for deep, punchy low-end coverage'
       },
       {
         url: WORK.churchStage,
@@ -217,6 +217,44 @@ export const EQUIPMENT_DATA: EquipmentItem[] = [
       {
         url: WORK.healthSummit,
         caption: 'Broadcast-ready PA and press position at a national summit'
+      }
+    ],
+    gearLineup: [
+      {
+        name: 'Touring Line Array Module',
+        type: 'Line Array',
+        detail: 'Active two-way modules that fly or ground-stack on a transport dolly for even, long-throw coverage.',
+        image: GEAR.lineArray
+      },
+      {
+        name: '18" High-Output Subwoofer',
+        type: 'Sub-Bass',
+        detail: 'Deep, controlled low end with pole mount, stacked under the array or alongside full-range tops.',
+        image: GEAR.subwoofer
+      },
+      {
+        name: 'Mixing Console',
+        type: 'Front-of-House',
+        detail: 'Channel-rich desk with onboard effects and multitrack recording for speech, bands and worship.',
+        image: GEAR.mixer
+      },
+      {
+        name: 'Active Full-Range Speaker',
+        type: 'Powered PA',
+        detail: 'Self-powered cabinet on a tripod stand, ideal for speeches, small halls and fill positions.',
+        image: GEAR.activeSpeaker
+      },
+      {
+        name: 'Stage PA Pair',
+        type: 'Speaker System',
+        detail: 'Matched pair on poles for clear left/right coverage in churches, boardrooms and mid-size venues.',
+        image: GEAR.speakerPair
+      },
+      {
+        name: 'Dual Wireless Microphone Kit',
+        type: 'Wireless Systems',
+        detail: 'Rack-mount dual UHF receivers with two handheld mics for clean, dropout-free speech.',
+        image: GEAR.wirelessMics
       }
     ],
     features: [

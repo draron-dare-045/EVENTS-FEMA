@@ -23,6 +23,8 @@ export const PHOTOS = {
 export const WORK = {
   // Church sanctuary: full-width LED backdrop, floor monitors, mic stands
   churchLed: '/images/work/church-jesus-led.jpg',
+  // Stacked subwoofer cabinets (studio render) for the Sound & Audio discipline
+  subwooferStack: '/images/work/subwoofer-stack.jpg',
   // Church auditorium stage: starfield wall, pulpit, wedges, keyboards
   churchStage: '/images/work/church-stage-wide.jpg',
   // Rear of a modular LED wall on scaffold, technician at work
@@ -35,4 +37,14 @@ export const WORK = {
   outdoorTent: '/images/work/outdoor-tent-led.jpg',
   // FEMA-branded LED backdrop in a hotel conference room
   femaBranded: '/images/work/fema-branded-led.jpg'
+} as const;
+
+// Studio product shots for the Sound & Audio gear lineup (files live in /public/images/gear)
+export const GEAR = {
+  lineArray: '/images/gear/line-array.jpg',
+  subwoofer: '/images/gear/subwoofer-18.jpg',
+  mixer: '/images/gear/digital-mixer.jpg',
+  activeSpeaker: '/images/gear/active-speaker.jpg',
+  speakerPair: '/images/gear/speaker-pair.jpg',
+  wirelessMics: '/images/gear/wireless-mic-kit.jpg'
 } as const;

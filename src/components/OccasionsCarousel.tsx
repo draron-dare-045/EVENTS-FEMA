@@ -34,6 +34,8 @@ export const OccasionsCarousel: React.FC<OccasionsCarouselProps> = ({
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const touchStartX = useRef<number | null>(null);
+  const tabBarRef = useRef<HTMLDivElement | null>(null);
+  const tabRefs = useRef<(HTMLButtonElement | null)[]>([]);
 
   const activeOccasion = OCCASIONS_DATA[currentIndex];
 
@@ -45,6 +47,16 @@ export const OccasionsCarousel: React.FC<OccasionsCarouselProps> = ({
     }, 6500);
     return () => clearInterval(timer);
   }, [isPaused]);
+
+  // On mobile the tab bar scrolls sideways: keep the active tab in view.
+  // Scrolls only the bar itself, never the page.
+  useEffect(() => {
+    const bar = tabBarRef.current;
+    const tab = tabRefs.current[currentIndex];
+    if (!bar || !tab || bar.scrollWidth <= bar.clientWidth) return;
+    const target = tab.offsetLeft - (bar.clientWidth - tab.offsetWidth) / 2;
+    bar.scrollTo({ left: Math.max(0, target), behavior: 'smooth' });
+  }, [currentIndex]);
 
   const handlePrev = () => {
     setCurrentIndex((prev) => (prev === 0 ? OCCASIONS_DATA.length - 1 : prev - 1));
@@ -116,15 +128,19 @@ export const OccasionsCarousel: React.FC<OccasionsCarouselProps> = ({
           </div>
         </div>
 
-        {/* Mobile Swipeable Horizontal Tab Bar */}
-        <div className="overflow-x-auto no-scrollbar flex gap-2.5 pb-4 mb-4 -mx-4 px-4 sm:mx-0 sm:px-0">
+        {/* Occasion tabs: swipeable on phones, wrap on tablets, one even row on desktop */}
+        <div
+          ref={tabBarRef}
+          className="overflow-x-auto no-scrollbar flex gap-2.5 pb-4 mb-4 -mx-4 px-4 sm:mx-0 sm:px-0 sm:overflow-visible sm:flex-wrap lg:flex-nowrap lg:gap-2"
+        >
           {OCCASIONS_DATA.map((occ, idx) => {
             const isCurrent = idx === currentIndex;
             return (
               <button
                 key={occ.id}
+                ref={(el) => { tabRefs.current[idx] = el; }}
                 onClick={() => setCurrentIndex(idx)}
-                className={`px-4 py-2.5 rounded-none text-xs font-bold uppercase tracking-wider transition-all flex items-center gap-2 shrink-0 cursor-pointer border-2 ${
+                className={`px-4 py-2.5 rounded-none text-xs font-bold uppercase tracking-wider transition-all flex items-center gap-2 shrink-0 cursor-pointer border-2 lg:flex-1 lg:shrink lg:justify-center lg:px-2.5 lg:text-[11px] lg:tracking-wide ${
                   isCurrent
                     ? 'bg-[#b83a24] text-white border-white shadow-[3px_3px_0px_0px_#ffffff]'
                     : 'bg-stone-900 text-stone-300 hover:text-white hover:bg-black border-stone-700'
@@ -133,10 +149,11 @@ export const OccasionsCarousel: React.FC<OccasionsCarouselProps> = ({
                 <span className={isCurrent ? 'text-white' : 'text-[#b83a24]'}>
                   {OCCASION_ICONS[occ.id]}
                 </span>
-                <span className="whitespace-nowrap">{occ.tag}</span>
+                <span className="whitespace-nowrap lg:whitespace-normal lg:text-center lg:leading-tight">{occ.tag}</span>
               </button>
             );
           })}
+          <span aria-hidden="true" className="shrink-0 w-2 sm:hidden" />
         </div>
 
         {/* Active Occasion Featured Card */}
@@ -253,4 +270,3 @@ export const OccasionsCarousel: React.FC<OccasionsCarouselProps> = ({
     </section>
   );
 };
-

@@ -1,5 +1,6 @@
 import React from 'react';
 import { FadeImage } from './FadeImage';
+import { GearLineup } from './GearLineup';
 import { 
   ArrowLeft, 
   Check, 
@@ -276,6 +277,8 @@ export const EquipmentDetailPage: React.FC<EquipmentDetailPageProps> = ({
           </div>
         </div>
       </div>
+
+      <GearLineup title={item.title} items={item.gearLineup} onOpenQuote={onOpenQuote} />
 
       {/* Visual Showcase (Field Execution Gallery) */}
       <div className="mb-12">
