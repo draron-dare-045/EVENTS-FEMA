@@ -103,7 +103,7 @@ export const EQUIPMENT_DATA: EquipmentItem[] = [
     id: 'lighting',
     number: '02',
     category: 'Atmosphere & Drama',
-    title: 'Stage & Architectural Lighting',
+    title: 'Ambience & Architectural Lighting',
     shortDesc: 'Intelligent moving heads, warm stage washes, profile spots, and mood uplighting tailored for any venue.',
     longDesc: 'Atmospheric lighting programmed to match the exact emotional arc of your event, from subtle warm keynote illumination to high-energy moving-light shows.',
     iconName: 'Sparkles',

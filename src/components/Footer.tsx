@@ -121,7 +121,7 @@ export const Footer: React.FC<FooterProps> = ({
                 aria-label="Stage & Mood Lighting - stage lighting hire in Nairobi"
                 className="hover:text-[#b83a24] text-stone-300 transition-colors text-left cursor-pointer"
               >
-                Stage &amp; Mood Lighting
+                Ambience &amp; Mood Lighting
               </button>
             </li>
             <li>

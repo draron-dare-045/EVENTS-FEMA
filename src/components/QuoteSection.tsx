@@ -39,7 +39,7 @@ const occasionToEventType: Record<string, string> = {
 
 const availableServices = [
   'LED Screens & Video Displays',
-  'Stage & Mood Lighting',
+  'Ambience & Architectural Lighting',
   'Professional Sound & Audio',
   'Stages & Modular Platforms',
   'Pyrotechnics & Special Effects',
