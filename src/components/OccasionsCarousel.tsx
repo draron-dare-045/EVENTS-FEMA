@@ -94,13 +94,13 @@ export const OccasionsCarousel: React.FC<OccasionsCarouselProps> = ({
         <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-6 sm:mb-8 pb-5 border-b-2 border-stone-800 gap-3">
           <div>
             <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-none bg-black border-2 border-stone-700 text-[#b83a24] text-[11px] sm:text-xs font-bold uppercase tracking-widest mb-2.5 shadow-[2px_2px_0px_0px_#b83a24]">
-              <span>Event Engineering Blueprints</span>
+              <span>Events We Cover</span>
             </div>
             <h2 className="font-serif text-2xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white">
               Solutions by Occasion
             </h2>
             <p className="text-stone-300 text-xs sm:text-sm mt-1.5 max-w-xl font-normal leading-relaxed">
-              Curated audio visual, lighting, staging, and generator setups tailored for specific crowd dynamics in Kenya.
+              Setups for churches, conferences, launches, rallies and memorials.
             </p>
           </div>
 
@@ -194,7 +194,7 @@ export const OccasionsCarousel: React.FC<OccasionsCarouselProps> = ({
                   {/* Production Highlights */}
                   <div className="mb-6">
                     <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-stone-400 block mb-2">
-                      Production Highlights:
+                      What We Provide:
                     </span>
                     <div className="space-y-1.5 sm:space-y-2">
                       {activeOccasion.highlights.slice(0, 4).map((highlight, hIdx) => (
@@ -213,7 +213,7 @@ export const OccasionsCarousel: React.FC<OccasionsCarouselProps> = ({
                     onClick={() => onSelectOccasionQuote(activeOccasion.title, activeOccasion.id)}
                     className="w-full bg-[#b83a24] hover:bg-[#9b2e1b] text-white text-xs uppercase font-bold tracking-widest py-3.5 px-5 rounded-none border-2 border-black shadow-[4px_4px_0px_0px_#000000] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all cursor-pointer flex items-center justify-center gap-2"
                   >
-                    <span>Request Quote</span>
+                    <span>Get a Quote</span>
                     <ArrowRight className="w-3.5 h-3.5" />
                   </button>
 
@@ -221,7 +221,7 @@ export const OccasionsCarousel: React.FC<OccasionsCarouselProps> = ({
                     onClick={() => onExploreOccasionSpecs(activeOccasion.id)}
                     className="w-full border-2 border-stone-600 bg-black hover:border-white text-stone-200 hover:text-white text-xs uppercase font-bold tracking-wider py-3.5 px-4 rounded-none shadow-[4px_4px_0px_0px_#000000] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all cursor-pointer flex items-center justify-center text-center"
                   >
-                    <span>View Blueprint Specs</span>
+                    <span>View Details</span>
                   </button>
                 </div>
               </div>
@@ -241,7 +241,7 @@ export const OccasionsCarousel: React.FC<OccasionsCarouselProps> = ({
                   {/* Image Overlay Caption */}
                   <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 bg-black/90 p-2.5 border border-stone-700">
                     <span className="text-[9px] sm:text-[10px] font-bold uppercase tracking-widest text-[#b83a24] block mb-0.5">
-                      Live Kenyan Deployment
+                      Recent Event
                     </span>
                     <p className="font-serif text-xs sm:text-sm font-bold text-white line-clamp-1">
                       {activeOccasion.title}

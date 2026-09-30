@@ -7,7 +7,7 @@ export const EQUIPMENT_DATA: EquipmentItem[] = [
     number: '01',
     category: 'Visual Displays',
     title: 'LED Screens & Video Displays',
-    shortDesc: 'High-definition indoor modular LED walls, daylight-visible outdoor panels, stage backdrops, and video switchers.',
+    shortDesc: 'Indoor and outdoor LED screens, stage backdrops and video switching.',
     longDesc: 'Clear, ultra-bright visual screens sized for any room or outdoor venue — from an intimate corporate backdrop to a daylight-visible wall facing a crowd of thousands.',
     iconName: 'Monitor',
     image: WORK.healthSummit,
@@ -26,10 +26,10 @@ export const EQUIPMENT_DATA: EquipmentItem[] = [
       }
     ],
     features: [
-      'Indoor and outdoor high-resolution LED screens',
-      'Seamless video switchers and multi-camera live feeds',
-      'Custom curved stage backdrops and side delay screens',
-      'Ultra-high refresh rates for flicker-free camera recording'
+      'Indoor and outdoor LED screens',
+      'Video switching and multi-camera live feeds',
+      'Curved stage backdrops and side screens',
+      'Flicker-free on camera'
     ],
     specs: [
       {
@@ -104,7 +104,7 @@ export const EQUIPMENT_DATA: EquipmentItem[] = [
     number: '02',
     category: 'Atmosphere & Drama',
     title: 'Ambience & Architectural Lighting',
-    shortDesc: 'Intelligent moving heads, warm stage washes, profile spots, and mood uplighting tailored for any venue.',
+    shortDesc: 'Stage lights, moving heads and mood lighting for any venue.',
     longDesc: 'Atmospheric lighting programmed to match the exact emotional arc of your event, from subtle warm keynote illumination to high-energy moving-light shows.',
     iconName: 'Sparkles',
     image: WORK.galaTent,
@@ -123,10 +123,10 @@ export const EQUIPMENT_DATA: EquipmentItem[] = [
       }
     ],
     features: [
-      'Intelligent 230W moving beam lights and motorized follow spots',
-      'Glare-free warm stage washes optimized for speaker photography',
-      'Wireless battery-powered perimeter room uplighters',
-      'Dedicated DMX lighting console programmer on-site'
+      'Moving lights and follow spots',
+      'Warm stage lighting that looks good on camera',
+      'Wireless uplighters for room colour',
+      'A lighting operator on site'
     ],
     specs: [
       {
@@ -201,7 +201,7 @@ export const EQUIPMENT_DATA: EquipmentItem[] = [
     number: '03',
     category: 'Audio Clarity',
     title: 'Professional Sound & Audio',
-    shortDesc: 'Concert line arrays, digital mixers, and speech-optimized wireless microphone systems for crisp acoustic coverage.',
+    shortDesc: 'Concert speakers, mixers and wireless microphones for clear sound at any size.',
     longDesc: 'High-clarity acoustic engineering so every spoken syllable and musical nuance is delivered with pristine intelligibility from the VIP front row to the furthest tent perimeter.',
     iconName: 'Speaker',
     image: WORK.subwooferStack,
@@ -258,10 +258,10 @@ export const EQUIPMENT_DATA: EquipmentItem[] = [
       }
     ],
     features: [
-      'Active touring line array sound systems with precision delay towers',
-      'High-output 18-inch subwoofers with punchy cardioid coverage',
-      '32/48-channel digital mixing consoles with iPad stage control',
-      'Frequency-managed UHF wireless handheld, lapel, and headset mics'
+      'Concert speaker systems with delay towers for large crowds',
+      'Powerful subwoofers for clean, deep bass',
+      'Digital mixing desks for bands and speakers',
+      'Wireless handheld, lapel and headset microphones'
     ],
     specs: [
       {
@@ -336,7 +336,7 @@ export const EQUIPMENT_DATA: EquipmentItem[] = [
     number: '04',
     category: 'Structural Platforms',
     title: 'Stages & Modular Platforms',
-    shortDesc: 'Customizable modular risers, heavy-duty outdoor concert stages, podiums, and safety guardrails.',
+    shortDesc: 'Indoor risers, outdoor stages, podiums and guardrails.',
     longDesc: 'Engineered stage platforms built to fit any venue footprint — from clean indoor executive risers with custom skirting to heavy-duty outdoor concert decks rated for multi-performer bands.',
     iconName: 'Layers',
     image: WORK.churchStage,
@@ -355,10 +355,10 @@ export const EQUIPMENT_DATA: EquipmentItem[] = [
       }
     ],
     features: [
-      'Heavy-duty non-slip aluminum deck platforms (750kg/m² load rating)',
-      'Adjustable leg heights from 0.4m to 2.0m with leveling footers',
-      'Safety access stairs, guardrails, and black pleated stage skirting',
-      'Acrylic or timber speaker podiums with integrated microphone mounts'
+      'Strong, non-slip aluminium stage decks',
+      'Adjustable height from 0.4m to 2.0m',
+      'Stairs, guardrails and black stage skirting',
+      'Speaker podiums with microphone mounts'
     ],
     specs: [
       {
@@ -433,7 +433,7 @@ export const EQUIPMENT_DATA: EquipmentItem[] = [
     number: '05',
     category: 'Special Effects',
     title: 'Pyrotechnics & Special Effects',
-    shortDesc: 'Cold-spark fountains, CO2 cryo jets, low-lying fog machines, and synchronized atmospheric special effects.',
+    shortDesc: 'Cold sparks, smoke jets, low fog and confetti for big moments.',
     longDesc: 'Safe, dramatic stage effects choreographed with light and sound to create show-stopping reveal moments, grand ceremonial entrances, and triumphant finales.',
     iconName: 'Flame',
     image: WORK.femaBranded,
@@ -452,10 +452,10 @@ export const EQUIPMENT_DATA: EquipmentItem[] = [
       }
     ],
     features: [
-      'Indoor-safe cold spark fountains (no smoke, non-hazardous, cold to touch)',
-      'High-pressure CO2 cryo jets with instantaneous dissipation',
-      'Low-lying dry ice heavy cloud fog for dancing on clouds effect',
-      'Electronic multi-shot confetti & streamer cannons'
+      'Cold spark fountains, safe to use indoors',
+      'CO2 jets for sudden bursts of white smoke',
+      'Low fog that hugs the floor, for first dances and entrances',
+      'Confetti and streamer cannons'
     ],
     specs: [
       {
@@ -530,7 +530,7 @@ export const EQUIPMENT_DATA: EquipmentItem[] = [
     number: '06',
     category: 'Power & Redundancy',
     title: 'Generator & Power Rentals',
-    shortDesc: 'Super-silent backup generators, redundant automatic transfer switches, and heavy-duty event power distribution.',
+    shortDesc: 'Silent generators and safe power distribution, with backup ready.',
     longDesc: 'Uncompromising power stability with 100% redundancy guarantees so that mains power fluctuations or blackouts never disrupt your high-stakes event.',
     iconName: 'Zap',
     image: WORK.outdoorTent,
@@ -549,10 +549,10 @@ export const EQUIPMENT_DATA: EquipmentItem[] = [
       }
     ],
     features: [
-      'Super-silent diesel generators housed in acoustic sound-dampened canopies',
-      'Dual-generator synchronized failover systems with Automatic Transfer Switches (ATS)',
-      'Heavy-duty rubberized 3-phase power distribution boxes with RCD protection',
-      'Certified master electricians on standby for the full duration of your event'
+      'Silent diesel generators in sound-proofed canopies',
+      'Two generators, so power switches over if one fails',
+      'Heavy-duty power boxes with safety cut-offs',
+      'A qualified electrician on standby throughout'
     ],
     specs: [
       {
@@ -629,14 +629,14 @@ export const OCCASIONS_DATA: OccasionItem[] = [
     id: 'churches',
     tag: 'Churches & Crusades',
     title: 'Churches & Multi-Day Crusades',
-    shortDesc: 'Dynamic worship sound, powerful voice clarity, and daylight LED screens built for spiritual gatherings.',
-    longDesc: 'Whether in an indoor sanctuary, an open sports ground, or a multi-day evangelistic crusade across Kenya, we engineer powerful long-throw sound systems, daylight-visible lyrics screens, and reliable generators that ensure uninterrupted ministry.',
+    shortDesc: 'Clear worship sound and daylight-visible screens for sanctuaries and open-air crusades.',
+    longDesc: 'Indoor sanctuary, open sports ground or multi-day crusade: we supply long-range sound, lyrics screens you can read in daylight, and generators that keep the service running.',
     image: WORK.churchLed,
     highlights: [
-      'Concert-grade line array with speech intelligibility across all rows',
-      'Dual high-brightness daylight LED screens for live IMAG & lyrics',
-      'Modular choir, band, and pulpit stage risers with safety rails',
-      'Dual-generator synchronized power running 24/7 with zero downtime'
+      'Speakers that keep every word clear, even in the back rows',
+      'Two bright LED screens for live video and lyrics, readable in daylight',
+      'Choir, band and pulpit platforms with safety rails',
+      'Two generators, so the power stays on through multi-day events'
     ],
     recommendedKit: [
       'Line Array PA + 18" Subwoofers',
@@ -690,14 +690,14 @@ export const OCCASIONS_DATA: OccasionItem[] = [
     id: 'conferences',
     tag: 'Conferences & Summits',
     title: 'Conferences, Summits & AGMs',
-    shortDesc: 'Distraction-free AV setups engineered for keynotes, panel discussions, hybrid streams, and Q&As.',
-    longDesc: 'We provide executive-tier presentation environments with ultra-sharp presentation screens, confidence monitors for keynotes, seamless multi-feed video switching, and pristine podium microphone acoustic balance.',
+    shortDesc: 'Clean audio-visual setups for keynotes, panels, hybrid streams and Q&As.',
+    longDesc: 'Sharp presentation screens, speaker monitors, smooth video switching and clear podium microphones, so your speakers and slides come across well.',
     image: WORK.healthSummit,
     highlights: [
-      'Multi-channel presentation switchers for live slides & hybrid zoom',
-      'Ultra-sharp P2.6 indoor LED backdrops and timer confidence monitors',
-      'Multi-microphone panel setups with automatic feedback suppression',
-      'Glare-free warm stage washes tailored for crisp 4K video recording'
+      'Switch between slides, cameras and video calls smoothly',
+      'Sharp indoor LED backdrops and speaker timer screens',
+      'Panel microphones with feedback control',
+      'Warm, even lighting that records well on video'
     ],
     recommendedKit: [
       'Indoor P2.6 Seamless LED Backdrop',
@@ -751,14 +751,14 @@ export const OCCASIONS_DATA: OccasionItem[] = [
     id: 'launches',
     tag: 'Product & Brand Launches',
     title: 'Product & Brand Launches',
-    shortDesc: 'High-impact choreography where reveal lighting, special effects, and staging sync together.',
-    longDesc: 'Transform brand launches into unforgettable sensory experiences. We combine cold-spark fountains, low-lying heavy fog, intelligent synchronized lighting sequences, and curved LED centerpieces that ignite excitement.',
+    shortDesc: 'Lighting, effects and staging timed together for a strong reveal.',
+    longDesc: 'We time cold sparks, low fog, moving lights and a curved LED backdrop to your reveal, so your audience remembers the moment.',
     image: WORK.femaBranded,
     highlights: [
-      'Choreographed reveal sequences with cold sparks & low-fog entrance',
-      'Curved high-definition LED centerpiece with 3D graphics playback',
-      'Intelligent moving head lighting programmed to precise music cues',
-      'Immersive surround sound acoustics with punchy low-end impact'
+      'Timed reveals with cold sparks and low fog',
+      'Curved LED backdrop for your visuals and video',
+      'Moving lights timed to your music',
+      'Full, powerful sound that fills the room'
     ],
     recommendedKit: [
       'Cold Spark Fountains (4–8 units)',
@@ -812,14 +812,14 @@ export const OCCASIONS_DATA: OccasionItem[] = [
     id: 'rallies',
     tag: 'Public Rallies & Gatherings',
     title: 'Public Rallies & Open-Air Gatherings',
-    shortDesc: 'Long-throw line arrays and daylight-visible outdoor LED walls engineered for massive open-air crowds.',
-    longDesc: 'Built for extreme crowd densities and outdoor field conditions. Our heavy-duty stage trucks, long-throw line array towers, and sunlight-fighting outdoor LED walls deliver crystal-clear messaging across vast open stadium fields.',
+    shortDesc: 'Powerful sound and daylight-visible LED screens for large open-air crowds.',
+    longDesc: 'Our strong stages, long-range speaker towers and sunlight-ready LED screens carry your message clearly across a full stadium or field.',
     image: WORK.outdoorTent,
     highlights: [
-      'High-power touring line arrays with perimeter delay towers',
-      'Daylight-fighting 6,500-nit outdoor LED jumbo screens',
-      'Heavy-duty reinforced modular stages with non-slip surfaces',
-      'Mobile power generator vehicles on continuous standby'
+      'Powerful speakers with delay towers around the field',
+      'Large outdoor LED screens, bright enough for midday sun',
+      'Reinforced non-slip stages',
+      'Generator vehicles on standby all day'
     ],
     recommendedKit: [
       'Outdoor High-SPL Line Array Rig',
@@ -873,14 +873,14 @@ export const OCCASIONS_DATA: OccasionItem[] = [
     id: 'funerals',
     tag: 'Funerals & Memorial Services',
     title: 'Funerals & Memorial Services',
-    shortDesc: 'Reverent, evenly distributed sound and discreet tribute screens so families can focus on the memorial.',
-    longDesc: 'We handle memorial services with deep reverence, quiet dignity, and flawless reliability. Discreet audio distribution reaches every tent and overflow section clearly, accompanied by silent generators that make zero acoustic disturbance.',
+    shortDesc: 'Quiet, even sound and discreet tribute screens, so families can focus on the service.',
+    longDesc: 'We work quietly and respectfully. Sound reaches every tent and overflow area clearly, and silent generators keep the service undisturbed.',
     image: WORK.galaTent,
     highlights: [
-      'Acoustically balanced sound distributed across family and guest tents',
-      'Overflow LED and TV monitors for tribute slideshows and recordings',
-      'Super-silent 60kVA generator with remote exhaust placement',
-      'Respectful, uniformed, and unobtrusive technical operators'
+      'Even sound across family and guest tents',
+      'Screens for tribute slideshows and overflow seating',
+      'Silent generator placed away from the gathering',
+      'Respectful, uniformed technicians who stay out of the way'
     ],
     recommendedKit: [
       'Multi-Tent Distributed Audio System',

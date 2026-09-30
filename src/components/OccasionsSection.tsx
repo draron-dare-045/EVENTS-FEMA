@@ -39,13 +39,13 @@ export const OccasionsSection: React.FC<OccasionsSectionProps> = ({
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-12 border-b-2 border-stone-800 pb-6 sm:pb-8 gap-4">
           <div>
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-none bg-black border-2 border-stone-700 text-[#b83a24] text-[11px] sm:text-xs font-bold uppercase tracking-widest mb-3 shadow-[2px_2px_0px_0px_#b83a24]">
-              <span>Event Engineering Blueprints</span>
+              <span>Events We Cover</span>
             </div>
             <h1 className="font-serif text-2xl sm:text-4xl lg:text-5xl font-bold leading-tight">
               Solutions by Occasion
             </h1>
             <p className="text-stone-300 text-xs sm:text-sm mt-2 max-w-2xl leading-relaxed font-normal">
-              Every gathering has distinct acoustic, visual, and power demands. Explore our curated event solutions designed for seamless execution across Kenya.
+              Pick your type of event to see what we recommend.
             </p>
           </div>
         </div>
@@ -123,7 +123,7 @@ export const OccasionsSection: React.FC<OccasionsSectionProps> = ({
               {/* Highlights */}
               <div className="mb-6">
                 <h3 className="text-[11px] font-bold uppercase tracking-widest text-[#b83a24] mb-2.5 font-sans">
-                  Production Engineering Highlights
+                  What We Provide
                 </h3>
                 <div className="space-y-2">
                   {selectedOccasion.highlights.map((h, i) => (
@@ -143,7 +143,7 @@ export const OccasionsSection: React.FC<OccasionsSectionProps> = ({
                   onClick={() => onSelectOccasionQuote(selectedOccasion.title, selectedOccasion.id)}
                   className="bg-[#b83a24] hover:bg-[#9b2e1b] text-white text-xs uppercase font-bold tracking-widest py-3.5 px-6 rounded-none border-2 border-white shadow-[3px_3px_0px_0px_#ffffff] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all cursor-pointer flex items-center justify-center gap-2"
                 >
-                  <span>Request Proposal</span>
+                  <span>Get a Quote</span>
                   <ArrowRight className="w-4 h-4" />
                 </button>
 
@@ -152,7 +152,7 @@ export const OccasionsSection: React.FC<OccasionsSectionProps> = ({
                     onClick={() => onNavigateToOccasionDetail(selectedOccasion.id)}
                     className="bg-black hover:bg-stone-900 border-2 border-stone-700 hover:border-white text-stone-200 hover:text-white text-xs uppercase font-bold tracking-wider py-3.5 px-5 rounded-none shadow-[3px_3px_0px_0px_#000000] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all cursor-pointer flex items-center justify-center"
                   >
-                    <span>View Blueprint Specs &rarr;</span>
+                    <span>View Details &rarr;</span>
                   </button>
                 )}
               </div>
@@ -171,7 +171,7 @@ export const OccasionsSection: React.FC<OccasionsSectionProps> = ({
                 <div className="absolute inset-0 bg-[#121212] opacity-40"></div>
                 <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4">
                   <span className="text-[9px] sm:text-[10px] font-bold uppercase tracking-widest text-[#b83a24] bg-black px-2 py-0.5 border border-white/20 inline-block mb-1">
-                    Live Production Setup
+                    Recent Event
                   </span>
                   <p className="font-serif text-xs sm:text-sm font-bold text-white line-clamp-1">
                     {selectedOccasion.title}

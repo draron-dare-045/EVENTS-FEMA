@@ -92,13 +92,13 @@ export const Hero: React.FC<HeroProps> = ({ onNavigateView, onOpenQuote }) => {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center">
         {/* Main Headline - Tailored for mobile screens */}
         <h1 className="font-serif text-3xl sm:text-5xl md:text-7xl font-bold leading-[1.18] sm:leading-[1.12] max-w-5xl tracking-tight mb-4 sm:mb-6">
-          Elevating Live Experiences Through{' '}
-          <span className="italic font-bold text-[#b83a24]">Seamless</span> Event Technology.
+          Sound, screens and lighting for{' '}
+          <span className="italic font-bold text-[#b83a24]">every event</span> in Kenya.
         </h1>
 
         {/* Sub-headline */}
         <p className="text-stone-300 text-sm sm:text-lg md:text-xl font-normal max-w-3xl mb-8 sm:mb-10 leading-relaxed px-2">
-          Concert sound line arrays, ultra-bright P2.6 &amp; P3 LED screens, intelligent stage lighting, modular staging, and synchronized backup generators across Kenya.
+          We supply and run sound, LED screens, lighting, staging and backup power.
         </p>
 
         {/* Action Buttons - Stacked on Mobile with 48px touch targets */}
@@ -147,24 +147,24 @@ export const Hero: React.FC<HeroProps> = ({ onNavigateView, onOpenQuote }) => {
             <div className="font-serif text-lg sm:text-2xl font-black text-white flex items-baseline justify-center">
               <StatCounter target={4} suffix="k" decimals={1} />
             </div>
-            <div className="text-stone-200 text-[10px] sm:text-[11px] uppercase tracking-wider font-bold mt-1">4k Custom LEDs</div>
-            <div className="text-stone-400 text-[10px] mt-0.5">P2.6 &amp; P3 panels</div>
+            <div className="text-stone-200 text-[10px] sm:text-[11px] uppercase tracking-wider font-bold mt-1">LED Panels</div>
+            <div className="text-stone-400 text-[10px] mt-0.5">Indoor and outdoor</div>
           </div>
 
           <div className="text-center">
             <div className="font-serif text-lg sm:text-2xl font-black text-[#b83a24] flex items-baseline justify-center">
               <StatCounter target={100} suffix="%" />
             </div>
-            <div className="text-stone-200 text-[10px] sm:text-[11px] uppercase tracking-wider font-bold mt-1">Power Redundancy</div>
-            <div className="text-stone-400 text-[10px] mt-0.5">Dual ATS generator sync</div>
+            <div className="text-stone-200 text-[10px] sm:text-[11px] uppercase tracking-wider font-bold mt-1">Backup Power</div>
+            <div className="text-stone-400 text-[10px] mt-0.5">Two generators on standby</div>
           </div>
 
           <div className="text-center">
             <div className="font-serif text-lg sm:text-2xl font-black text-white flex items-baseline justify-center">
               <span>24/7</span>
             </div>
-            <div className="text-stone-200 text-[10px] sm:text-[11px] uppercase tracking-wider font-bold mt-1">Certified Crew</div>
-            <div className="text-stone-400 text-[10px] mt-0.5">In-house technicians</div>
+            <div className="text-stone-200 text-[10px] sm:text-[11px] uppercase tracking-wider font-bold mt-1">Crew On Site</div>
+            <div className="text-stone-400 text-[10px] mt-0.5">Our own technicians</div>
           </div>
         </div>
 
