@@ -97,10 +97,10 @@ export const OccasionsCarousel: React.FC<OccasionsCarouselProps> = ({
               <span>Events We Cover</span>
             </div>
             <h2 className="font-serif text-2xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white">
-              Solutions by Occasion
+              Setups for Every Kind of Event
             </h2>
             <p className="text-stone-300 text-xs sm:text-sm mt-1.5 max-w-xl font-normal leading-relaxed">
-              Setups for churches, conferences, launches, rallies and memorials.
+              Sound, screens, lighting, stages and backup power, planned around your kind of event and the size of your crowd.
             </p>
           </div>
 
@@ -194,7 +194,7 @@ export const OccasionsCarousel: React.FC<OccasionsCarouselProps> = ({
                   {/* Production Highlights */}
                   <div className="mb-6">
                     <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-stone-400 block mb-2">
-                      What We Provide:
+                      What You Get:
                     </span>
                     <div className="space-y-1.5 sm:space-y-2">
                       {activeOccasion.highlights.slice(0, 4).map((highlight, hIdx) => (
@@ -221,7 +221,7 @@ export const OccasionsCarousel: React.FC<OccasionsCarouselProps> = ({
                     onClick={() => onExploreOccasionSpecs(activeOccasion.id)}
                     className="w-full border-2 border-stone-600 bg-black hover:border-white text-stone-200 hover:text-white text-xs uppercase font-bold tracking-wider py-3.5 px-4 rounded-none shadow-[4px_4px_0px_0px_#000000] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all cursor-pointer flex items-center justify-center text-center"
                   >
-                    <span>View Details</span>
+                    <span>See the Full Setup</span>
                   </button>
                 </div>
               </div>
@@ -241,7 +241,7 @@ export const OccasionsCarousel: React.FC<OccasionsCarouselProps> = ({
                   {/* Image Overlay Caption */}
                   <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 bg-black/90 p-2.5 border border-stone-700">
                     <span className="text-[9px] sm:text-[10px] font-bold uppercase tracking-widest text-[#b83a24] block mb-0.5">
-                      Recent Event
+                      From One of Our Events
                     </span>
                     <p className="font-serif text-xs sm:text-sm font-bold text-white line-clamp-1">
                       {activeOccasion.title}

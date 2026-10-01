@@ -10,19 +10,19 @@ const STATS = [
 const PILLARS = [
   {
     title: 'Our Own Crew',
-    body: 'Sound engineers, lighting technicians and riggers who work for us. We never outsource.'
+    body: 'Sound engineers, lighting technicians and riggers who work for us, not for a subcontractor. You see the same faces from setup to pack-down.'
   },
   {
     title: 'Backup Power',
-    body: 'Two silent generators on standby. If one fails, the other takes over automatically.'
+    body: 'Two silent generators on standby. If one stops, an automatic switch brings in the other within half a second, so nobody notices.'
   },
   {
-    title: 'Technician On Site',
-    body: 'A technician stays at the stage and the mixing desk from soundcheck until the event ends.'
+    title: 'A Technician On Site',
+    body: 'A technician stays at the stage and the mixing desk from soundcheck to the final goodbye.'
   },
   {
-    title: 'Delivery Across Kenya',
-    body: 'Our own trucks deliver to Mombasa, Kisumu, Nakuru and everywhere in between.'
+    title: 'We Deliver Across Kenya',
+    body: 'Our own trucks reach Mombasa, Kisumu, Nakuru and everywhere in between.'
   }
 ];
 
@@ -38,11 +38,11 @@ export const AboutSection: React.FC = () => {
               About FEMA Events
             </span>
             <h1 className="font-serif text-4xl sm:text-6xl font-bold leading-[1.08]">
-              Sound, screens and staging you can rely on.
+              Sound you can hear, screens you can see, and a crew you can rely on.
             </h1>
           </div>
           <p className="lg:col-span-5 text-base sm:text-lg text-stone-700 leading-relaxed">
-            We are an event production company in Nairobi. We supply sound, LED screens, lighting, staging and backup power across Kenya, and our own crew sets up and runs every show.
+            We are an event production company in Nairobi. We bring sound, LED screens, lighting, staging and backup power to churches, companies and institutions across Kenya, and our own crew sets up and runs every show.
           </p>
         </div>
 
@@ -57,7 +57,7 @@ export const AboutSection: React.FC = () => {
           <div className="absolute inset-0 bg-[#121212] opacity-40"></div>
           <div className="absolute inset-x-0 bottom-0 p-6 sm:p-10 text-white">
             <span className="text-xs font-bold uppercase tracking-widest text-[#b83a24] bg-black px-2.5 py-1 border border-white/20">
-              Based in Nairobi
+              Proudly based in Nairobi
             </span>
             <h2 className="font-serif text-2xl sm:text-4xl font-bold max-w-2xl leading-tight mt-3">
               Trusted by churches, companies and institutions across Kenya.
@@ -84,10 +84,10 @@ export const AboutSection: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
           <div className="lg:col-span-4">
             <h2 className="font-serif text-3xl sm:text-4xl font-bold leading-tight mb-4">
-              How we run every show.
+              How we keep every show running smoothly.
             </h2>
             <p className="text-stone-700 leading-relaxed">
-              The same team handles your event from first visit to pack-down.
+              From the first site visit to the last pack-down, the same team looks after your event.
             </p>
           </div>
 

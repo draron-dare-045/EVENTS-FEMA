@@ -89,7 +89,7 @@ export const OccasionDetailPage: React.FC<OccasionDetailPageProps> = ({
               className="bg-stone-900 hover:bg-stone-800 border-2 border-stone-700 hover:border-white text-stone-200 hover:text-white text-xs uppercase font-bold tracking-widest py-4 px-5 rounded-none shadow-[3px_3px_0px_0px_#000000] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all cursor-pointer flex items-center justify-center gap-2"
             >
               <MessageSquare className="w-4 h-4 text-emerald-400" />
-              <span>WhatsApp Production Desk</span>
+              <span>Message Us on WhatsApp</span>
             </button>
           </div>
         </div>
@@ -98,7 +98,7 @@ export const OccasionDetailPage: React.FC<OccasionDetailPageProps> = ({
       {/* Quick Occasion Switcher - Horizontal Touch Swipe on Mobile */}
       <div className="mb-10 pb-4 border-b-2 border-stone-300">
         <span className="text-[11px] font-bold uppercase tracking-widest text-stone-700 mb-2.5 block">
-          Switch Occasion Blueprint:
+          Look at Another Event Type:
         </span>
         <div className="overflow-x-auto no-scrollbar flex gap-2 -mx-4 px-4 sm:mx-0 sm:px-0">
           {OCCASIONS_DATA.map((occ) => {
@@ -129,10 +129,10 @@ export const OccasionDetailPage: React.FC<OccasionDetailPageProps> = ({
         {/* Production Highlights */}
         <div className="lg:col-span-7 bg-white rounded-none p-6 sm:p-8 border-2 border-[#121212] shadow-[6px_6px_0px_0px_#121212]">
           <span className="text-xs font-bold uppercase tracking-widest text-[#b83a24] mb-1.5 block">
-            Engineering Highlights
+            What You Get
           </span>
           <h2 className="font-serif text-xl sm:text-2xl font-bold text-[#121212] mb-4">
-            Acoustic &amp; Visual Blueprint
+            Our Sound and Screen Plan
           </h2>
 
           <div className="space-y-3">
@@ -153,7 +153,7 @@ export const OccasionDetailPage: React.FC<OccasionDetailPageProps> = ({
             <div className="flex items-center gap-2 mb-2">
               <Check className="w-4 h-4 text-[#b83a24]" />
               <span className="text-xs font-bold uppercase tracking-widest text-[#b83a24]">
-                Turnkey Event Production
+                We Handle It All
               </span>
             </div>
             <h3 className="font-serif text-xl sm:text-2xl font-bold mb-4">
@@ -179,7 +179,7 @@ export const OccasionDetailPage: React.FC<OccasionDetailPageProps> = ({
             onClick={() => onOpenQuote(occasion.title)}
             className="w-full bg-[#b83a24] hover:bg-[#9b2e1b] text-white text-xs font-bold uppercase tracking-widest py-3.5 rounded-none border-2 border-white transition-all text-center cursor-pointer shadow-[3px_3px_0px_0px_#ffffff] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none"
           >
-            Request Event Proposal &rarr;
+            Get a Quote for Your Event &rarr;
           </button>
         </div>
       </div>
@@ -189,13 +189,13 @@ export const OccasionDetailPage: React.FC<OccasionDetailPageProps> = ({
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
           <div className="max-w-2xl">
             <span className="text-xs font-bold uppercase tracking-widest text-[#b83a24] mb-1.5 block">
-              Event-Specific AV Engineering
+              Planned Around Your Event
             </span>
             <h3 className="font-serif text-xl sm:text-2xl font-bold text-[#121212] mb-2">
               Custom Production Sizing for {occasion.tag}
             </h3>
             <p className="text-stone-700 text-xs sm:text-sm leading-relaxed font-normal">
-              Every gathering has unique acoustic dynamics, sightlines, and power parameters. Call our technical production desk to discuss your event vision, schedule, and venue requirements.
+              Every venue has its own echo, sightlines and power supply. Call us, tell us about your event, and we will plan the setup together.
             </p>
           </div>
 
@@ -212,7 +212,7 @@ export const OccasionDetailPage: React.FC<OccasionDetailPageProps> = ({
               onClick={() => onOpenQuote(occasion.title)}
               className="bg-[#121212] hover:bg-black text-white text-xs uppercase font-bold tracking-widest py-3.5 px-6 rounded-none border-2 border-black shadow-[3px_3px_0px_0px_#b83a24] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all flex items-center justify-center gap-2 cursor-pointer"
             >
-              <span>Submit Inquiries</span>
+              <span>Get in Touch</span>
               <ArrowRight className="w-4 h-4" />
             </button>
           </div>
@@ -223,10 +223,10 @@ export const OccasionDetailPage: React.FC<OccasionDetailPageProps> = ({
       {occasion.keyChallengesSolved && occasion.keyChallengesSolved.length > 0 && (
         <div className="bg-white rounded-none p-6 sm:p-8 border-2 border-[#121212] shadow-[6px_6px_0px_0px_#121212] mb-12">
           <span className="text-xs font-bold uppercase tracking-widest text-[#b83a24] mb-1.5 block">
-            Field Reliability Guarantee
+            Problems We Solve
           </span>
           <h2 className="font-serif text-xl sm:text-3xl font-bold text-[#121212] mb-5">
-            Production Challenges Engineered Away
+            Common Event Headaches, Sorted
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -252,7 +252,7 @@ export const OccasionDetailPage: React.FC<OccasionDetailPageProps> = ({
         <div className="mb-12">
           <div className="mb-6">
             <span className="text-xs font-bold uppercase tracking-widest text-[#b83a24] mb-1 block">
-              Execution Portfolio
+              Photos From Real Events
             </span>
             <h2 className="font-serif text-xl sm:text-3xl font-bold text-[#121212]">
               {occasion.title} Live Deployments
@@ -295,7 +295,7 @@ export const OccasionDetailPage: React.FC<OccasionDetailPageProps> = ({
             Planning a {occasion.tag}?
           </h2>
           <p className="text-stone-300 text-xs sm:text-sm mb-6 max-w-lg mx-auto font-normal">
-            Get an itemized quote with site acoustic mapping, CAD screen elevations, and dual generator power redundancy.
+            Get an itemised quote that covers a sound check of your venue, screen drawings and twin-generator backup.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
@@ -303,7 +303,7 @@ export const OccasionDetailPage: React.FC<OccasionDetailPageProps> = ({
               onClick={() => onOpenQuote(occasion.title)}
               className="w-full sm:w-auto bg-[#b83a24] hover:bg-[#9b2e1b] text-white text-xs uppercase font-bold tracking-widest py-3.5 px-7 rounded-none border-2 border-white shadow-[3px_3px_0px_0px_#ffffff] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all cursor-pointer flex items-center justify-center gap-2"
             >
-              <span>Request Custom Proposal</span>
+              <span>Get a Quote</span>
               <ArrowRight className="w-4 h-4" />
             </button>
 
@@ -311,7 +311,7 @@ export const OccasionDetailPage: React.FC<OccasionDetailPageProps> = ({
               onClick={onBackToAllOccasions}
               className="w-full sm:w-auto bg-stone-900 border-2 border-stone-700 hover:border-white text-stone-200 hover:text-white text-xs uppercase font-bold tracking-widest py-3.5 px-6 rounded-none shadow-[3px_3px_0px_0px_#000000] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all cursor-pointer"
             >
-              All Occasion Blueprints
+              See All Event Types
             </button>
           </div>
         </div>

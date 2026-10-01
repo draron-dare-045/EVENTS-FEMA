@@ -43,15 +43,15 @@ export const EquipmentSection: React.FC<EquipmentSectionProps> = ({
         <div className="relative z-10 max-w-3xl">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-none bg-black border-2 border-stone-700 text-[11px] sm:text-xs font-bold uppercase tracking-widest text-[#b83a24] mb-4 shadow-[2px_2px_0px_0px_#b83a24]">
             <Package className="w-3.5 h-3.5" />
-            <span>Our Equipment &bull; Nairobi</span>
+            <span>Our Equipment &bull; Nairobi Warehouse</span>
           </div>
 
           <h1 className="font-serif text-2xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white mb-4 leading-tight">
-            Event Equipment for Hire
+            Event Equipment for Hire in Kenya
           </h1>
 
           <p className="text-stone-300 text-xs sm:text-base leading-relaxed font-normal mb-6">
-            We own and maintain all of our equipment. Pick a category to see what we have.
+            We own and look after every piece of gear we hire out, and our stages are TÜV load-certified. Pick a category below to see the models, specs and setups we offer.
           </p>
 
           {/* Quick Direct Booking Assistance Strip */}
@@ -61,7 +61,7 @@ export const EquipmentSection: React.FC<EquipmentSectionProps> = ({
               className="bg-[#b83a24] hover:bg-[#9b2e1b] text-white py-3.5 px-6 rounded-none border-2 border-white shadow-[3px_3px_0px_0px_#ffffff] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all flex items-center justify-center gap-2 cursor-pointer"
             >
               <PhoneCall className="w-4 h-4" />
-              <span>Call 0722 541 214</span>
+              <span>Call Us: 0722 541 214</span>
             </a>
 
             <a
@@ -71,7 +71,7 @@ export const EquipmentSection: React.FC<EquipmentSectionProps> = ({
               className="bg-stone-900 hover:bg-stone-800 border-2 border-stone-700 hover:border-white text-stone-200 hover:text-white py-3.5 px-6 rounded-none shadow-[3px_3px_0px_0px_#000000] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all flex items-center justify-center gap-2"
             >
               <MessageSquare className="w-4 h-4 text-emerald-400" />
-              <span>WhatsApp Us</span>
+              <span>Message Us on WhatsApp</span>
             </a>
           </div>
         </div>
@@ -84,9 +84,9 @@ export const EquipmentSection: React.FC<EquipmentSectionProps> = ({
             01
           </div>
           <div>
-            <h2 className="font-serif font-bold text-sm text-[#121212] mb-1 uppercase tracking-wide">Pick Your Gear</h2>
+            <h2 className="font-serif font-bold text-sm text-[#121212] mb-1 uppercase tracking-wide">Start With a Category</h2>
             <p className="text-xs text-stone-700 leading-relaxed font-normal">
-              Open a category to see what we offer.
+              Tap a category to see the models, sizes and what each one can do.
             </p>
           </div>
         </div>
@@ -98,7 +98,7 @@ export const EquipmentSection: React.FC<EquipmentSectionProps> = ({
           <div>
             <h2 className="font-serif font-bold text-sm text-[#121212] mb-1 uppercase tracking-wide">Call or WhatsApp Us</h2>
             <p className="text-xs text-stone-700 leading-relaxed font-normal">
-              Tell us your venue, dates and audience size.
+              Tell us your venue, dates and how many guests you expect, and we will reserve the right gear.
             </p>
           </div>
         </div>
@@ -110,7 +110,7 @@ export const EquipmentSection: React.FC<EquipmentSectionProps> = ({
           <div>
             <h2 className="font-serif font-bold text-sm text-[#121212] mb-1 uppercase tracking-wide">We Set Up and Run It</h2>
             <p className="text-xs text-stone-700 leading-relaxed font-normal">
-              Our crew delivers, sets up and operates everything.
+              Our own sound and video crew delivers, rigs and tunes everything, then runs it live.
             </p>
           </div>
         </div>
@@ -188,7 +188,7 @@ export const EquipmentSection: React.FC<EquipmentSectionProps> = ({
               {/* Bottom Interactive Bar */}
               <div className="pt-4 border-t-2 border-stone-200 flex items-center justify-between">
                 <span className="text-xs font-bold uppercase tracking-widest text-[#b83a24] group-hover:translate-x-1 transition-transform flex items-center gap-1.5">
-                  <span>View Details</span>
+                  <span>See Details and Specs</span>
                   <ArrowRight className="w-4 h-4" />
                 </span>
               </div>
@@ -207,7 +207,7 @@ export const EquipmentSection: React.FC<EquipmentSectionProps> = ({
             Need Something Specific?
           </h2>
           <p className="text-stone-300 text-xs sm:text-sm mb-6 max-w-lg mx-auto font-normal leading-relaxed">
-            Tell us what you need and we will put together the right setup.
+            Every venue is different. Tell us your room size, crowd and schedule, and we will build a setup that fits.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
@@ -216,7 +216,7 @@ export const EquipmentSection: React.FC<EquipmentSectionProps> = ({
               className="w-full sm:w-auto bg-[#b83a24] hover:bg-[#9b2e1b] text-white text-xs uppercase font-bold tracking-widest py-3.5 px-7 rounded-none border-2 border-white shadow-[3px_3px_0px_0px_#ffffff] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all cursor-pointer flex items-center justify-center gap-2"
             >
               <PhoneCall className="w-4 h-4" />
-              <span>Call 0722 541 214</span>
+              <span>Call Us: 0722 541 214</span>
             </a>
 
             <a
@@ -226,7 +226,7 @@ export const EquipmentSection: React.FC<EquipmentSectionProps> = ({
               className="w-full sm:w-auto bg-stone-900 border-2 border-stone-700 hover:border-white text-stone-200 hover:text-white text-xs uppercase font-bold tracking-widest py-3.5 px-6 rounded-none shadow-[3px_3px_0px_0px_#000000] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all cursor-pointer flex items-center justify-center gap-2"
             >
               <MessageSquare className="w-4 h-4 text-emerald-400" />
-              <span>WhatsApp Us</span>
+              <span>Message Us on WhatsApp</span>
             </a>
           </div>
         </div>

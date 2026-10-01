@@ -212,13 +212,13 @@ ${notes ? `- Additional Requirements: ${notes}` : ''}`;
         <div className="text-center max-w-2xl mx-auto mb-10">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-none bg-black text-white text-xs font-bold uppercase tracking-widest mb-3 border border-black shadow-[2px_2px_0px_0px_#b83a24]">
             <Phone className="w-3.5 h-3.5 text-[#b83a24]" />
-            <span>Direct Equipment Booking &amp; Inquiry</span>
+            <span>Request a Quote</span>
           </div>
           <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#121212]">
-            Book Your Production Gear &amp; Rigs
+            Tell Us About Your Event
           </h2>
           <p className="text-stone-700 text-sm mt-2 font-normal">
-            Specify the equipment and date for your event. You can submit the form below or call our production team directly at <strong className="text-stone-900">0722 541 214</strong> to reserve immediately. Requests are delivered to <strong className="text-stone-900">{CONTACT_EMAIL}</strong>.
+            Tell us what you need and when. Fill in the form below, or call us on <strong className="text-stone-900">0722 541 214</strong> if you would like to book right away. Your request goes straight to <strong className="text-stone-900">{CONTACT_EMAIL}</strong>.
           </p>
         </div>
 
@@ -228,10 +228,10 @@ ${notes ? `- Additional Requirements: ${notes}` : ''}`;
               <Check className="w-8 h-8 text-[#b83a24]" />
             </div>
             <h3 className="font-serif text-2xl font-bold text-stone-900 mb-2">
-              Quote Request Sent!
+              Thank You, We Got It!
             </h3>
             <p className="text-stone-700 text-sm max-w-md mx-auto mb-6 font-normal">
-              Thank you, <strong className="text-stone-900">{contactName || 'Valued Client'}</strong>. Your request has been sent to our production team, who will contact you on <strong className="text-stone-900">{contactPhone || 'your number'}</strong> with a proposal. Need it faster? Message us on WhatsApp.
+              Thank you, <strong className="text-stone-900">{contactName || 'Valued Client'}</strong>. Your request has reached our team, and someone will contact you on <strong className="text-stone-900">{contactPhone || 'your number'}</strong> with a quote. Need it sooner? Message us on WhatsApp.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4">
               <button
@@ -239,13 +239,13 @@ ${notes ? `- Additional Requirements: ${notes}` : ''}`;
                 className="bg-[#121212] hover:bg-black text-white text-xs uppercase font-bold tracking-widest px-6 py-3.5 rounded-none border-2 border-black shadow-[3px_3px_0px_0px_#b83a24] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none flex items-center gap-2 cursor-pointer"
               >
                 <MessageSquare className="w-4 h-4 text-emerald-400" />
-                <span>Chat Instantly on WhatsApp</span>
+                <span>Chat With Us on WhatsApp</span>
               </button>
               <button
                 onClick={resetForm}
                 className="text-stone-800 hover:text-black text-xs font-bold uppercase tracking-wider px-6 py-3 border-2 border-stone-400 hover:border-black rounded-none cursor-pointer"
               >
-                Submit Another Request
+                Send Another Request
               </button>
             </div>
           </div>
@@ -265,7 +265,7 @@ ${notes ? `- Additional Requirements: ${notes}` : ''}`;
             {/* Step 1: Event Context */}
             <div>
               <label htmlFor="eventType" className="block text-xs font-bold uppercase tracking-wider text-stone-900 mb-2">
-                1. Select Gathering / Event Type
+                1. What kind of event is it?
               </label>
               <MobileSelect
                 id="eventType"
@@ -287,7 +287,7 @@ ${notes ? `- Additional Requirements: ${notes}` : ''}`;
 
               <div>
                 <label htmlFor="venueLocation" className="block text-xs font-bold uppercase tracking-wider text-stone-900 mb-2">
-                  Venue / County
+                  Venue or County
                 </label>
                 <input
                   id="venueLocation"
@@ -304,7 +304,7 @@ ${notes ? `- Additional Requirements: ${notes}` : ''}`;
             {/* Step 3: Equipment Checklist */}
             <div>
               <label className="block text-xs font-bold uppercase tracking-wider text-stone-900 mb-3">
-                2. Required Production Disciplines (Select all that apply)
+                2. What do you need? (Pick all that apply)
               </label>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5">
                 {availableServices.map((svc) => {
@@ -337,7 +337,7 @@ ${notes ? `- Additional Requirements: ${notes}` : ''}`;
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t-2 border-stone-200">
               <div>
                 <label htmlFor="contactName" className="block text-xs font-bold uppercase tracking-wider text-stone-900 mb-2">
-                  Your Name / Organization
+                  Your Name or Organisation
                 </label>
                 <input
                   id="contactName"
@@ -352,7 +352,7 @@ ${notes ? `- Additional Requirements: ${notes}` : ''}`;
 
               <div>
                 <label htmlFor="contactPhone" className="block text-xs font-bold uppercase tracking-wider text-stone-900 mb-2">
-                  Phone Number / WhatsApp
+                  Phone or WhatsApp Number
                 </label>
                 <input
                   id="contactPhone"
@@ -368,12 +368,12 @@ ${notes ? `- Additional Requirements: ${notes}` : ''}`;
 
             <div>
               <label htmlFor="notes" className="block text-xs font-bold uppercase tracking-wider text-stone-900 mb-2">
-                Special Technical Notes or Run-of-Show Requirements (Optional)
+                Anything else we should know? (Optional)
               </label>
               <textarea
                 id="notes"
                 rows={3}
-                placeholder="e.g., Live streaming needed, hybrid Zoom feeds, specific stage dimensions..."
+                placeholder="e.g. live streaming, a 10m × 6m stage, a silent generator..."
                 value={notes}
                 onChange={(e) => setNotes(e.target.value)}
                 className="w-full bg-[#FAF8F5] border-2 border-[#121212] rounded-none px-4 py-3 text-sm focus:outline-none focus:border-[#b83a24] text-stone-900 font-medium"
@@ -414,12 +414,12 @@ ${notes ? `- Additional Requirements: ${notes}` : ''}`;
                 {isSending ? (
                   <>
                     <Loader2 className="w-4 h-4 animate-spin" />
-                    <span>Sending Request...</span>
+                    <span>Sending...</span>
                   </>
                 ) : (
                   <>
                     <Send className="w-4 h-4" />
-                    <span>Submit Equipment Booking Request</span>
+                    <span>Send My Request</span>
                   </>
                 )}
               </button>
@@ -431,23 +431,23 @@ ${notes ? `- Additional Requirements: ${notes}` : ''}`;
                 className="w-full sm:w-1/3 bg-[#121212] hover:bg-black text-white font-bold py-4 rounded-none text-xs uppercase tracking-widest border-2 border-black shadow-[4px_4px_0px_0px_#b83a24] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all flex items-center justify-center gap-2 cursor-pointer"
               >
                 <MessageSquare className="w-4 h-4 text-emerald-400" />
-                <span>Book via WhatsApp</span>
+                <span>Message Us on WhatsApp</span>
               </button>
             </div>
 
             <div className="flex items-center justify-center gap-4 text-xs text-stone-600 font-bold pt-2 flex-wrap">
               <span className="flex items-center gap-1">
                 <Phone className="w-3.5 h-3.5 text-[#b83a24]" />
-                Call Desk: 0722 541 214
+                Call Us: 0722 541 214
               </span>
               <span>&bull;</span>
               <a href={`mailto:${CONTACT_EMAIL}`} className="hover:text-[#b83a24] transition-colors">
                 Email: {CONTACT_EMAIL}
               </a>
               <span>&bull;</span>
-              <span>24/7 Rigging &amp; Tech Support</span>
+              <span>Technical Support When You Need It</span>
               <span>&bull;</span>
-              <span>Delivered Nationwide Across Kenya</span>
+              <span>We Deliver Across Kenya</span>
             </div>
           </form>
         )}

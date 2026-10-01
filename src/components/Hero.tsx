@@ -92,13 +92,13 @@ export const Hero: React.FC<HeroProps> = ({ onNavigateView, onOpenQuote }) => {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center">
         {/* Main Headline - Tailored for mobile screens */}
         <h1 className="font-serif text-3xl sm:text-5xl md:text-7xl font-bold leading-[1.18] sm:leading-[1.12] max-w-5xl tracking-tight mb-4 sm:mb-6">
-          Sound, screens and lighting for{' '}
-          <span className="italic font-bold text-[#b83a24]">every event</span> in Kenya.
+          We bring the sound, screens and lighting for{' '}
+          <span className="italic font-bold text-[#b83a24]">your event</span> in Kenya.
         </h1>
 
         {/* Sub-headline */}
         <p className="text-stone-300 text-sm sm:text-lg md:text-xl font-normal max-w-3xl mb-8 sm:mb-10 leading-relaxed px-2">
-          We supply and run sound, LED screens, lighting, staging and backup power.
+          From church crusades to brand launches, we bring line array sound, P2.6 &amp; P4.8 LED screens, lighting, stages and silent backup power. Then we set it up and run it, so you can enjoy your event.
         </p>
 
         {/* Action Buttons - Stacked on Mobile with 48px touch targets */}
@@ -108,7 +108,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigateView, onOpenQuote }) => {
             onClick={onOpenQuote}
             className="w-full sm:w-auto bg-[#b83a24] hover:bg-[#9b2e1b] text-white text-xs sm:text-sm font-bold uppercase tracking-widest py-4 px-8 rounded-none border-2 border-white shadow-[4px_4px_0px_0px_#ffffff] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all cursor-pointer flex items-center justify-center gap-2"
           >
-            <span>Book AV Equipment</span>
+            <span>Get a Quote</span>
             <ArrowRight className="w-4 h-4" />
           </button>
           
@@ -119,7 +119,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigateView, onOpenQuote }) => {
               className="bg-[#b83a24] hover:bg-[#9b2e1b] text-white text-xs sm:text-sm font-bold uppercase tracking-widest py-3.5 sm:py-4 px-4 sm:px-6 rounded-none border-2 border-white shadow-[4px_4px_0px_0px_#ffffff] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all cursor-pointer flex items-center justify-center gap-1.5"
             >
               <Layers className="w-3.5 h-3.5 text-white" />
-              <span>Equipment</span>
+              <span>Our Gear</span>
             </button>
 
             <button
@@ -128,7 +128,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigateView, onOpenQuote }) => {
               className="bg-[#b83a24] hover:bg-[#9b2e1b] text-white text-xs sm:text-sm font-bold uppercase tracking-widest py-3.5 sm:py-4 px-4 sm:px-6 rounded-none border-2 border-white shadow-[4px_4px_0px_0px_#ffffff] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all cursor-pointer flex items-center justify-center gap-1.5"
             >
               <Calendar className="w-3.5 h-3.5 text-white" />
-              <span>Occasions</span>
+              <span>Event Types</span>
             </button>
           </div>
         </div>
@@ -140,15 +140,15 @@ export const Hero: React.FC<HeroProps> = ({ onNavigateView, onOpenQuote }) => {
               <StatCounter target={500} suffix="+" />
             </div>
             <div className="text-stone-200 text-[10px] sm:text-[11px] uppercase tracking-wider font-bold mt-1">Events Powered</div>
-            <div className="text-stone-400 text-[10px] mt-0.5">Nationwide Kenya</div>
+            <div className="text-stone-400 text-[10px] mt-0.5">Across Kenya</div>
           </div>
 
           <div className="text-center">
             <div className="font-serif text-lg sm:text-2xl font-black text-white flex items-baseline justify-center">
               <StatCounter target={4} suffix="k" decimals={1} />
             </div>
-            <div className="text-stone-200 text-[10px] sm:text-[11px] uppercase tracking-wider font-bold mt-1">LED Panels</div>
-            <div className="text-stone-400 text-[10px] mt-0.5">Indoor and outdoor</div>
+            <div className="text-stone-200 text-[10px] sm:text-[11px] uppercase tracking-wider font-bold mt-1">P2.6 &amp; P4.8 LED</div>
+            <div className="text-stone-400 text-[10px] mt-0.5">Sharp indoors, bright outdoors</div>
           </div>
 
           <div className="text-center">
@@ -156,7 +156,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigateView, onOpenQuote }) => {
               <StatCounter target={100} suffix="%" />
             </div>
             <div className="text-stone-200 text-[10px] sm:text-[11px] uppercase tracking-wider font-bold mt-1">Backup Power</div>
-            <div className="text-stone-400 text-[10px] mt-0.5">Two generators on standby</div>
+            <div className="text-stone-400 text-[10px] mt-0.5">Twin silent generators</div>
           </div>
 
           <div className="text-center">

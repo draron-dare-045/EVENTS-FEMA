@@ -67,7 +67,7 @@ export const GearLineup: React.FC<GearLineupProps> = ({ title, items, onOpenQuot
                 onClick={() => onOpenQuote(title)}
                 className="mt-auto self-start inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-widest text-[#121212] hover:text-[#b83a24] transition-colors cursor-pointer"
               >
-                <span>Request this gear</span>
+                <span>Ask About This Gear</span>
                 <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
               </button>
             </div>

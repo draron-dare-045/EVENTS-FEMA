@@ -23,18 +23,18 @@ export const Footer: React.FC<FooterProps> = ({
           </div>
           )}
           <p className="text-xs leading-relaxed text-stone-300 mb-4 font-normal">
-            Full-spectrum Audio Visual production, concert audio, high-definition LED screens, stage lighting, and backup power rentals across Kenya.
+            Sound, LED screens, lighting, stages and backup power for events across Kenya. Our own crew delivers, sets up and runs it all.
           </p>
           <div className="text-xs text-stone-200 flex items-center gap-2 font-bold uppercase tracking-wider bg-stone-900 border border-stone-700 px-3 py-1.5 inline-flex">
             <span className="w-2 h-2 bg-emerald-500"></span>
-            Certified Production Crew
+            A Friendly, Trained Crew
           </div>
         </div>
 
         {/* Col 2: Sitemap */}
         <div>
           <h2 className="text-white text-xs font-bold uppercase tracking-widest mb-4 border-b-2 border-stone-800 pb-1 font-sans">
-            Sitemap
+            Quick Links
           </h2>
           <ul className="space-y-2.5 text-xs font-bold uppercase tracking-wider">
             <li>
@@ -52,7 +52,7 @@ export const Footer: React.FC<FooterProps> = ({
                 onClick={() => onNavigateView('equipment', 'equipment-section')}
                 className="hover:text-[#b83a24] text-stone-300 transition-colors text-left flex items-center group cursor-pointer"
               >
-                <span className="group-hover:translate-x-1 transition-transform">Equipment &amp; Inventory</span>
+                <span className="group-hover:translate-x-1 transition-transform">Equipment</span>
               </button>
             </li>
             <li>
@@ -61,7 +61,7 @@ export const Footer: React.FC<FooterProps> = ({
                 onClick={() => onNavigateView('occasions', 'occasions-section')}
                 className="hover:text-[#b83a24] text-stone-300 transition-colors text-left flex items-center group cursor-pointer"
               >
-                <span className="group-hover:translate-x-1 transition-transform">Occasions &amp; Bundles</span>
+                <span className="group-hover:translate-x-1 transition-transform">Events We Cover</span>
               </button>
             </li>
             <li>
@@ -70,7 +70,7 @@ export const Footer: React.FC<FooterProps> = ({
                 onClick={() => onNavigateView('our-work', 'our-work-section')}
                 className="hover:text-[#b83a24] text-stone-300 transition-colors text-left flex items-center group cursor-pointer"
               >
-                <span className="group-hover:translate-x-1 transition-transform">Our Work &amp; Case Studies</span>
+                <span className="group-hover:translate-x-1 transition-transform">Our Work</span>
               </button>
             </li>
             <li>
@@ -97,7 +97,7 @@ export const Footer: React.FC<FooterProps> = ({
         {/* Col 3: Services */}
         <div>
           <h2 className="text-white text-xs font-bold uppercase tracking-widest mb-4 border-b-2 border-stone-800 pb-1 font-sans">
-            Services &amp; Rigs
+            What We Hire Out
           </h2>
           <ul className="space-y-2.5 text-xs font-medium">
             <li>
@@ -178,7 +178,7 @@ export const Footer: React.FC<FooterProps> = ({
         {/* Col 4: Contact info */}
         <div>
           <h2 className="text-white text-xs font-bold uppercase tracking-widest mb-4 border-b-2 border-stone-800 pb-1 font-sans">
-            Nairobi Headquarters
+            Find Us in Nairobi
           </h2>
           <ul className="space-y-3 text-xs">
             <li className="flex items-start gap-2.5">
@@ -214,7 +214,7 @@ export const Footer: React.FC<FooterProps> = ({
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 border-t-2 border-stone-800 flex flex-col sm:flex-row items-center justify-between text-xs text-stone-400 gap-3 font-medium">
         <p>&copy; {new Date().getFullYear()} FEMA Events Ltd. All rights reserved.</p>
-        <p>Engineered for Live Performance &bull; Kenya &amp; East Africa</p>
+        <p>Proudly serving Kenya &amp; East Africa</p>
       </div>
     </footer>
   );

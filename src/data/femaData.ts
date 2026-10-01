@@ -7,8 +7,8 @@ export const EQUIPMENT_DATA: EquipmentItem[] = [
     number: '01',
     category: 'Visual Displays',
     title: 'LED Screens & Video Displays',
-    shortDesc: 'Indoor and outdoor LED screens, stage backdrops and video switching.',
-    longDesc: 'Clear, ultra-bright visual screens sized for any room or outdoor venue — from an intimate corporate backdrop to a daylight-visible wall facing a crowd of thousands.',
+    shortDesc: 'Sharp indoor LED walls and sun-proof outdoor screens, with live video switching.',
+    longDesc: 'From a neat backdrop in a hotel ballroom to a wall that thousands can see in daylight, we size the screen to your room and your crowd. Our crew builds it, calibrates it and runs it for you.',
     iconName: 'Monitor',
     image: WORK.healthSummit,
     showcaseImages: [
@@ -26,10 +26,10 @@ export const EQUIPMENT_DATA: EquipmentItem[] = [
       }
     ],
     features: [
-      'Indoor and outdoor LED screens',
-      'Video switching and multi-camera live feeds',
-      'Curved stage backdrops and side screens',
-      'Flicker-free on camera'
+      'Indoor P2.6 and outdoor P4.8 panels, sharp and sun-ready',
+      'Live video switching and multi-camera feeds',
+      'Curved backdrops and side screens for big rooms',
+      'Flicker-free on camera, so recordings look clean'
     ],
     specs: [
       {
@@ -89,7 +89,7 @@ export const EQUIPMENT_DATA: EquipmentItem[] = [
         name: 'Curved Stage Reveal Package',
         tier: 'Pro Touring',
         idealFor: 'Product launches, gala dinners, annual summits (500–2,500 attendees)',
-        includedItems: ['P3.9 8×3.5m Curved LED Screen', '8-Channel Seamless Video Switcher', 'Live IMAG Camera Feed', 'Video playback servers']
+        includedItems: ['P3.9 8×3.5m Curved LED Screen', '8-Channel Video Switcher', 'Live IMAG Camera Feed', 'Video playback servers']
       },
       {
         name: 'Stadium / Outdoor Crusade Jumbotron',
@@ -104,8 +104,8 @@ export const EQUIPMENT_DATA: EquipmentItem[] = [
     number: '02',
     category: 'Atmosphere & Drama',
     title: 'Ambience & Architectural Lighting',
-    shortDesc: 'Stage lights, moving heads and mood lighting for any venue.',
-    longDesc: 'Atmospheric lighting programmed to match the exact emotional arc of your event, from subtle warm keynote illumination to high-energy moving-light shows.',
+    shortDesc: 'Moving heads, stage washes and mood lighting that suit your venue and your event.',
+    longDesc: 'Good lighting sets the mood before anyone speaks. We program every cue to match your programme, from soft, warm keynote light to a full moving-light show.',
     iconName: 'Sparkles',
     image: WORK.galaTent,
     showcaseImages: [
@@ -123,10 +123,10 @@ export const EQUIPMENT_DATA: EquipmentItem[] = [
       }
     ],
     features: [
-      'Moving lights and follow spots',
-      'Warm stage lighting that looks good on camera',
-      'Wireless uplighters for room colour',
-      'A lighting operator on site'
+      'Moving heads and follow spots for your key moments',
+      'Warm stage washes that look good on camera',
+      'Wireless uplighters to colour the room, no cables to trip over',
+      'A lighting operator with you all event'
     ],
     specs: [
       {
@@ -189,7 +189,7 @@ export const EQUIPMENT_DATA: EquipmentItem[] = [
         includedItems: ['12× 230W Moving Beam Heads', '16× RGBW Stage Washes', '2× Touring Hazers', 'GrandMA-compatible DMX console']
       },
       {
-        name: 'Arena & Festival Festival Rig',
+        name: 'Arena & Festival Rig',
         tier: 'Stadium / Enterprise',
         idealFor: 'Mega rallies, open-air stadiums, multi-act festivals',
         includedItems: ['24× Beam/Spot/Wash Hybrids', 'Truss roof goalpost grid', '4× Long-throw Follow Spots', 'Certified lighting designer on console']
@@ -201,8 +201,8 @@ export const EQUIPMENT_DATA: EquipmentItem[] = [
     number: '03',
     category: 'Audio Clarity',
     title: 'Professional Sound & Audio',
-    shortDesc: 'Concert speakers, mixers and wireless microphones for clear sound at any size.',
-    longDesc: 'High-clarity acoustic engineering so every spoken syllable and musical nuance is delivered with pristine intelligibility from the VIP front row to the furthest tent perimeter.',
+    shortDesc: 'Line array speakers, mixing desks and wireless mics, so every word is heard clearly.',
+    longDesc: 'Whether it is a quiet boardroom or an open field, we tune the sound so everyone hears every word, from the front row to the far end of the last tent.',
     iconName: 'Speaker',
     image: WORK.subwooferStack,
     showcaseImages: [
@@ -223,45 +223,45 @@ export const EQUIPMENT_DATA: EquipmentItem[] = [
       {
         name: 'Touring Line Array Module',
         type: 'Line Array',
-        detail: 'Active two-way modules that fly or ground-stack on a transport dolly for even, long-throw coverage.',
+        detail: 'Powered two-way modules that fly or stack on a dolly, giving even sound over a long distance.',
         image: GEAR.lineArray
       },
       {
         name: '18" High-Output Subwoofer',
         type: 'Sub-Bass',
-        detail: 'Deep, controlled low end with pole mount, stacked under the array or alongside full-range tops.',
+        detail: 'Deep, tight bass. Stack it under the array or beside full-range speakers.',
         image: GEAR.subwoofer
       },
       {
         name: 'Mixing Console',
         type: 'Front-of-House',
-        detail: 'Channel-rich desk with onboard effects and multitrack recording for speech, bands and worship.',
+        detail: 'Plenty of channels, built-in effects and multitrack recording, for speeches, bands and worship.',
         image: GEAR.mixer
       },
       {
         name: 'Active Full-Range Speaker',
         type: 'Powered PA',
-        detail: 'Self-powered cabinet on a tripod stand, ideal for speeches, small halls and fill positions.',
+        detail: 'A self-powered speaker on a tripod. Ideal for speeches, small halls and fill positions.',
         image: GEAR.activeSpeaker
       },
       {
         name: 'Stage PA Pair',
         type: 'Speaker System',
-        detail: 'Matched pair on poles for clear left/right coverage in churches, boardrooms and mid-size venues.',
+        detail: 'A matched pair on poles for clear left and right sound in churches, boardrooms and mid-size venues.',
         image: GEAR.speakerPair
       },
       {
         name: 'Dual Wireless Microphone Kit',
         type: 'Wireless Systems',
-        detail: 'Rack-mount dual UHF receivers with two handheld mics for clean, dropout-free speech.',
+        detail: 'Two UHF handheld mics on a rack receiver, for clean speech without dropouts.',
         image: GEAR.wirelessMics
       }
     ],
     features: [
-      'Concert speaker systems with delay towers for large crowds',
-      'Powerful subwoofers for clean, deep bass',
-      'Digital mixing desks for bands and speakers',
-      'Wireless handheld, lapel and headset microphones'
+      'Line array speakers with delay towers for big crowds',
+      'Powerful 18" subwoofers for clean, deep bass',
+      'Digital mixing desks for bands, choirs and speakers',
+      'Wireless handheld, lapel and headset mics'
     ],
     specs: [
       {
@@ -336,8 +336,8 @@ export const EQUIPMENT_DATA: EquipmentItem[] = [
     number: '04',
     category: 'Structural Platforms',
     title: 'Stages & Modular Platforms',
-    shortDesc: 'Indoor risers, outdoor stages, podiums and guardrails.',
-    longDesc: 'Engineered stage platforms built to fit any venue footprint — from clean indoor executive risers with custom skirting to heavy-duty outdoor concert decks rated for multi-performer bands.',
+    shortDesc: 'Strong indoor risers and outdoor stages, with steps, rails and podiums to match.',
+    longDesc: 'We build the stage to fit your venue, from a tidy indoor riser with a skirt to a heavy-duty outdoor deck rated for a full band.',
     iconName: 'Layers',
     image: WORK.churchStage,
     showcaseImages: [
@@ -355,10 +355,10 @@ export const EQUIPMENT_DATA: EquipmentItem[] = [
       }
     ],
     features: [
-      'Strong, non-slip aluminium stage decks',
+      'Non-slip aluminium decks, rated to 750kg/m²',
       'Adjustable height from 0.4m to 2.0m',
-      'Stairs, guardrails and black stage skirting',
-      'Speaker podiums with microphone mounts'
+      'Stairs, guardrails and black skirting for a neat, safe finish',
+      'Speaker podiums with built-in mic mounts'
     ],
     specs: [
       {
@@ -433,8 +433,8 @@ export const EQUIPMENT_DATA: EquipmentItem[] = [
     number: '05',
     category: 'Special Effects',
     title: 'Pyrotechnics & Special Effects',
-    shortDesc: 'Cold sparks, smoke jets, low fog and confetti for big moments.',
-    longDesc: 'Safe, dramatic stage effects choreographed with light and sound to create show-stopping reveal moments, grand ceremonial entrances, and triumphant finales.',
+    shortDesc: 'Cold sparks, CO2 jets, low fog and confetti, safe for indoor events.',
+    longDesc: 'A well-timed effect turns a good moment into one people remember. We time sparks, fog and confetti with your lights and music, and a trained operator fires every cue.',
     iconName: 'Flame',
     image: WORK.femaBranded,
     showcaseImages: [
@@ -453,9 +453,9 @@ export const EQUIPMENT_DATA: EquipmentItem[] = [
     ],
     features: [
       'Cold spark fountains, safe to use indoors',
-      'CO2 jets for sudden bursts of white smoke',
-      'Low fog that hugs the floor, for first dances and entrances',
-      'Confetti and streamer cannons'
+      'CO2 jets for a sudden burst of white vapour',
+      'Low fog that hugs the floor, perfect for first dances',
+      'Confetti and streamer cannons for the finale'
     ],
     specs: [
       {
@@ -530,8 +530,8 @@ export const EQUIPMENT_DATA: EquipmentItem[] = [
     number: '06',
     category: 'Power & Redundancy',
     title: 'Generator & Power Rentals',
-    shortDesc: 'Silent generators and safe power distribution, with backup ready.',
-    longDesc: 'Uncompromising power stability with 100% redundancy guarantees so that mains power fluctuations or blackouts never disrupt your high-stakes event.',
+    shortDesc: 'Quiet diesel generators with automatic backup, so the show never loses power.',
+    longDesc: 'Nothing ruins an event like a blackout. Our silent generators (58 dBA at 7m) back each other up automatically, so your sound, screens and lights keep running.',
     iconName: 'Zap',
     image: WORK.outdoorTent,
     showcaseImages: [
@@ -550,9 +550,9 @@ export const EQUIPMENT_DATA: EquipmentItem[] = [
     ],
     features: [
       'Silent diesel generators in sound-proofed canopies',
-      'Two generators, so power switches over if one fails',
-      'Heavy-duty power boxes with safety cut-offs',
-      'A qualified electrician on standby throughout'
+      'Twin generators with automatic switch-over in under 0.5 seconds',
+      'Heavy-duty power boxes with RCD safety cut-outs',
+      'A qualified electrician on site for the whole event'
     ],
     specs: [
       {
@@ -629,14 +629,14 @@ export const OCCASIONS_DATA: OccasionItem[] = [
     id: 'churches',
     tag: 'Churches & Crusades',
     title: 'Churches & Multi-Day Crusades',
-    shortDesc: 'Clear worship sound and daylight-visible screens for sanctuaries and open-air crusades.',
-    longDesc: 'Indoor sanctuary, open sports ground or multi-day crusade: we supply long-range sound, lyrics screens you can read in daylight, and generators that keep the service running.',
+    shortDesc: 'Clear worship sound and screens you can read in daylight, for sanctuaries and open-air crusades.',
+    longDesc: 'Whether you meet in a sanctuary, on an open ground or across several nights of crusade, we make sure everyone can hear and see. That means long-throw sound, daylight-bright lyrics screens and generators that keep the service going.',
     image: WORK.churchLed,
     highlights: [
-      'Speakers that keep every word clear, even in the back rows',
+      'Line array sound that keeps every word clear, even at the back',
       'Two bright LED screens for live video and lyrics, readable in daylight',
       'Choir, band and pulpit platforms with safety rails',
-      'Two generators, so the power stays on through multi-day events'
+      'Twin generators, so the power stays on through multi-night events'
     ],
     recommendedKit: [
       'Line Array PA + 18" Subwoofers',
@@ -647,9 +647,9 @@ export const OCCASIONS_DATA: OccasionItem[] = [
     crowdCapacity: 'Scalable to Any Crowd Size',
     venueTypes: ['Open Stadium Grounds', 'Church Auditoriums', 'Community Fields', 'Cathedrals'],
     keyChallengesSolved: [
-      'Acoustic echo control in large uncarpeted halls and reverberant stadiums',
-      'Extreme sunlight glare on lyrics screens during daytime afternoon services',
-      'Grid power outages during high-stakes worship and altar call moments'
+      'Echo in large bare halls and stadiums, solved with tuned delay and careful speaker placement',
+      'Bright sun washing out lyrics screens at daytime services',
+      'Power cuts during worship and altar calls'
     ],
     packages: [
       {
@@ -690,17 +690,17 @@ export const OCCASIONS_DATA: OccasionItem[] = [
     id: 'conferences',
     tag: 'Conferences & Summits',
     title: 'Conferences, Summits & AGMs',
-    shortDesc: 'Clean audio-visual setups for keynotes, panels, hybrid streams and Q&As.',
-    longDesc: 'Sharp presentation screens, speaker monitors, smooth video switching and clear podium microphones, so your speakers and slides come across well.',
+    shortDesc: 'Clean audio and visuals for keynotes, panels, hybrid streams and Q&A.',
+    longDesc: 'We set up the screens, speaker monitors, video switching and podium mics so your speakers sound clear and your slides look sharp, in the room and online.',
     image: WORK.healthSummit,
     highlights: [
-      'Switch between slides, cameras and video calls smoothly',
-      'Sharp indoor LED backdrops and speaker timer screens',
-      'Panel microphones with feedback control',
-      'Warm, even lighting that records well on video'
+      'Smooth switching between slides, cameras and video calls',
+      'Sharp P2.6 indoor LED backdrops and speaker timer screens',
+      'Panel microphones with feedback control, so no squeals',
+      'Even, warm lighting that looks good on video'
     ],
     recommendedKit: [
-      'Indoor P2.6 Seamless LED Backdrop',
+      'Indoor P2.6 LED Backdrop',
       'Multi-channel Video Scaler & Switcher',
       'Wireless Handheld + Lapel Mic Package',
       'Executive Acrylic Speaker Podium'
@@ -708,16 +708,16 @@ export const OCCASIONS_DATA: OccasionItem[] = [
     crowdCapacity: 'Scalable to Any Delegation Size',
     venueTypes: ['Hotel Ballrooms', 'Convention Centers (KICC, Sarit)', 'Corporate Boardrooms', 'Auditoriums'],
     keyChallengesSolved: [
-      'Speaker confidence monitor delay and slide sync glitching',
-      'Audio feedback and room echo during open-floor Q&A sessions',
-      'Lighting glare reflecting onto presenter glasses or projection surfaces'
+      'Speaker screens lagging behind the slides',
+      'Whistling microphones and room echo during Q&A',
+      'Stage lights glaring on presenters or screens'
     ],
     packages: [
       {
         name: 'Executive Board & AGM Setup',
         tier: 'Compact / Intimate',
         idealFor: 'Annual General Meetings, leadership symposiums, 100-300 delegates',
-        includedKit: ['Seamless 85" 4K Presentation Displays', 'Digital Speech Podium & 4 Panel Mics', 'Broadcast-Quality Stage Lighting Wash', '60kVA Silent Backup Power']
+        includedKit: ['85" 4K Presentation Displays', 'Digital Speech Podium & 4 Panel Mics', 'Broadcast-Quality Stage Lighting Wash', '60kVA Silent Backup Power']
       },
       {
         name: 'Plenary Summit Production Rig',
@@ -751,14 +751,14 @@ export const OCCASIONS_DATA: OccasionItem[] = [
     id: 'launches',
     tag: 'Product & Brand Launches',
     title: 'Product & Brand Launches',
-    shortDesc: 'Lighting, effects and staging timed together for a strong reveal.',
-    longDesc: 'We time cold sparks, low fog, moving lights and a curved LED backdrop to your reveal, so your audience remembers the moment.',
+    shortDesc: 'Lighting, effects and staging timed together for a reveal people remember.',
+    longDesc: 'We time cold sparks, low fog, moving lights and a curved LED backdrop to the exact second of your reveal, so your guests feel the moment.',
     image: WORK.femaBranded,
     highlights: [
-      'Timed reveals with cold sparks and low fog',
-      'Curved LED backdrop for your visuals and video',
-      'Moving lights timed to your music',
-      'Full, powerful sound that fills the room'
+      'Reveals timed to the beat with cold sparks and low fog',
+      'A curved LED backdrop for your brand visuals and video',
+      'Moving lights programmed to your music cues',
+      'Full, punchy sound that fills the room'
     ],
     recommendedKit: [
       'Cold Spark Fountains (4–8 units)',
@@ -769,9 +769,9 @@ export const OCCASIONS_DATA: OccasionItem[] = [
     crowdCapacity: 'Scalable to Any Attendance',
     venueTypes: ['Expo Centers', 'Five-Star Ballrooms', 'Automotive Showrooms', 'Open Warehouses'],
     keyChallengesSolved: [
-      'Split-second synchronization between video cues, spark triggers, and music drops',
-      'Indoor venue safety compliance with zero-smoke, non-hazardous cold sparks',
-      'Custom stage layout engineering to support heavy vehicle or product displays'
+      'Video, sparks and music landing on the same beat',
+      'Cold sparks that are safe indoors and meet venue rules',
+      'Stages strong enough to carry a vehicle or large product'
     ],
     packages: [
       {
@@ -812,13 +812,13 @@ export const OCCASIONS_DATA: OccasionItem[] = [
     id: 'rallies',
     tag: 'Public Rallies & Gatherings',
     title: 'Public Rallies & Open-Air Gatherings',
-    shortDesc: 'Powerful sound and daylight-visible LED screens for large open-air crowds.',
-    longDesc: 'Our strong stages, long-range speaker towers and sunlight-ready LED screens carry your message clearly across a full stadium or field.',
+    shortDesc: 'Powerful sound and daylight-bright LED screens for big open-air crowds.',
+    longDesc: 'Our strong stages, long-range speaker towers and sun-proof LED screens carry your message clearly across a full stadium or field.',
     image: WORK.outdoorTent,
     highlights: [
-      'Powerful speakers with delay towers around the field',
+      'Powerful line array speakers with delay towers around the field',
       'Large outdoor LED screens, bright enough for midday sun',
-      'Reinforced non-slip stages',
+      'Reinforced, non-slip stages',
       'Generator vehicles on standby all day'
     ],
     recommendedKit: [
@@ -830,9 +830,9 @@ export const OCCASIONS_DATA: OccasionItem[] = [
     crowdCapacity: 'Scalable to Any Field Capacity',
     venueTypes: ['Public Stadiums', 'County Showgrounds', 'Town Squares', 'Open Fields'],
     keyChallengesSolved: [
-      'Sound dissipation across 300+ meters in open windy outdoor fields',
-      'Direct intense equatorial midday sunlight washing out screen visuals',
-      'Rapid crowd surge management with heavy barricaded stage boundaries'
+      'Sound that carries 300m+ across windy open fields',
+      'Midday sun washing out the screens',
+      'Keeping the crowd back with strong stage barriers'
     ],
     packages: [
       {
@@ -845,7 +845,7 @@ export const OCCASIONS_DATA: OccasionItem[] = [
         name: 'Regional Open-Air Campaign Rig',
         tier: 'Standard Gathering',
         idealFor: 'Large constituency gatherings, sporting rallies, 5,000-15,000 attendees',
-        includedKit: ['Touring Line Array (8 tops + 4 subs per side)', 'Dual 6x4m Outdoor Daylight LED Screens', 'Heavy 12x8m Stage with Safety Mojo Barriers', '150kVA Silent Generator with Auto-Switch']
+        includedKit: ['Touring Line Array (8 tops + 4 subs per side)', 'Dual 6x4m Outdoor Daylight LED Screens', 'Heavy 12x8m Stage with Safety Barriers', '150kVA Silent Generator with Auto-Switch']
       },
       {
         name: 'Mega Stadium National Assembly Rig',
@@ -874,12 +874,12 @@ export const OCCASIONS_DATA: OccasionItem[] = [
     tag: 'Funerals & Memorial Services',
     title: 'Funerals & Memorial Services',
     shortDesc: 'Quiet, even sound and discreet tribute screens, so families can focus on the service.',
-    longDesc: 'We work quietly and respectfully. Sound reaches every tent and overflow area clearly, and silent generators keep the service undisturbed.',
+    longDesc: 'We work quietly and with respect. Sound reaches every tent and overflow area clearly, and silent generators keep the service undisturbed.',
     image: WORK.galaTent,
     highlights: [
       'Even sound across family and guest tents',
       'Screens for tribute slideshows and overflow seating',
-      'Silent generator placed away from the gathering',
+      'A silent generator placed well away from the gathering',
       'Respectful, uniformed technicians who stay out of the way'
     ],
     recommendedKit: [
@@ -891,9 +891,9 @@ export const OCCASIONS_DATA: OccasionItem[] = [
     crowdCapacity: 'Scalable to Any Gathering Size',
     venueTypes: ['Private Residences & Homesteads', 'Church Sanctuaries', 'School Grounds', 'Cemetery Pavilions'],
     keyChallengesSolved: [
-      'Ensuring eulogies are heard in distant perimeter tents without deafening the family tent',
-      'Zero engine noise interference during sensitive prayers and quiet moments',
-      'Rapid dignified setup and non-intrusive cable runs under mats and carpet runners'
+      'Eulogies heard in the far tents without being too loud near the family',
+      'No engine noise during prayers and quiet moments',
+      'A quick, respectful setup with cables hidden under mats'
     ],
     packages: [
       {
@@ -981,7 +981,7 @@ export const CASE_STUDIES_DATA: CaseStudy[] = [
     crowdSize: '400 VIP Guests & Executives',
     image: WORK.galaTent,
     equipmentUsed: [
-      'High-impact seamless LED video wall with synced 4K motion graphics',
+      'LED video wall with motion graphics timed to the show',
       'Cold spark fountain machines timed precisely to the product unboxing',
       'Intelligent moving-head beam lighting programmed to music cues',
       'Low-lying dry ice fog blanket creating a dramatic stage floor reveal'
