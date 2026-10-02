@@ -12,8 +12,8 @@ interface SeoMeta {
  */
 const SEO_META: Record<string, SeoMeta> = {
   "home": {
-    "title": "FEMA Events | AV, LED Screen & Sound Hire in Nairobi, Kenya",
-    "description": "FEMA Events hires concert sound, LED screens, stage lighting, staging, pyrotechnics and backup generators for events across Nairobi and Kenya. Get a quote."
+    "title": "FEMA Events | Premier Audio Visual Production & Technology Rental",
+    "description": "FEMA Events — full-spectrum Audio Visual production, LED screens, concert-grade sound, stage lighting, staging, pyrotechnics and backup power rentals across Kenya."
   },
   "equipment": {
     "title": "Event Equipment Hire in Kenya | LED, Sound, Lighting | FEMA",

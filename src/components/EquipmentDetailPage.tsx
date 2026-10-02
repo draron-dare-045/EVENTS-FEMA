@@ -92,7 +92,7 @@ export const EquipmentDetailPage: React.FC<EquipmentDetailPageProps> = ({
               className="bg-stone-900 hover:bg-stone-800 border-2 border-stone-700 hover:border-white text-stone-200 hover:text-white text-xs uppercase font-bold tracking-widest py-4 px-5 rounded-none shadow-[3px_3px_0px_0px_#000000] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all cursor-pointer flex items-center justify-center gap-2"
             >
               <MessageSquare className="w-4 h-4 text-emerald-400" />
-              <span>Ask Us on WhatsApp</span>
+              <span>WhatsApp Tech Specs</span>
             </button>
           </div>
         </div>
@@ -101,7 +101,7 @@ export const EquipmentDetailPage: React.FC<EquipmentDetailPageProps> = ({
       {/* Quick Category Switcher - Mobile Horizontal Swipe */}
       <div className="mb-10 pb-4 border-b-2 border-stone-300">
         <span className="text-[11px] font-bold uppercase tracking-widest text-stone-700 mb-2.5 block">
-          Look at Another Category:
+          Switch Equipment Discipline:
         </span>
         <div className="overflow-x-auto no-scrollbar flex gap-2 -mx-4 px-4 sm:mx-0 sm:px-0">
           {EQUIPMENT_DATA.map((cat) => {
@@ -130,10 +130,10 @@ export const EquipmentDetailPage: React.FC<EquipmentDetailPageProps> = ({
       {/* Key Features & Engineering Highlights */}
       <div className="bg-white rounded-none p-6 sm:p-8 border-2 border-[#121212] shadow-[6px_6px_0px_0px_#121212] mb-10">
         <span className="text-xs font-bold uppercase tracking-widest text-[#b83a24] mb-1.5 block">
-          What It Does
+          Key Capabilities
         </span>
         <h2 className="font-serif text-xl sm:text-3xl font-bold text-[#121212] mb-5">
-          Features and Performance
+          Rig Features &amp; Performance Highlights
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
@@ -155,14 +155,14 @@ export const EquipmentDetailPage: React.FC<EquipmentDetailPageProps> = ({
         <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-5 pb-3 border-b-2 border-stone-200">
           <div>
             <span className="text-xs font-bold uppercase tracking-widest text-[#b83a24] block mb-1">
-              Technical Specs
+              Technical Specifications
             </span>
             <h2 className="font-serif text-xl sm:text-3xl font-bold text-[#121212]">
-              The Gear in Detail
+              Calibrated Gear Breakdown
             </h2>
           </div>
           <span className="text-[11px] text-stone-700 font-mono font-bold mt-1 sm:mt-0 uppercase">
-            TÜV Certified &bull; Rigged by Our Own Crew
+            TÜV Certified &bull; In-House Rigging
           </span>
         </div>
 
@@ -209,7 +209,7 @@ export const EquipmentDetailPage: React.FC<EquipmentDetailPageProps> = ({
                 <th className="px-4 py-3.5 font-bold border-r border-stone-700">{item.specs[0]?.spec1Title}</th>
                 <th className="px-4 py-3.5 font-bold border-r border-stone-700">{item.specs[0]?.spec2Title}</th>
                 <th className="px-4 py-3.5 font-bold border-r border-stone-700">{item.specs[0]?.spec3Title}</th>
-                <th className="px-4 py-3.5 font-bold">How It Is Set Up</th>
+                <th className="px-4 py-3.5 font-bold">Deployment Setup</th>
               </tr>
             </thead>
             <tbody className="divide-y-2 divide-stone-200 bg-white">
@@ -230,7 +230,7 @@ export const EquipmentDetailPage: React.FC<EquipmentDetailPageProps> = ({
         {/* Recommended For Badges */}
         <div className="mt-5 flex flex-wrap items-center gap-1.5">
           <span className="text-xs font-bold uppercase tracking-wider text-stone-700 mr-1">
-            Great For:
+            Recommended For:
           </span>
           {item.idealFor.map((useCase, uIdx) => (
             <span
@@ -248,13 +248,13 @@ export const EquipmentDetailPage: React.FC<EquipmentDetailPageProps> = ({
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
           <div className="max-w-2xl">
             <span className="text-xs font-bold uppercase tracking-widest text-[#b83a24] mb-1.5 block">
-              Tailored to Your Venue
+              Custom Venue Calibration
             </span>
             <h3 className="font-serif text-xl sm:text-2xl font-bold text-[#121212] mb-2">
-              Exact Sizes and Quantities
+              Tailored Rigging &amp; Specific Unit Counts
             </h3>
             <p className="text-stone-700 text-xs sm:text-sm leading-relaxed font-normal">
-              You do not have to pick a fixed package. Call us and tell us your venue size, screen shape, delay towers and power needs, and we will plan the setup with you.
+              We do not force rigid packages — every event is unique. Call our sound and visual engineering desk directly to specify your exact venue dimensions, screen aspect ratios, delay towers, and power load requirements.
             </p>
           </div>
 
@@ -271,7 +271,7 @@ export const EquipmentDetailPage: React.FC<EquipmentDetailPageProps> = ({
               onClick={() => onOpenQuote(item.title)}
               className="bg-[#121212] hover:bg-black text-white text-xs uppercase font-bold tracking-widest py-3.5 px-6 rounded-none border-2 border-black shadow-[3px_3px_0px_0px_#b83a24] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all flex items-center justify-center gap-2 cursor-pointer"
             >
-              <span>Get in Touch</span>
+              <span>Submit Inquiries</span>
               <ArrowRight className="w-4 h-4" />
             </button>
           </div>
@@ -284,10 +284,10 @@ export const EquipmentDetailPage: React.FC<EquipmentDetailPageProps> = ({
       <div className="mb-12">
         <div className="mb-6">
           <span className="text-xs font-bold uppercase tracking-widest text-[#b83a24] mb-1 block">
-            Seen in the Field
+            Field Execution Gallery
           </span>
           <h2 className="font-serif text-xl sm:text-3xl font-bold text-[#121212]">
-            Photos From Real Setups
+            Visual Showcase &amp; Live Rigging
           </h2>
         </div>
 
@@ -326,7 +326,7 @@ export const EquipmentDetailPage: React.FC<EquipmentDetailPageProps> = ({
             Ready to Deploy {item.title}?
           </h2>
           <p className="text-stone-300 text-xs sm:text-sm mb-6 max-w-lg mx-auto font-normal">
-            Talk to our team about screen sizes, a sound check of your venue and how much power you will need.
+            Contact our engineering desk for custom dimension calculations, acoustic site surveys, and power load verification.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
@@ -334,7 +334,7 @@ export const EquipmentDetailPage: React.FC<EquipmentDetailPageProps> = ({
               onClick={() => onOpenQuote(item.title)}
               className="w-full sm:w-auto bg-[#b83a24] hover:bg-[#9b2e1b] text-white text-xs uppercase font-bold tracking-widest py-3.5 px-7 rounded-none border-2 border-white shadow-[3px_3px_0px_0px_#ffffff] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all cursor-pointer flex items-center justify-center gap-2"
             >
-              <span>Get a Quote</span>
+              <span>Request Proposal</span>
               <ArrowRight className="w-4 h-4" />
             </button>
 
@@ -342,7 +342,7 @@ export const EquipmentDetailPage: React.FC<EquipmentDetailPageProps> = ({
               onClick={onBackToAllEquipment}
               className="w-full sm:w-auto bg-stone-900 border-2 border-stone-700 hover:border-white text-stone-200 hover:text-white text-xs uppercase font-bold tracking-widest py-3.5 px-6 rounded-none shadow-[3px_3px_0px_0px_#000000] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all cursor-pointer"
             >
-              See All Equipment
+              Browse All Disciplines
             </button>
           </div>
         </div>

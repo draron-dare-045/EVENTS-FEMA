@@ -212,13 +212,13 @@ export default function App() {
               <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 border-b-2 border-stone-300 pb-8">
                 <div>
                   <div className="inline-flex items-center gap-2 px-3 py-1 rounded-none bg-black text-[#b83a24] text-xs font-bold uppercase tracking-widest mb-3 border border-black shadow-[2px_2px_0px_0px_#b83a24]">
-                    What We Bring
+                    Core Disciplines
                   </div>
                   <h2 className="font-serif text-3xl sm:text-4xl font-bold tracking-tight text-[#121212]">
-                    Everything Your Event Needs
+                    Comprehensive Production Technology
                   </h2>
                   <p className="text-stone-700 text-sm mt-2 max-w-xl font-normal">
-                    Six services, all from our own warehouse in Nairobi. We deliver, set up and run everything across Kenya.
+                    Six specialized disciplines maintained in Nairobi and deployed nationwide by our certified in-house crew.
                   </p>
                 </div>
                 <div className="mt-4 md:mt-0">
@@ -230,7 +230,7 @@ export default function App() {
                     }}
                     className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#b83a24] hover:text-[#121212] transition-colors cursor-pointer bg-stone-100 hover:bg-stone-200 border-2 border-stone-800 px-4 py-2 shadow-[2px_2px_0px_0px_#121212] active:translate-x-[1px] active:translate-y-[1px]"
                   >
-                    <span>See All Our Equipment</span>
+                    <span>View All Equipment Specs</span>
                     <ArrowRight className="w-4 h-4" />
                   </button>
                 </div>
@@ -258,7 +258,7 @@ export default function App() {
                         {CATEGORY_ICONS[eq.id]}
                       </div>
                       <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-stone-500 block mb-1">
-                        {eq.number}
+                        Discipline {eq.number}
                       </span>
                       <h3 className="font-serif text-xl font-bold text-[#121212] mb-2 group-hover:text-[#b83a24] transition-colors">
                         {eq.title}
@@ -269,7 +269,7 @@ export default function App() {
                     </div>
 
                     <div className="pt-4 border-t-2 border-stone-200 flex items-center justify-between text-xs font-bold uppercase tracking-wider text-[#b83a24]">
-                      <span>See What We Offer</span>
+                      <span>Explore Specs &amp; Packages</span>
                       <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                     </div>
                   </motion.div>
@@ -291,27 +291,27 @@ export default function App() {
                     <div className="lg:col-span-8">
                       <div className="inline-flex items-center gap-2 px-3 py-1 rounded-none bg-black text-xs font-bold uppercase tracking-widest text-[#b83a24] mb-3 border border-stone-700 shadow-[2px_2px_0px_0px_#b83a24]">
                         <ShieldCheck className="w-3.5 h-3.5" />
-                        <span>Our Promise</span>
+                        <span>FEMA Production Standard</span>
                       </div>
                       <h2 className="font-serif text-2xl sm:text-4xl font-bold leading-tight mb-3">
-                        Our gear. Our crew. Your event, running smoothly.
+                        Zero Downtime. 100% In-House Hardware. Certified Crew.
                       </h2>
                       <p className="text-stone-300 text-xs sm:text-sm max-w-2xl font-normal leading-relaxed">
-                        Every booking includes a site visit before your event to plan the sound and check the stage loading, plus twin-generator backup so the power never drops.
+                        Every FEMA Events booking includes pre-show acoustic mapping, structural load validation, and dual-synchronized power redundancy.
                       </p>
 
                       <div className="flex flex-wrap gap-4 mt-6 text-xs text-stone-300 font-bold uppercase tracking-wider">
                         <span className="flex items-center gap-1.5 bg-stone-900 border border-stone-700 px-2.5 py-1">
                           <CheckCircle2 className="w-4 h-4 text-[#b83a24]" />
-                          <span>P2.6 indoor and P4.8 outdoor LED screens</span>
+                          <span>P4.8 &amp; P2.6 LED Displays</span>
                         </span>
                         <span className="flex items-center gap-1.5 bg-stone-900 border border-stone-700 px-2.5 py-1">
                           <CheckCircle2 className="w-4 h-4 text-[#b83a24]" />
-                          <span>Line array sound for any crowd size</span>
+                          <span>Touring Sound Line Arrays</span>
                         </span>
                         <span className="flex items-center gap-1.5 bg-stone-900 border border-stone-700 px-2.5 py-1">
                           <CheckCircle2 className="w-4 h-4 text-[#b83a24]" />
-                          <span>Silent generators with automatic backup</span>
+                          <span>Silent ATS Genset Redundancy</span>
                         </span>
                       </div>
                     </div>
@@ -321,7 +321,7 @@ export default function App() {
                         onClick={() => handleOpenQuote()}
                         className="w-full bg-[#b83a24] hover:bg-[#9b2e1b] text-white text-xs uppercase font-bold tracking-widest py-4 px-6 rounded-none border-2 border-black shadow-[4px_4px_0px_0px_#000000] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all cursor-pointer flex items-center justify-center gap-2"
                       >
-                        <span>Get a Quote</span>
+                        <span>Request Custom Proposal</span>
                         <ArrowRight className="w-4 h-4" />
                       </button>
 
@@ -461,7 +461,7 @@ export default function App() {
       >
         <MessageCircle className="w-6 h-6" />
         <span className="max-w-0 overflow-hidden whitespace-nowrap group-hover:max-w-xs group-hover:ml-2 transition-all duration-300 text-xs font-bold uppercase tracking-wider">
-          Chat With Us
+          WhatsApp Support
         </span>
       </a>
 

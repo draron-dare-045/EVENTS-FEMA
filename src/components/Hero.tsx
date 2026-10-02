@@ -92,13 +92,13 @@ export const Hero: React.FC<HeroProps> = ({ onNavigateView, onOpenQuote }) => {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center">
         {/* Main Headline - Tailored for mobile screens */}
         <h1 className="font-serif text-3xl sm:text-5xl md:text-7xl font-bold leading-[1.18] sm:leading-[1.12] max-w-5xl tracking-tight mb-4 sm:mb-6">
-          We bring the sound, screens and lighting for{' '}
-          <span className="italic font-bold text-[#b83a24]">your event</span> in Kenya.
+          Elevating Live Experiences Through{' '}
+          <span className="italic font-bold text-[#b83a24]">Seamless</span> Event Technology.
         </h1>
 
         {/* Sub-headline */}
         <p className="text-stone-300 text-sm sm:text-lg md:text-xl font-normal max-w-3xl mb-8 sm:mb-10 leading-relaxed px-2">
-          From church crusades to brand launches, we bring line array sound, P2.6 &amp; P4.8 LED screens, lighting, stages and silent backup power. Then we set it up and run it, so you can enjoy your event.
+          Concert sound line arrays, ultra-bright P2.6 &amp; P4.8 LED screens, intelligent stage lighting, modular staging, and synchronized backup generators across Kenya.
         </p>
 
         {/* Action Buttons - Stacked on Mobile with 48px touch targets */}
@@ -108,7 +108,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigateView, onOpenQuote }) => {
             onClick={onOpenQuote}
             className="w-full sm:w-auto bg-[#b83a24] hover:bg-[#9b2e1b] text-white text-xs sm:text-sm font-bold uppercase tracking-widest py-4 px-8 rounded-none border-2 border-white shadow-[4px_4px_0px_0px_#ffffff] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all cursor-pointer flex items-center justify-center gap-2"
           >
-            <span>Get a Quote</span>
+            <span>Book AV Equipment</span>
             <ArrowRight className="w-4 h-4" />
           </button>
           
@@ -119,7 +119,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigateView, onOpenQuote }) => {
               className="bg-[#b83a24] hover:bg-[#9b2e1b] text-white text-xs sm:text-sm font-bold uppercase tracking-widest py-3.5 sm:py-4 px-4 sm:px-6 rounded-none border-2 border-white shadow-[4px_4px_0px_0px_#ffffff] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all cursor-pointer flex items-center justify-center gap-1.5"
             >
               <Layers className="w-3.5 h-3.5 text-white" />
-              <span>Our Gear</span>
+              <span>Equipment</span>
             </button>
 
             <button
@@ -128,7 +128,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigateView, onOpenQuote }) => {
               className="bg-[#b83a24] hover:bg-[#9b2e1b] text-white text-xs sm:text-sm font-bold uppercase tracking-widest py-3.5 sm:py-4 px-4 sm:px-6 rounded-none border-2 border-white shadow-[4px_4px_0px_0px_#ffffff] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all cursor-pointer flex items-center justify-center gap-1.5"
             >
               <Calendar className="w-3.5 h-3.5 text-white" />
-              <span>Event Types</span>
+              <span>Occasions</span>
             </button>
           </div>
         </div>
@@ -140,31 +140,31 @@ export const Hero: React.FC<HeroProps> = ({ onNavigateView, onOpenQuote }) => {
               <StatCounter target={500} suffix="+" />
             </div>
             <div className="text-stone-200 text-[10px] sm:text-[11px] uppercase tracking-wider font-bold mt-1">Events Powered</div>
-            <div className="text-stone-400 text-[10px] mt-0.5">Across Kenya</div>
+            <div className="text-stone-400 text-[10px] mt-0.5">Nationwide Kenya</div>
           </div>
 
           <div className="text-center">
             <div className="font-serif text-lg sm:text-2xl font-black text-white flex items-baseline justify-center">
               <StatCounter target={4} suffix="k" decimals={1} />
             </div>
-            <div className="text-stone-200 text-[10px] sm:text-[11px] uppercase tracking-wider font-bold mt-1">P2.6 &amp; P4.8 LED</div>
-            <div className="text-stone-400 text-[10px] mt-0.5">Sharp indoors, bright outdoors</div>
+            <div className="text-stone-200 text-[10px] sm:text-[11px] uppercase tracking-wider font-bold mt-1">4k Custom LEDs</div>
+            <div className="text-stone-400 text-[10px] mt-0.5">P2.6 &amp; P4.8 panels</div>
           </div>
 
           <div className="text-center">
             <div className="font-serif text-lg sm:text-2xl font-black text-[#b83a24] flex items-baseline justify-center">
               <StatCounter target={100} suffix="%" />
             </div>
-            <div className="text-stone-200 text-[10px] sm:text-[11px] uppercase tracking-wider font-bold mt-1">Backup Power</div>
-            <div className="text-stone-400 text-[10px] mt-0.5">Twin silent generators</div>
+            <div className="text-stone-200 text-[10px] sm:text-[11px] uppercase tracking-wider font-bold mt-1">Power Redundancy</div>
+            <div className="text-stone-400 text-[10px] mt-0.5">Dual ATS generator sync</div>
           </div>
 
           <div className="text-center">
             <div className="font-serif text-lg sm:text-2xl font-black text-white flex items-baseline justify-center">
               <span>24/7</span>
             </div>
-            <div className="text-stone-200 text-[10px] sm:text-[11px] uppercase tracking-wider font-bold mt-1">Crew On Site</div>
-            <div className="text-stone-400 text-[10px] mt-0.5">Our own technicians</div>
+            <div className="text-stone-200 text-[10px] sm:text-[11px] uppercase tracking-wider font-bold mt-1">Certified Crew</div>
+            <div className="text-stone-400 text-[10px] mt-0.5">In-house technicians</div>
           </div>
         </div>
 

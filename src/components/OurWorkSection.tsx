@@ -34,13 +34,13 @@ export const OurWorkSection: React.FC<OurWorkSectionProps> = ({ onOpenQuote }) =
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 border-b-2 border-[#121212] pb-8">
           <div>
             <div className="inline-flex items-center gap-2 px-3 py-1 bg-black text-white text-[11px] font-bold uppercase tracking-widest mb-2 border border-black shadow-[2px_2px_0px_0px_#b83a24]">
-              Events We Are Proud Of
+              Proven Production Track Record
             </div>
             <h1 className="font-serif text-3xl sm:text-5xl font-bold tracking-tight text-[#121212]">
-              Our Work, Up Close.
+              Our Work &amp; Case Studies.
             </h1>
             <p className="text-stone-700 text-sm mt-3 max-w-2xl leading-relaxed font-normal">
-              See how we handled big corporate summits, multi-night outdoor crusades and brand reveals across Kenya.
+              Explore high-stakes corporate summits, multi-night outdoor crusades, and brand reveals powered seamlessly by FEMA Events across Kenya.
             </p>
           </div>
           <div className="mt-4 md:mt-0">
@@ -48,7 +48,7 @@ export const OurWorkSection: React.FC<OurWorkSectionProps> = ({ onOpenQuote }) =
               onClick={onOpenQuote}
               className="bg-[#121212] hover:bg-[#b83a24] text-white text-xs uppercase font-bold tracking-widest px-6 py-4 rounded-none border-2 border-[#121212] shadow-[4px_4px_0px_0px_#b83a24] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all cursor-pointer flex items-center gap-2"
             >
-              <span>Plan Your Event With Us</span>
+              <span>Book Your Production</span>
               <ArrowRight className="w-4 h-4" />
             </button>
           </div>
@@ -141,7 +141,7 @@ export const OurWorkSection: React.FC<OurWorkSectionProps> = ({ onOpenQuote }) =
                 <div className="flex items-start gap-2.5">
                   <Users2 className="w-4 h-4 text-[#b83a24] mt-0.5 shrink-0" />
                   <div>
-                    <span className="block text-[10px] uppercase font-bold text-stone-600">Crowd Size</span>
+                    <span className="block text-[10px] uppercase font-bold text-stone-600">Crowd Footfall</span>
                     <span className="text-xs font-bold text-stone-900">{activeCaseStudy.crowdSize}</span>
                   </div>
                 </div>
@@ -149,8 +149,8 @@ export const OurWorkSection: React.FC<OurWorkSectionProps> = ({ onOpenQuote }) =
                 <div className="flex items-start gap-2.5">
                   <Award className="w-4 h-4 text-[#b83a24] mt-0.5 shrink-0" />
                   <div>
-                    <span className="block text-[10px] uppercase font-bold text-stone-600">How It Went</span>
-                    <span className="text-xs font-bold text-stone-900">Ran smoothly from start to finish</span>
+                    <span className="block text-[10px] uppercase font-bold text-stone-600">Execution Score</span>
+                    <span className="text-xs font-bold text-stone-900">100% Zero Glitches</span>
                   </div>
                 </div>
               </div>
@@ -158,7 +158,7 @@ export const OurWorkSection: React.FC<OurWorkSectionProps> = ({ onOpenQuote }) =
               {/* Equipment Rigged */}
               <div className="mb-8">
                 <h3 className="text-xs font-bold uppercase tracking-widest text-stone-700 mb-3 font-sans">
-                  What We Brought:
+                  Production Rig &amp; Technology Deployed:
                 </h3>
                 <ul className="space-y-2.5">
                   {activeCaseStudy.equipmentUsed.map((eq, eIdx) => (
@@ -191,10 +191,10 @@ export const OurWorkSection: React.FC<OurWorkSectionProps> = ({ onOpenQuote }) =
           <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-8">
             <div>
               <span className="text-xs font-bold uppercase tracking-widest text-[#b83a24] mb-1 block">
-                In the Field
+                Visual Field Capture
               </span>
               <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#121212]">
-                Photo Gallery
+                Photo &amp; Rig Gallery
               </h2>
             </div>
             <div className="flex gap-2 mt-4 sm:mt-0 overflow-x-auto pb-1">
@@ -253,7 +253,7 @@ export const OurWorkSection: React.FC<OurWorkSectionProps> = ({ onOpenQuote }) =
         {/* Corporate Trust & Testimonial Row */}
         <div className="bg-stone-200 rounded-none p-8 sm:p-12 border-2 border-[#121212] shadow-[6px_6px_0px_0px_#121212]">
           <p className="text-center text-xs font-bold uppercase tracking-widest text-stone-800 mb-8">
-            Trusted by Companies, Event Planners and Churches Across Kenya
+            Trusted by Leading Corporates, Planners &amp; Ministries Across Kenya
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-14 opacity-90 transition-all mb-12">

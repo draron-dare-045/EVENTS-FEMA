@@ -2,27 +2,27 @@ import React from 'react';
 import { WORK } from '../data/photos';
 
 const STATS = [
-  { value: '10+', label: 'Years in live production' },
-  { value: '100%', label: 'In-house crew' },
-  { value: '24/7', label: 'Technicians on every show' }
+  { value: '10+', label: 'Years of Live Production Excellence' },
+  { value: '100%', label: 'Power Redundancy' },
+  { value: '24/7', label: 'Certified Crew' }
 ];
 
 const PILLARS = [
   {
-    title: 'Our Own Crew',
-    body: 'Sound engineers, lighting technicians and riggers who work for us, not for a subcontractor. You see the same faces from setup to pack-down.'
+    title: 'Full In-House Crew',
+    body: "Certified sound engineers, lighting designers, and riggers on our direct payroll."
   },
   {
-    title: 'Backup Power',
-    body: 'Two silent generators on standby. If one stops, an automatic switch brings in the other within half a second, so nobody notices.'
+    title: '100% Power Redundancy',
+    body: "Synchronized dual silent generators with sub-second automatic transfer switches."
   },
   {
-    title: 'A Technician On Site',
-    body: 'A technician stays at the stage and the mixing desk from soundcheck to the final goodbye.'
+    title: '24/7 Live Monitoring',
+    body: "Dedicated stage and FOH technicians present from soundcheck through final curtain."
   },
   {
-    title: 'We Deliver Across Kenya',
-    body: 'Our own trucks reach Mombasa, Kisumu, Nakuru and everywhere in between.'
+    title: 'Nationwide Kenya Logistics',
+    body: "Fully equipped heavy logistics fleet serving Mombasa, Kisumu, Nakuru, and all regions."
   }
 ];
 
@@ -35,14 +35,14 @@ export const AboutSection: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-end mb-16 sm:mb-24">
           <div className="lg:col-span-7">
             <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#b83a24] mb-4 border-b-2 border-[#b83a24] pb-1">
-              About FEMA Events
+              Why FEMA Events Kenya
             </span>
             <h1 className="font-serif text-4xl sm:text-6xl font-bold leading-[1.08]">
-              Sound you can hear, screens you can see, and a crew you can rely on.
+              Uncompromising Technical Rigor &amp; Acoustic Craft.
             </h1>
           </div>
           <p className="lg:col-span-5 text-base sm:text-lg text-stone-700 leading-relaxed">
-            We are an event production company in Nairobi. We bring sound, LED screens, lighting, staging and backup power to churches, companies and institutions across Kenya, and our own crew sets up and runs every show.
+            FEMA Events is an elite event production house based in Nairobi, providing comprehensive Audio Visual, stage lighting, modular rigging, and backup power solutions for churches, corporates, and public institutions across Kenya. Every single rig is engineered and operated on-site by our own in-house crew — never outsourced or brokered out.
           </p>
         </div>
 
@@ -57,11 +57,14 @@ export const AboutSection: React.FC = () => {
           <div className="absolute inset-0 bg-[#121212] opacity-40"></div>
           <div className="absolute inset-x-0 bottom-0 p-6 sm:p-10 text-white">
             <span className="text-xs font-bold uppercase tracking-widest text-[#b83a24] bg-black px-2.5 py-1 border border-white/20">
-              Proudly based in Nairobi
+              Engineered in Nairobi
             </span>
             <h2 className="font-serif text-2xl sm:text-4xl font-bold max-w-2xl leading-tight mt-3">
-              Trusted by churches, companies and institutions across Kenya.
+              Over 10 Years of Live Production Excellence
             </h2>
+            <p className="mt-2 text-sm sm:text-base text-stone-200 font-medium max-w-2xl">
+              Trusted by Kenya's foremost event producers, church ministries, and global organizations.
+            </p>
           </div>
         </div>
 
@@ -84,10 +87,10 @@ export const AboutSection: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
           <div className="lg:col-span-4">
             <h2 className="font-serif text-3xl sm:text-4xl font-bold leading-tight mb-4">
-              How we keep every show running smoothly.
+              Flawless Execution Standards.
             </h2>
             <p className="text-stone-700 leading-relaxed">
-              From the first site visit to the last pack-down, the same team looks after your event.
+              From the initial site survey and acoustic measurement to cable routing, live FOH mixing, and swift strike, our team maintains flawless execution standards.
             </p>
           </div>
 

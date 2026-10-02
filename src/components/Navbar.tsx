@@ -181,7 +181,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               onClick={() => onOpenQuote()}
               className="bg-[#b83a24] hover:bg-[#9b2e1b] text-white text-xs font-bold uppercase tracking-widest px-6 py-3 rounded-none border-2 border-white shadow-[3px_3px_0px_0px_#ffffff] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all cursor-pointer"
             >
-              Get a Quote
+              Book Equipment
             </button>
           </div>
 
@@ -227,11 +227,11 @@ export const Navbar: React.FC<NavbarProps> = ({
             {/* Primary Page Navigation */}
             <div className="space-y-2.5 mb-6">
               {[
-                { id: 'home', label: 'Home Page', desc: 'Start here and book fast' },
-                { id: 'equipment', label: 'Equipment', desc: 'LED, sound, lighting, stages and power' },
-                { id: 'occasions', label: 'Events We Cover', desc: 'Crusades, conferences, launches, rallies' },
-                { id: 'our-work', label: 'Our Work', desc: 'Real events and photo galleries' },
-                { id: 'about', label: 'About Us', desc: 'Meet our crew and see how we work' }
+                { id: 'home', label: 'Home Page', desc: 'Main showcase & fast booking' },
+                { id: 'equipment', label: 'Equipment & Inventory', desc: 'LEDs, Sound, Lighting, Stages, Gensets' },
+                { id: 'occasions', label: 'Occasions & Solutions', desc: 'Crusades, Summits, Launches, Rallies' },
+                { id: 'our-work', label: 'Our Work & Case Studies', desc: 'Live event proof & photo galleries' },
+                { id: 'about', label: 'About FEMA Events', desc: 'Certified crew, lab & 4 pillars' }
               ].map((link) => (
                 <button
                   key={link.id}
@@ -254,16 +254,16 @@ export const Navbar: React.FC<NavbarProps> = ({
             {/* Quick Equipment Shortcuts */}
             <div className="mb-6">
               <span className="text-[11px] font-bold uppercase tracking-widest text-stone-400 block mb-2.5">
-                Jump to Gear:
+                Quick Rig Disciplines:
               </span>
               <div className="grid grid-cols-2 gap-2">
                 {[
                   { id: 'led-screens', label: 'LED Screens', icon: <Monitor className="w-3.5 h-3.5 text-[#b83a24]" /> },
-                  { id: 'sound-audio', label: 'Sound', icon: <Speaker className="w-3.5 h-3.5 text-[#b83a24]" /> },
-                  { id: 'lighting', label: 'Lighting', icon: <Sparkles className="w-3.5 h-3.5 text-[#b83a24]" /> },
-                  { id: 'stages', label: 'Stages', icon: <Layers className="w-3.5 h-3.5 text-[#b83a24]" /> },
-                  { id: 'pyrotechnics', label: 'Effects', icon: <Flame className="w-3.5 h-3.5 text-[#b83a24]" /> },
-                  { id: 'generators', label: 'Power', icon: <Zap className="w-3.5 h-3.5 text-[#b83a24]" /> }
+                  { id: 'sound-audio', label: 'Sound Audio', icon: <Speaker className="w-3.5 h-3.5 text-[#b83a24]" /> },
+                  { id: 'lighting', label: 'Lighting Rigs', icon: <Sparkles className="w-3.5 h-3.5 text-[#b83a24]" /> },
+                  { id: 'stages', label: 'Stage Decks', icon: <Layers className="w-3.5 h-3.5 text-[#b83a24]" /> },
+                  { id: 'pyrotechnics', label: 'Pyrotechnics', icon: <Flame className="w-3.5 h-3.5 text-[#b83a24]" /> },
+                  { id: 'generators', label: 'Genset Power', icon: <Zap className="w-3.5 h-3.5 text-[#b83a24]" /> }
                 ].map((item) => (
                   <button
                     key={item.id}
@@ -288,7 +288,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               className="w-full bg-[#b83a24] hover:bg-[#9b2e1b] text-white text-xs font-bold uppercase tracking-widest py-3.5 rounded-none border-2 border-white shadow-[3px_3px_0px_0px_#ffffff] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none flex items-center justify-center gap-2 cursor-pointer"
             >
               <PhoneCall className="w-4 h-4" />
-              <span>Get a Quote</span>
+              <span>Book Gear / Inquire</span>
             </button>
 
             <div className="grid grid-cols-2 gap-2">
@@ -307,7 +307,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                 className="bg-stone-900 border-2 border-stone-700 hover:border-white text-stone-200 hover:text-white text-xs font-bold uppercase tracking-wider py-3 rounded-none shadow-[2px_2px_0px_0px_#000000] active:translate-x-[1px] active:translate-y-[1px] active:shadow-none flex items-center justify-center gap-2 text-center"
               >
                 <PhoneCall className="w-4 h-4 text-[#b83a24]" />
-                <span>Call Us</span>
+                <span>Call Hotline</span>
               </a>
             </div>
           </div>
