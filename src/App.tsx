@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion, MotionConfig } from 'motion/react';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
@@ -28,6 +28,7 @@ import {
 } from 'lucide-react';
 import { EQUIPMENT_DATA } from './data/femaData';
 import { useSeo } from './seo';
+import { parsePath, buildPath, normalizePath } from './routes';
 
 /**
  * Discipline Icon Map for Core Disciplines Teaser Cards
@@ -43,11 +44,13 @@ const CATEGORY_ICONS: Record<string, React.ReactNode> = {
 
 export default function App() {
   // Page view routing state: 'home' | 'equipment' | 'occasions' | 'our-work' | 'about'
-  const [activeView, setActiveView] = useState<PageView>('home');
+  // The initial page comes from the URL, so deep links and refreshes land on the right page.
+  const [initialRoute] = useState(() => parsePath(window.location.pathname));
+  const [activeView, setActiveView] = useState<PageView>(initialRoute.view);
   
   // Dedicated subpage drilldown states
-  const [selectedEquipmentSubpage, setSelectedEquipmentSubpage] = useState<string | null>(null);
-  const [selectedOccasionSubpage, setSelectedOccasionSubpage] = useState<string | null>(null);
+  const [selectedEquipmentSubpage, setSelectedEquipmentSubpage] = useState<string | null>(initialRoute.equipmentId);
+  const [selectedOccasionSubpage, setSelectedOccasionSubpage] = useState<string | null>(initialRoute.occasionId);
   
   // Form pre-fill state for custom quotes
   const [selectedServiceForQuote, setSelectedServiceForQuote] = useState<string>('');
@@ -59,6 +62,32 @@ export default function App() {
 
   // SEO: keep <title> and meta description in sync with the visible page (no visual change)
   useSeo(activeView, selectedEquipmentSubpage, selectedOccasionSubpage);
+
+  // URL routing: keep the address bar in sync with the visible page (History API, no extra deps).
+  const hasSyncedUrl = useRef(false);
+  useEffect(() => {
+    const target = buildPath(activeView, selectedEquipmentSubpage, selectedOccasionSubpage);
+    if (normalizePath(window.location.pathname) !== target) {
+      const url = target + window.location.hash;
+      // First sync only canonicalises the URL (e.g. unknown path -> "/"); later changes add history entries.
+      if (hasSyncedUrl.current) window.history.pushState(null, '', url);
+      else window.history.replaceState(null, '', url);
+    }
+    hasSyncedUrl.current = true;
+  }, [activeView, selectedEquipmentSubpage, selectedOccasionSubpage]);
+
+  // Browser back/forward buttons: restore the page from the URL.
+  useEffect(() => {
+    const onPopState = () => {
+      const route = parsePath(window.location.pathname);
+      setActiveView(route.view);
+      setSelectedEquipmentSubpage(route.equipmentId);
+      setSelectedOccasionSubpage(route.occasionId);
+      window.scrollTo({ top: 0 });
+    };
+    window.addEventListener('popstate', onPopState);
+    return () => window.removeEventListener('popstate', onPopState);
+  }, []);
 
   // Monitor scroll distance for back-to-top trigger
   useEffect(() => {

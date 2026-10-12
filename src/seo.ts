@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import type { PageView } from './types';
+import { buildPath } from './routes';
 
 interface SeoMeta {
   title: string;
@@ -96,6 +97,10 @@ export const useSeo = (
         ? `oc:${occasionId}`
         : view;
     const meta = SEO_META[key] ?? SEO_META[view] ?? SEO_META.home;
+
+    const url = `https://femaevents.com${buildPath(view, equipmentId, occasionId)}`;
+    document.head.querySelector('link[rel="canonical"]')?.setAttribute('href', url);
+    setContent('meta[property="og:url"]', url);
 
     document.title = meta.title;
     setContent('meta[name="description"]', meta.description);
